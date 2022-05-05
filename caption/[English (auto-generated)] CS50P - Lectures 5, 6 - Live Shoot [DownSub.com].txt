@@ -1,0 +1,9916 @@
+one
+
+all right testing one two three hello
+
+world can everyone hear me okay
+
+yes yes okay wonderful well so nice to
+
+see so many faces here around the world
+
+if you haven't already feel free to say
+
+hello to everyone else in the chat and
+
+where you're from perhaps uh this is a
+
+live filming of cs50p cs50s new
+
+introduction to programming with python
+
+class as you may know from online in our
+
+emails we're filming these live with you
+
+as the audience so it'll be an
+
+opportunity to ask and to answer
+
+questions along the way um might make
+
+some mistakes along the way so i hope
+
+you'll forgive if we stop or fix things
+
+as we go the final
+
+edited versions of these videos will
+
+then end up on cs50s website youtube edx
+
+and beyond once they're fine-tuned based
+
+on how today goes uh for those who are
+
+joining us for the first time just a
+
+couple of fyis all of today's slides and
+
+all of today's source code the
+
+programming code that i'm going to write
+
+can be found at this url here if you
+
+haven't discovered that already
+
+if you find the chat distracting
+
+something we say each week is that
+
+we
+
+the easiest workaround to do this is to
+
+go to your chat window find the little
+
+triangular menu probably in the top left
+
+and then pop it out and then just drag
+
+and drop it to like the bottom of your
+
+screen and that way you won't constantly
+
+see the badges and the pop-ups but those
+
+who do want to converse via chat or ask
+
+questions of carter my colleague here
+
+can still do so the zoom chat tends to
+
+be a little noisy that does not work on
+
+mobile but it will work on laptops and
+
+desktops if you haven't already this is
+
+the website where you can use vs code or
+
+visual studio code
+
+in the cloud using cs50's account note
+
+that sometimes if too many people log in
+
+all at once github doesn't uh allow us
+
+to have that many people coming through
+
+at once so if you get an error message
+
+wait a minute or more and then give it
+
+another try
+
+and then we have this tradition which is
+
+now if you would like to participate in
+
+a
+
+souvenir photo that will post online go
+
+ahead and turn your camera on if it's
+
+not yet on
+
+go ahead and turn your camera off if you
+
+don't want a photo of what you look like
+
+today to end up on the internet
+
+and we'll go ahead in just a moment and
+
+as some of you are already doing put on
+
+your best smile your best wave and my
+
+colleague rang shin here is going to
+
+take as many screenshots as he can
+
+one at a time in zoom hopefully we'll
+
+catch you at a good looking moment
+
+if not hope you'll forgive there too
+
+feel free to vary it if you want to
+
+change hands or something like that or
+
+put on a funny face maybe we'll catch
+
+that instead but what we're taking is a
+
+whole bunch of screenshots now and then
+
+using fancy software that wrong shin
+
+wrote we'll stitch them all together
+
+into the illusion of one really big
+
+zoom room instead of screen after screen
+
+alright we are all good there uh allow
+
+us to just take a couple of hellos on
+
+camera make sure all of our audio is
+
+working nicely and to hear from some of
+
+you
+
+if function we can put everyone's hand
+
+down
+
+just for a moment
+
+virtually
+
+all right and if you'd like to say hello
+
+to folks on camera here and a little
+
+something about where you are in the
+
+world or about yourself uh why don't we
+
+go ahead and call on just two or three
+
+people before we dive in
+
+let's see how about we start with
+
+all the tiles are moving around chin may
+
+if i'm saying that right
+
+hello yes we can hear you
+
+hello david
+
+it's very nice to learn from you
+
+oh well nice uh nice to have you in the
+
+class welcome where in the world are you
+
+i'm from india nice well welcome to uh
+
+to harvard virtually today uh how about
+
+another hand from the group wrong shin
+
+if we could call on uh harshita next if
+
+i'm saying it right
+
+hello sir it's glad to learn from you i
+
+am parashat sharma from india
+
+i hope i can learn from you yes nice to
+
+meet you as well i'm guessing it's
+
+getting later there so thank you for
+
+staying up with us here how about one
+
+more hello from the group my colleague
+
+ranchin is helping pin people on the
+
+screens here uh say ham if i'm saying it
+
+right
+
+hello hello um
+
+hello i'm seyham i'm palestinian uh but
+
+i'm now in hungary i hope that i learned
+
+from you thank you oh well i do too well
+
+nice to meet you as well so before we
+
+dive into today's two lectures we're
+
+going to film what's called lecture five
+
+which is going to focus on unit tests
+
+then we'll take like a 10 plus minute
+
+break then we'll resume with lecture six
+
+which is going to be focused on file io
+
+input and output if you have no idea
+
+what either of those things are that's
+
+good you're in the right place so after
+
+the first lecture even though you might
+
+hear me saying that's all goodbye we're
+
+just going to take a break and then
+
+start again since we're pretending to
+
+shoot these
+
+separately
+
+before we do that though wanted to
+
+introduce a little informally one topic
+
+that we didn't touch on last week which
+
+was this
+
+for those of you who were in attendance
+
+last week
+
+we ended with this example on the screen
+
+here this was an example of a file
+
+called sayings.pi that had two functions
+
+hello and goodbye
+
+for those who weren't here this was just
+
+an example of two functions that i
+
+started to realize i'm using a lot i
+
+keep writing all these programs that
+
+just say hello all the time and for that
+
+matter that say goodbye now as well and
+
+i realized wouldn't it be nice last week
+
+where our focus was on libraries
+
+wouldn't it be nice to write my hello
+
+function once write my goodbye function
+
+once and then just reuse that code for
+
+project after project after project as
+
+opposed to just copying and pasting or
+
+rewriting these things from scratch so
+
+those of you who are here who are here
+
+might recall that we used that file in a
+
+different code file called say dot pi in
+
+say.pi we imported the sys library which
+
+gives me access to those things called
+
+command line arguments if you weren't
+
+here last week not a problem but this
+
+was the interesting line we were able to
+
+import a specific function from my
+
+sayings.pi file using this line of code
+
+here from sayings import hello and that
+
+just gives me access now in say.pi to
+
+the function called hello in the other
+
+file called sayings.pi and it allows me
+
+to really invent my own library that i
+
+can now use in this program and any
+
+future programs as well and heck if i
+
+put it on the internet you also could
+
+use my hello or my goodbye function but
+
+it's worth knowing that
+
+you can create problems for yourself
+
+when creating libraries if you don't
+
+adhere to best practices and so let me
+
+propose this let me first run this
+
+program to remind you what it did if i
+
+run python of say.pi and then my name
+
+david it just said hello david and
+
+that's the code we're looking at right
+
+here but notice that the function we're
+
+calling on line six hello is actually
+
+defined in this other file
+
+sayings.pi now suppose that i realized
+
+that um
+
+i might want my sayings file to be
+
+functional onto it unto itself and i
+
+just want to be able to test this file
+
+and so up until now we've been in the
+
+habit of running our own functions by
+
+defining arbitrarily but conventionally
+
+a function called main and so suppose i
+
+just want to try out this function i
+
+might do this hello quote unquote world
+
+and then let me try out the other one
+
+goodbye quote unquote world as well in
+
+other words i'm defining a main function
+
+for the sole purpose of like testing
+
+these two functions now of course if i
+
+go back to my terminal and run python of
+
+sayings.pi enter nothing happens
+
+and just to rewind to past weeks why did
+
+nothing happen how can i fix this at the
+
+moment
+
+i have a main function now and i have
+
+hello and goodbye why did nothing happen
+
+on the screen any volunteers
+
+yeah over to girkon if i'm saying it
+
+right
+
+can you hear me yes we can what are your
+
+thoughts
+
+okay uh we didn't call main function at
+
+the end of the file exactly we didn't
+
+call main so this is not like c or c
+
+plus plus where main just happens
+
+automatically for you in python you have
+
+to be more deliberate and actually call
+
+the function so up until now the habit
+
+we've been in is just calling main as
+
+the very last line of your file just to
+
+guarantee that main is absolutely called
+
+but it's the last thing that's called so
+
+that you're defining defining defining
+
+first so that the functions all exist
+
+and then at the very end you kick off
+
+the execution of the program by actually
+
+calling main so this is now correct for
+
+sayings.pi and if i run python of
+
+sayings.pi again notice that we see my
+
+two test outputs hello world and goodbye
+
+world so all is working well but notice
+
+this i've created a side effect for
+
+myself if i leave those tests in that
+
+file that is i leave my main function in
+
+there
+
+notice what happens if i go over to
+
+say.pi now which is a completely
+
+different function program that is
+
+importing one function i'm not importing
+
+main i'm not importing goodbye i'm only
+
+using hello just like before so let me
+
+do just like before this python of
+
+say.pi and then david my name in the
+
+command line argument i should see like
+
+before hello comma david
+
+but let me hit enter
+
+i'm saying hello world goodbye world and
+
+then hello david and this is a really
+
+bad feature of a library if i'm just
+
+trying to use this function hello and
+
+it's presuming to output hello world
+
+goodbye world and then what i actually
+
+care about so let me ask the group again
+
+why now is this happening just to be
+
+clear why am i seeing three lines of
+
+output from say.pi even though
+
+i only called hello once dev your
+
+thoughts
+
+yeah i think it's because you call
+
+domain within sayings.pi yeah it's of
+
+course because i called main in
+
+sayings.pi and it turns out when you
+
+import a function or anything else from
+
+a file the entire file is interpreted by
+
+python top to bottom left to right so if
+
+you've got a line like my last one in
+
+saying stop i main open paren close
+
+paren it's going to call main no matter
+
+what even if you didn't run
+
+sayings.pi at the command line itself so
+
+i could of course just undo everything i
+
+did i could go back to sayings.pi and i
+
+could just delete this last line i could
+
+even delete main but then i've lost my
+
+test functions and maybe longer term
+
+it's just convenient to be able to test
+
+my hello and goodbye function so that
+
+too doesn't feel like an ideal solution
+
+so the right way of doing this the
+
+typical way of doing this is to actually
+
+introduce a fairly funny symbol here so
+
+it turns out that built into python is
+
+this special variable underscore
+
+underscore name underscore underscore
+
+and that variable is automatically set
+
+by python whenever you run a program
+
+specifically it's set to a specific
+
+value if you have run a program directly
+
+so what do i mean by this let me go
+
+ahead and change sayings.pi to not just
+
+blindly call main anymore let me do this
+
+albeit cryptically if underscore
+
+underscore name underscore underscore
+
+and there's indeed two underscores even
+
+though the font is making them look
+
+close together
+
+if that variable equals equals quote
+
+unquote underscore underscore main
+
+underscore underscore quote and now let
+
+me add my colon and indent main as part
+
+of this conditional this is now saying
+
+to python only call the main function
+
+if the name of this file is itself main
+
+and honestly this is not at all clear
+
+when just looking at the code how this
+
+works but let me show you by
+
+demonstration let me go back to my
+
+terminal window and run python of
+
+sayings.pi
+
+which in the past printed hello world
+
+goodbye world and that's it because
+
+that's all that's in this file but
+
+notice i'm conditionally calling main at
+
+the bottom of this file but let's see if
+
+the condition works out to be true let
+
+me hit enter in my terminal
+
+and it works hello world goodbye world
+
+now works but now let me change tabs let
+
+me go back to say.pi and notice that
+
+i've made no changes to this i'm still
+
+importing
+
+from sayings the hello function which is
+
+still going to involve python reading
+
+the entirety of sayings.pi top to bottom
+
+left to right and doing what it says but
+
+because sayings.pi
+
+now has this conditional saying only
+
+execute main if the name of the file is
+
+main this import is going to behave
+
+differently when i now go back to my
+
+terminal and run not python of
+
+sayings.pi but python of say.pi this
+
+shorter program here
+
+it is now using hello by importing it
+
+not by running the sayings.pi file
+
+directly i'm running say.pi instead so
+
+when i hit enter now you'll see that
+
+damn it so now nothing happened let me
+
+fix that that's user error not
+
+not curricular error now python of
+
+say.pi in my name like before and let me
+
+hit enter and now we only see hello
+
+david so in short the right way moving
+
+forward to define a main function is
+
+just as we've done up here if you want
+
+to have a main function that's fine do
+
+it but only call it conditionally
+
+because you want to make sure that main
+
+is only called when you run the file
+
+directly python of sayings.pi you don't
+
+want main to be called when you import
+
+this file or any functions they're from
+
+so that's what this very cryptic looking
+
+condition is doing and it's indeed
+
+deliberate that it's underscore
+
+underscore main underscore underscore
+
+this is just automatically done for you
+
+by python
+
+independent of your having defined the
+
+main function all right that's a lot let
+
+me pause and see if there's any
+
+questions
+
+any questions here yeah how about over
+
+to
+
+uh nathan
+
+from you
+
+is there any reason why there are two
+
+underscores in front and before
+
+is that is there a specific reason why
+
+they're there or is that just a way of
+
+defining them it's a convention so it's
+
+that way just because that's what the
+
+authors of python decided in many
+
+languages though it is conventional for
+
+the authors of the language to reserve
+
+sort of unofficially any variable that
+
+starts with underscore underscore is
+
+belonging to the language itself like
+
+you the programmer should not write
+
+functions that start with underscore
+
+underscore single underscore is okay
+
+double underscore is bad um it's a
+
+little weird that there's underscores at
+
+the end of it too but that's just what
+
+the python community has done it's a
+
+visual clue that this isn't your special
+
+thing it's someone else's design
+
+a good question other questions on this
+
+use of name and main uh anish if i'm
+
+saying it right
+
+hi david uh david i have one query like
+
+if you run
+
+sainsbury then it will output us
+
+uh hello world goodbye world right
+
+correct so does that mean that by
+
+default if we run a particular file even
+
+though we have set that underscore name
+
+to be understands for main python
+
+assumes that the file name is still
+
+underscoring main and its current story
+
+when you run it directly this all
+
+happens automatically for you but when
+
+you import it underscore underscore name
+
+is not set to main
+
+it's not and for demonstration sake let
+
+me try this let me do this instead of
+
+doing all of this let me go into
+
+sayings.pi and do print underscore
+
+underscore name underscore underscore
+
+and now let me do this let me run python
+
+of sayings.pi enter and you'll see that
+
+the name of this file by convention even
+
+though we've named it something else is
+
+underscore underscore main if i now do
+
+this python of say dot pi which imports
+
+from this file we see
+
+this we see that the name of the file is
+
+not underscore underscore main because
+
+it hasn't been run from the command line
+
+directly it's instead the name of the
+
+file itself and this is useful to be
+
+clear because recall the libraries we
+
+did talk about last week if you were
+
+here we looked at the uh random library
+
+the statistics library and there's so
+
+many others as well
+
+khao say library it would be really bad
+
+really obnoxious if any of those
+
+libraries had their own main function
+
+and just because you import one of those
+
+libraries boom you're seeing someone
+
+else's output so this is a solution to
+
+that problem to avoid other people's
+
+libraries or your own libraries from
+
+having these side effects how about one
+
+more question before we reset and dive
+
+into today's unit tests uh josh v if i'm
+
+saying it right
+
+uh
+
+it was just a curious question david uh
+
+what if we run uh instead of your name
+
+we write main in say dot pi would it
+
+implement hello world and goodbye world
+
+or would you print hello main and
+
+goodbye me
+
+um hello me so instead of let me go back
+
+to the file
+
+so instead of world plugging in
+
+something else here
+
+oh sorry there we go
+
+dot i okay
+
+when you entered your name uh what if we
+
+entered there instead of david main
+
+if we said instead of david mayne
+
+instead
+
+yes
+
+oh i mean we i'm if i'm hearing you
+
+correctly are you proposing that i do
+
+this
+
+uh yeah okay we can do that let me do
+
+that so python of say dot pi and you'll
+
+uh let me fix the other file let me undo
+
+my change to sayings.pi so i have the if
+
+condition that we've been promoting here
+
+let me now rerun this correctly
+
+enter
+
+oops here we go
+
+i still have to provide a command line
+
+argument so that the length of argv is
+
+two and you now see hello main so yes
+
+you can see that as well
+
+it's a coincidence though that we're
+
+talking about names like my human name
+
+but the name of this variable is also
+
+underscore underscore name it's cryptic
+
+this is not the best clearest design but
+
+this is the way it is so moving forward
+
+anytime you write a main function and
+
+call a main function don't call it
+
+blindly like we have been previously
+
+because that's going to create new
+
+problems for us always wrap it in this
+
+conditional using literally this syntax
+
+you don't change name and you don't
+
+change underscore underscore main those
+
+are just always that way just because so
+
+to speak all right give me just a moment
+
+to close these files and in just a
+
+minute or so we'll resume with today's
+
+lecture five on unit tests
+
+all right this is cs50s introduction to
+
+programming with python my name is david
+
+malin and this is our week on unit tests
+
+up until now we've been writing a lot of
+
+code and you might have been testing
+
+your code by running your program and
+
+passing in some sample inputs and
+
+running it again and passing in some
+
+sample inputs or you might have been
+
+waiting for us to test your code instead
+
+but it's actually much better practice
+
+to get into the habits sooner rather
+
+than later of testing your own code
+
+using code of your own in fact whether
+
+you're writing a personal project or
+
+working in industry it's very common
+
+nowadays to not only write code to solve
+
+the problems that you want to solve but
+
+also to write a little extra code to
+
+test the code that you wrote and that's
+
+what we're going to focus on today
+
+writing our own tests so as to be all
+
+the more confident all the more certain
+
+that the problems we have been trying to
+
+solve are in fact solved correctly so
+
+let's rewind a few weeks now to a
+
+program we wrote a while back namely to
+
+to calculate uh numbers and specifically
+
+we left off with this calculator on
+
+trying to compute the power of a number
+
+like x squared or
+
+where x might be 2 or 3 or some other
+
+number as well well let me go ahead and
+
+resurrect that file by going into my
+
+terminal window here and running again
+
+code of calculator dot pi and let me go
+
+ahead and pick up where we left off way
+
+back when by defining a main function
+
+here and then in my main function i did
+
+something like this i said x equals int
+
+of input and i asked the user what's x
+
+question mark and then i immediately
+
+went ahead and printed out something
+
+like x squared is and then i passed in
+
+as a second argument to print the result
+
+of calling a function called square
+
+passing in that value x now of course i
+
+haven't yet implemented the square
+
+function so let's define that as well
+
+let me go down a couple of lines and
+
+define square
+
+and it takes an argument recall a
+
+parameter that at the time i called n
+
+for number so i'll do that again so i
+
+could technically choose any name for
+
+this variable and i recall did this i
+
+returned n times n and there were
+
+multiple ways to do this the squaring a
+
+number is multiplying it by itself so i
+
+could also use other syntax here but
+
+this is what we ultimately settled on
+
+and then recall that i ultimately called
+
+main in order to kick off the process of
+
+running this program so just as a test
+
+manually let me go ahead and run python
+
+of calculator.pi and hit enter what's x
+
+let's start with 2. all right x squared
+
+is 4 i think that's correct so let's run
+
+it again just for good measure python of
+
+calculator.pi let's type in 3 for x this
+
+time
+
+x squared is 9. and i think that's
+
+correct and i might be feeling pretty
+
+good at this point and i go off and
+
+submit my code to a course or i post it
+
+on the internet for others to use but i
+
+haven't really methodically tested this
+
+code and it's not necessarily the case
+
+that it works entirely in fact i haven't
+
+really considered a number of corner
+
+cases i went with some pretty obvious
+
+numbers like two and three but what
+
+about 0 what about negative numbers what
+
+about any number of other infinite
+
+numbers well we're not going to test an
+
+infinite number of inputs to this
+
+because the program would never halt but
+
+we should test some representative
+
+inputs ultimately but before we do that
+
+let's get into the habit of making sure
+
+that maine isn't always called let's
+
+adopt this habit again of doing if
+
+underscore underscore name underscore
+
+underscore equals equals quote unquote
+
+underscore underscore main underscore
+
+underscore only then should we execute
+
+main and i'm doing this now proactively
+
+because i want to make sure that when i
+
+import my square function perhaps from
+
+another library from another file
+
+treating it as though it's a library i
+
+want to make sure that main is not just
+
+automatically called itself now what do
+
+i want to do from here now that i've
+
+modified this program as follows well
+
+let's go ahead and write a completely
+
+different program whose sole purpose in
+
+life is to now test this program so i've
+
+got my actual calculator in
+
+calculator.pi i've readied myself to
+
+call main conditionally so that i can
+
+safely import one or more things from
+
+this file in another file well what
+
+should that other file be well by
+
+convention i'm going to create a file
+
+that's called test underscore
+
+and then because the thing i'm testing
+
+is this calculator itself let's call
+
+this file testcalculator.pi
+
+that's going to give me a new tab in
+
+which i can write a brand new program
+
+whose purpose in life is now
+
+specifically to test that program but
+
+really that program specific
+
+functionality built into that program is
+
+the square function let's focus on
+
+testing that function alright so how do
+
+i access that function in this program
+
+well recall that i can import a function
+
+from another file as though it's a
+
+library of my own a so-called module so
+
+i'm going to do this from calculator
+
+import square
+
+i could go ahead and just import square
+
+itself but then i would have to prefix
+
+my use of square recall by saying
+
+calculator dot everywhere and it's just
+
+a little cleaner to just import the one
+
+function and now let me go ahead and do
+
+this let me go ahead and define a
+
+function called test square this two is
+
+a convention if you want to test a
+
+function called square your function for
+
+testing should be called test underscore
+
+square or alternatively you could do
+
+square underscore test but i'll adopt
+
+this convention here now what kind of
+
+tests can we do well i don't dislike the
+
+tests i ran earlier testing x equals 2
+
+and x equals 3 but every time i
+
+want to test my program previously i
+
+would have to do that manually and
+
+that's going to get tedious it's not
+
+going to be easy for someone else to
+
+test it and if i'm actually working in
+
+the real world it would be nice if i
+
+could automatically have my program
+
+tested again and again by having some
+
+automated process run my own code so
+
+let's do that and take the human
+
+ultimately out of the equation so how
+
+might i go about testing the square
+
+function that i've now imported per line
+
+one well in my test square function why
+
+do i do this if
+
+the result of calling square of 2 does
+
+not equal 4 why don't we go ahead and
+
+print an error message because i know
+
+that in the real world 2 squared should
+
+equal 4 so if square of 2 does not equal
+
+4 there's a bug in my program there's a
+
+bug in my function i've made a mistake
+
+so let me go ahead and print something
+
+like that so i or someone else knows 2
+
+squared was not 4 for instance so i
+
+could print out anything here what
+
+should i maybe next test well let's do
+
+more than one test let's say if the
+
+square of 3 does not equal 3 squared 9
+
+then let's go ahead and print out that 3
+
+squared was not 9. so i haven't done any
+
+more testing than i did earlier but i've
+
+baked those two tests x equals 2 and x
+
+equals 3 into my own code here so i can
+
+now run those tests automatically if you
+
+will now it's not enough to just define
+
+a function called test square
+
+i actually if i want to run this
+
+function need to call it somehow and our
+
+convention for doing that is the same as
+
+always in this function here in this
+
+file too let me define main and main's
+
+sole purpose in life is going to be to
+
+test square and now at the bottom of
+
+this file as before let me go ahead and
+
+adopt my convention of if underscore
+
+underscore name underscore underscore
+
+equals equals quote unquote underscore
+
+underscore main underscore underscore
+
+then go ahead and call main so a lot of
+
+this is just boilerplate like we've seen
+
+this before defining a main function and
+
+calling a function to kick off some
+
+process now adding the conditional at
+
+the bottom of the file to make sure i'm
+
+only conditionally calling main just in
+
+case i import anything from this file
+
+elsewhere so let's see let's go ahead
+
+and test my code now let me go ahead and
+
+run
+
+test calculator with python and hit
+
+enter
+
+and nothing outputs
+
+nothing outputs but i think it's okay i
+
+think no output is good because look at
+
+my test square function i'm not printing
+
+anything
+
+if all seems well so let's let's
+
+demonstrate as much by going back to my
+
+calculator and let me break it let me
+
+introduce a bug maybe i didn't even get
+
+it right the first time maybe my code
+
+originally looked like this i wasn't
+
+thinking i forgot my squares and so i
+
+thought that the square of a number is n
+
+plus n instead of n times n so a
+
+reasonable mistake to make perhaps
+
+arithmetically let me now go back to my
+
+test calculator which i'm not going to
+
+change but i am going to rerun it python
+
+of testcalculator.pi
+
+i'm going to cross my fingers here but
+
+for naught i'm going to see immediately
+
+that 3 squared was not 9.
+
+now what is it well let's see when your
+
+tests fail how can we put our finger on
+
+what's wrong well it's a little
+
+interesting that i completely broke my
+
+square function and yet only one of
+
+these tests is failing it looks like
+
+this test lines 9 and 10 is fine because
+
+i'm not seeing that output but of course
+
+these
+
+two lines this test is failing because 3
+
+squared is not 9 when i'm using plus so
+
+just to be clear here why
+
+is my function only partially broken
+
+just to be clear why am i seeing only
+
+one error instead of two even though the
+
+square function is now mathematically
+
+broken uh nikita
+
+because two plus two is four
+
+yeah i mean it's as simple as that i
+
+just got lucky that two plus two is the
+
+same thing as two times two so this is
+
+one of those corner cases and this is
+
+why it's good to be in the habit of not
+
+just testing one thing but test several
+
+and make sure you're covering your bases
+
+so to speak so i got lucky here and that
+
+explains why i'm seeing only one error
+
+even though the function itself is
+
+flawed but let me propose that there's
+
+another way we could do this because
+
+honestly if i extrapolate from this
+
+simple example running not just two
+
+tests but three or four or 10 or 20
+
+tests you can imagine that my god the
+
+code is going to get so much more
+
+complicated than the function itself i
+
+mean already look in calculator.pi the
+
+function in question is two lines long
+
+and yet in test calculator the code in
+
+question is five lines long like i've
+
+written more code to test my code than i
+
+actually wrote original code so the
+
+fewer lines of code we can write when
+
+testing code i think the more likely you
+
+and i are to do it because it's going to
+
+be literally a little less work and just
+
+fewer opportunities for mistakes so
+
+what's another approach i can take here
+
+well it turns out in python there is
+
+another keyword that we haven't yet used
+
+which is this here assert a cert is a
+
+keyword in python and some other
+
+languages as well that allow you to do
+
+exactly that as in english to assert
+
+that something is true to sort of boldly
+
+claim that something is true and if it
+
+is
+
+nothing's going to happen no errors are
+
+going to appear on the screen but if you
+
+assert something in python and it is not
+
+true that is the thing you're in
+
+asserting a boolean expression is false
+
+you're actually going to see some kind
+
+of error on the screen
+
+so let's go ahead and try this new
+
+keyword as follows let me go back to my
+
+code here and just to make it a little
+
+simpler
+
+let me propose that i
+
+use this new keyword as follows let me
+
+simply assert that the square of two
+
+should equal four so i've changed my
+
+logic instead of checking for not equals
+
+i'm now asserting very loudly that it
+
+should equal four and then on one
+
+additional line let me do the other test
+
+assert that the square of three equals
+
+equals nine and that's it no if no
+
+indented print i'm just going to assert
+
+more simply these two things that i want
+
+to be true well let me go ahead now with
+
+calculator.pi still broken i'm still
+
+using plus accidentally instead of
+
+multiplication let me go ahead now and
+
+run python of testcalculator.pi crossing
+
+my fingers as always but it's not going
+
+to go well this time a whole lot of
+
+errors seem to appear on the screen and
+
+if i scroll up here for this traceback
+
+we'll see that the thing that failed was
+
+this line here a cert square of 3 equals
+
+equals 9. now unfortunately when you're
+
+using the assert keyword it's not
+
+terribly user-friendly it shows you the
+
+files and the line numbers involved but
+
+it does show you the specific line of
+
+code that failed the assertion that
+
+failed so to speak it's now kind of up
+
+to you and me to infer from this well
+
+wait a minute why is the square of 3 not
+
+equal to 9. so it's not super
+
+user-friendly but honestly it was like
+
+half as much code for me to write it's
+
+just two lines instead of those previous
+
+four but notice this little remnant down
+
+here this was an assertion error and we
+
+have seen errors before we've seen
+
+errors before when we've made other
+
+mistakes in our code and in the past
+
+what was our solution
+
+for catching those errors
+
+how do we catch errors that seem to
+
+resemble this even though we've not seen
+
+this one before tolu
+
+yeah in python we can use the try and
+
+accept keywords to try to do something
+
+optimistically except if something goes
+
+wrong do something else instead so this
+
+is a step forward and that i can at
+
+least catch this error but it's going to
+
+be perhaps a step backward and that i'm
+
+going to end up writing i'll admit in
+
+advance a little more code
+
+instead so let me go ahead and try this
+
+let me go back into my code here and
+
+instead of just asserting blindly let me
+
+go ahead as totally proposed and try
+
+to do this first assertion except if
+
+there is an assertion error like we saw
+
+a moment ago then go ahead and print out
+
+something more user friendly that
+
+explains what actually failed 2 squared
+
+is was not 4
+
+and let me go ahead similarly and try to
+
+assert that the square of 3 equals 9
+
+except if there's an assertion error
+
+there in which case i'm going to print
+
+out more user friendly 3 squared was not
+
+9. so i've taken a step forward but also
+
+a step back because now i have more code
+
+but i have at least introduced
+
+assertions and exceptions in a manner
+
+consistent with how we've seen in the
+
+past when something goes wrong you
+
+actually see an exception raised well
+
+let me go ahead and run this version of
+
+the program now instead python of
+
+testcalculator.pi crossing my fingers
+
+all right it still failed because i'm
+
+seeing output but we're back to at least
+
+user-friendly output so that's at least
+
+progress in some way here but it's again
+
+more code than might have been ideal and
+
+in fact if we continue this further what
+
+if we actually want to add additional
+
+test cases here as well
+
+well it seems like we might end up
+
+writing way more code than would be
+
+ideal for instance i'm testing two and
+
+three now i should probably test some
+
+negative numbers as well so why don't i
+
+go ahead and add in for instance let me
+
+go ahead and copy and paste this let me
+
+try to assert that the square of
+
+negative 2 equals equals 4 which should
+
+be the case mathematically and if not
+
+let me go ahead and change this to say
+
+negative 2 squared was not 4 and you
+
+know what let me go ahead and copy paste
+
+this again test another negative number
+
+just for good measure let's test the
+
+square of negative 3 which should equal
+
+9 but if it doesn't let's go ahead and
+
+say that negative 3 squared was not 9.
+
+and just to think aloud here what might
+
+be another good value to test i've tried
+
+2 i've tried 3. i've tried negative 2
+
+i've tried negative 3. i can't try in
+
+infinite numbers but there's at least
+
+something that's a little different in
+
+between those values let's try 0. 0 is
+
+an interesting case too just in case
+
+something might be wrong and y zero i'm
+
+just going with instincts here right
+
+odds are positive numbers are generally
+
+going to behave the same negative
+
+numbers might generally behave the same
+
+zero might be a little anomalous there's
+
+no
+
+science to it necessarily but rather
+
+considering for yourself based on your
+
+own experience like what are the
+
+potential corner cases based on the
+
+function you're trying to test i'm
+
+trying to test something mathematical so
+
+i want to test representative values so
+
+let me go ahead and paste in one more
+
+try except block let's assert that the
+
+square of zero should equal zero and if
+
+not i'll say something explanatory like
+
+zero squared was not zero now if i go
+
+ahead and run this python of
+
+testcalculator.pi and hit enter
+
+now i see multiple errors and this is
+
+interesting it's a bit of a clue because
+
+notice that some but not all of these
+
+assertions are failing
+
+the one for 2 squared is apparently ok
+
+as we noted earlier recall that two
+
+squared happens to be two plus two so
+
+that bug doesn't really throw off our
+
+test but it's a good thing we tested for
+
+three it's a good thing we tested for
+
+negative two and negative three because
+
+all of those tests caught this error the
+
+zero test did not notice because zero
+
+squared is of course zero but zero plus
+
+zero is zero so we're getting lucky or
+
+unlucky there depending on how you you
+
+view the glass is half full or half
+
+empty here we at least by way of having
+
+multiple tests caught this mistake
+
+somehow so it would be nice though if we
+
+weren't
+
+writing so much darn code here right
+
+because notice what i've done i have try
+
+accept try except i have all of these
+
+assertions i have a main function i have
+
+this if conditional at the bottom of my
+
+file i mean honestly who's going to want
+
+to write 31 lines of code now just to
+
+test a two-line function right no one's
+
+going to write test code like this if
+
+we're all
+
+writing so much more code to do the
+
+actual testing
+
+so people have solved this problem if
+
+you are in the habit of testing your
+
+code a lot or wanting to if i'm in the
+
+habit of wanting to test my code a lot
+
+if everyone else in the real world is in
+
+this habit of wanting to test their code
+
+why don't we create tools that make it a
+
+little easier to do so and in fact there
+
+is a mechanism for doing this whereby we
+
+can use a tool that's popularly called
+
+pi test so pi test is a third-party
+
+program that you can download and
+
+install that will automate the testing
+
+of your code so long as you write the
+
+tests but what's nice about this library
+
+and others like it is that it adopts
+
+some conventions so that you don't have
+
+to write as many lines of code yourself
+
+manually they do some of that
+
+automatically for you now this is a
+
+third-party library there's other
+
+libraries for unit tests so to speak
+
+that is testing units of your code some
+
+of them come with python itself we're
+
+proposing that we look at pi test today
+
+because it's actually a little simpler
+
+than the unit testing frameworks that
+
+come with python itself and what do we
+
+mean by unit testing unit testing is
+
+just a formal way of describing testing
+
+individual units of your program what
+
+are those individual units they're
+
+typically functions so unit tests are
+
+typically tests for functions that you
+
+have written now what does this mean in
+
+practice here well let me go back to my
+
+vs code here and let me propose that we
+
+simplify
+
+my test calculator significantly i'm
+
+going to go ahead and delete all of
+
+these tests which were
+
+which we're accumulating to like 31
+
+lines of code and let's see if we can
+
+distill the tests to their essence using
+
+pi test from my same calculator program
+
+let me still import square so i do still
+
+need that line of code so that i can
+
+test that specific function now i'm
+
+going to go ahead and define a function
+
+just like i did before as follows i'm
+
+going to define a function called test
+
+square again by convention test
+
+underscore and the name of the function
+
+you want to test though it doesn't have
+
+to be that way and now i'm going to go
+
+ahead and make a few assertions i'm
+
+going to assert that the square of 2
+
+should equal 4. i'm going to assert that
+
+the square of 3 should equal 9. i'm
+
+going to assert that the square of
+
+negative 2 should equal 4 and i'm going
+
+to insert that the square of negative 3
+
+should equal 9 and lastly for now i'm
+
+going to assert that the square of 0
+
+should equal 0. so i'm still using the
+
+assert keyword as i introduced earlier
+
+and even though it was a little tedious
+
+to type those i mean it's only eight
+
+lines of code now and they're so easy to
+
+type it's not trying except in all of
+
+this
+
+wouldn't it be nice if something else
+
+someone else handled the try the accept
+
+the printing all of the standardization
+
+of actually running these tests and
+
+that's where indeed pi test comes into
+
+play per the documentation for pi test
+
+which can itself be installed with pip
+
+install pi test which we've used to
+
+install other libraries in the past you
+
+can look at the documentation here for
+
+all of its formal usage but fortunately
+
+pi test is pretty user friendly as
+
+testing frameworks go and it actually
+
+allows us to dive right in by just
+
+running pi test on the code that we've
+
+written so if i go back to vs code here
+
+and look at my testcalculator.pi
+
+which notice has no main function
+
+anymore it has no conditional it has no
+
+tries it has no accepts it has no prints
+
+it just has my few assertions pi test
+
+and other libraries like it are going to
+
+automate the process of running these
+
+tests for me and
+
+informing me on the screen whether or
+
+not any of those tests failed so let me
+
+go ahead and do this i'm going to go
+
+ahead and increase the size of my
+
+terminal window for a moment just so we
+
+can see more on the screen and i'm going
+
+to run not python as i've been doing i'm
+
+going to run pi test which again is this
+
+third party tool for running tests in
+
+your code i'm going to run pi test of
+
+test underscore calculator so that same
+
+file i'm going to cross my fingers as
+
+always and hit enter and we'll see that
+
+ah
+
+something has failed now admittedly even
+
+though i do think you'll find that pi
+
+test is relatively simple to use its
+
+output at least at first glance is not
+
+necessarily super user friendly so what
+
+are we seeing here we'll notice at the
+
+very top of my window is the command
+
+that i ran after my prompt right below
+
+that is a single f in red which means
+
+fail so not very encouraging i tried
+
+really hard here but fail is my grade on
+
+this program but let's see exactly what
+
+happened well if i look at this excerpt
+
+here under failures you'll see that test
+
+square is the function that failed all
+
+right that makes sense because that's
+
+the only one i wrote and you'll see here
+
+somewhat
+
+arcane output describing what the error
+
+was so what you're seeing here is the
+
+first line of output equals equals 4
+
+which is fine there's no red error
+
+message below that so that one's okay
+
+but this line of code here assert that
+
+square of 3 equals equals 9 pi test did
+
+not like that assertion because it
+
+didn't end up being true in fact per the
+
+red e at the start of this line you'll
+
+see that i'm effectively trying to
+
+assert that six equals equals nine now
+
+where did the six come from okay wait a
+
+minute if my test involves this notice
+
+that where 6 equals square of 3 this is
+
+saying that because i've called square
+
+passing in a value of 3 it turns out its
+
+return value is 6 and of course
+
+mathematically 6 does not equal equal 9
+
+so that's why this is failing now pi
+
+test is not as user friendly as telling
+
+you exactly why the bug is there or how
+
+to fix it this is really just a clue to
+
+you what must be wrong what you're
+
+seeing here is a clue that the first
+
+test passed because there's no red error
+
+below that line of code but this test
+
+failed somehow or other your square
+
+function is returning 6 when passed in 3
+
+instead of nine so at this point you
+
+sort of put your detective hat on you go
+
+back to your actual code and you think
+
+about in calculator to pi how in the
+
+world is line seven of my square
+
+function returning six instead of nine
+
+and at this point odds are the light
+
+bulb would go off above your head
+
+proverbially and you would see oh i'm
+
+using addition instead of multiplication
+
+but what pi test has done for us is
+
+automate the process of at least
+
+pointing out that error for us and if i
+
+now go in and fix this let me go ahead
+
+and the light bulb has gone off i change
+
+the plus to a
+
+to multiply now i'm going to go ahead
+
+and after clearing my screen i'm going
+
+to run not python but pi test of
+
+testcalculator.pi
+
+crossing my fingers again and now it's
+
+green and i see just a dot which
+
+indicates that my one and only test
+
+passed
+
+i'm good a hundred percent success with
+
+my test now after fixing that bug all
+
+right let me pause here and see
+
+if there's any questions
+
+about pi test about my file or what i'm
+
+seeing here bashal
+
+um hi thanks for
+
+letting me ask the question so my
+
+question is what if a user
+
+instead of because we are taking input
+
+from the user what if the user is
+
+somewhat malicious and types in a string
+
+instead of an integer or maybe he types
+
+in a float or some other data type
+
+really good question
+
+yeah so what if the user like we've seen
+
+in past examples types in cat instead of
+
+a number when we're expecting an integer
+
+how do we test for something like that
+
+at the moment i'm admittedly not testing
+
+user input if i go back to my code here
+
+notice that my calculator function of
+
+course has the square function that we
+
+keep testing and re-testing but notice
+
+that all of the user input is currently
+
+relegated to my main function and
+
+admittedly as of now i am not testing my
+
+main function so there could be one of
+
+those bugs and in fact there would be
+
+because if the user types in a string
+
+like cat instead of an integer like two
+
+or three then line two recall would
+
+actually raise a value error exception
+
+so we've seen that before so when it
+
+comes to testing your code this is
+
+actually a good reason for having
+
+multiple functions in your program
+
+rather than putting all of your logic in
+
+just the file itself rather than putting
+
+all of the logic in just main it's
+
+actually really good really helpful
+
+practice to break your ideas up into
+
+smaller bite-sized functions that
+
+themselves are testable and what do i
+
+mean here square is perfectly testable
+
+why because it takes as input a
+
+parameter called n
+
+and it returns as output in integer
+
+which is going to be the square thereof
+
+hopefully it has a well-defined input
+
+and a well-defined output it is
+
+therefore completely within your control
+
+in your test program to pass in those
+
+values now i will say if you want to
+
+test whether
+
+square behaves properly when past
+
+something like a string like quote
+
+unquote cat we could absolutely do
+
+something like this assert that the
+
+square of
+
+quote unquote cat it's not going to
+
+equal something you can actually using
+
+different syntax assert that a specific
+
+exception will be raised so if we were
+
+actually going to go back into our
+
+square function improve it and
+
+deliberately raise an exception we could
+
+test for that too but for now i'm
+
+deliberately only testing the square
+
+function i'm not testing
+
+for specific user input but that's
+
+another problem to be solved other
+
+questions now
+
+on unit tests yeah
+
+hope do you use the units test to test a
+
+code for
+
+the
+
+cs50 check
+
+check 50. so check 50 is similar in
+
+spirit check 50 is a tool that we cs50
+
+wrote that is essentially doing
+
+something like pi test for the
+
+evaluation of students code it is
+
+similar in spirit but think of check 50
+
+as being an alternative to pi test if
+
+you will but it works a little bit
+
+differently but same idea pi test and
+
+unit testing more generally is a
+
+technique that is independent of cs50
+
+and is something that you can and should
+
+be doing on your own code both in or
+
+outside of this class how about one
+
+other question here on
+
+on um on our uh unit tests uh lavanya
+
+i'm adviser hello
+
+my question is instead of writing 4
+
+times like s square of 2 is equal to 4
+
+instead of that can we write if is it
+
+i is equals to in square brackets the
+
+numbers we want
+
+instead of writing 4 lines a really good
+
+question absolutely right now if i go
+
+back to testcalculator.pi
+
+it's indeed pretty manual i mean it took
+
+me a while to say and to type out those
+
+several lines and you could imagine
+
+writing some kind of loop to just
+
+assert in a loop that this equals that
+
+that this equals that and so forth using
+
+a list or using maybe a list or a
+
+dictionary or some structure like that
+
+so yes you can absolutely automate some
+
+of these tests by not just doing the
+
+same thing again and again you can still
+
+use all of the syntax of python to do
+
+loops but generally speaking your tests
+
+should be pretty simple and in fact let
+
+me propose that we improve upon even
+
+this design further because at the
+
+moment what's not really ideal
+
+when i run all of this
+
+when i run all of these tests when my
+
+function is buggy is notice the output
+
+that i got let me reintroduce that same
+
+bug by changing my multiplication back
+
+to addition let me increase the size of
+
+my terminal window again and let me run
+
+pi test again of testcalculator.pi so
+
+this is the version of my code now that
+
+has the bug again so i'm going to see
+
+that big massive failure where this
+
+failure has been displayed to me but
+
+this is not as helpful as it could be
+
+right because i have all of those other
+
+tests in my code recall that i had what
+
+one two three four five separate tests
+
+and i'm only seeing the output of the
+
+first now why is that well if we go back
+
+to my code here you'll see that the
+
+first assertion that's failing namely
+
+this one here that assert of square of
+
+three equals equals nine the other tests
+
+aren't even getting run and that's not a
+
+big deal in the sense that my code is
+
+buggy so one or more of them are
+
+probably going to fail anyway but
+
+wouldn't it be nice to know which of
+
+them are going to fail and in fact it's
+
+ideal to run as many tests all at once
+
+as possible to give you as many clues as
+
+possible to finding your bug so let me
+
+propose that we improve the design of my
+
+testing code now still using pi test as
+
+follows instead of having one big
+
+function called test square that tests
+
+the entire function itself with so many
+
+different inputs let's break down my
+
+tests into different categories and here
+
+too there's no one right way to do this
+
+but my mind is thinking that i should
+
+maybe test positive numbers separately
+
+test negative numbers separately and
+
+test zero separately i could think of
+
+other ways i could test even numbers i
+
+could test odd numbers or maybe some
+
+other pattern altogether but separating
+
+this big test into multiple tests is
+
+probably going to yield more clues for
+
+me when something goes wrong so let me
+
+do this
+
+let me go ahead and rename this function
+
+to test positive initially and let me
+
+include in that function only those
+
+first two tests let me then create
+
+another function here called test
+
+negative and in this function let me
+
+test only negative 2 and negative 3.
+
+then down here let me do one more def of
+
+test 0 and i'll just run one test in
+
+there so i have the same assertions the
+
+same five but i've now divided them up
+
+among three separate functions what's
+
+nice about pi test and other unit
+
+testing frameworks is that all three of
+
+these test functions will be run
+
+automatically even if one of them fails
+
+the others will be attempted that means
+
+that if one or two or three of them fail
+
+i'll have one or two or three clues now
+
+for helping me find that mistake so let
+
+me go ahead and again increase the size
+
+of my terminal window just so we can see
+
+more on the screen my calculator still
+
+has the bug using addition instead of
+
+multiplication let me go ahead and run
+
+not python but again pi test of
+
+testcalculator.pi
+
+crossing my fingers is always and now oh
+
+my god there's even more errors on the
+
+screen but this in itself is more
+
+helpful let's work through them from top
+
+to bottom so under failures here in all
+
+caps which i know is not very
+
+encouraging to see failure when you're
+
+just trying to solve a problem but
+
+that's what these frameworks do under
+
+failures the first function that failed
+
+is test positive but here too we see the
+
+same clue as before the first one 2 the
+
+square of 2 equals equals 4. that one's
+
+fine it's not airing with any red errors
+
+but the next one is failing so i know
+
+that square is broken when i pass in 3.
+
+all right what about down here it looks
+
+like unfortunately my test negative
+
+function is failing 2y well when i pass
+
+in oh this is interesting here now
+
+negative 2 doesn't even work so i got
+
+lucky with positive 2 but negative 2
+
+isn't working so that's a bit of a clue
+
+but in total only two tests failed so
+
+notice at the very bottom this summary
+
+two failed and one passed what's the
+
+other one what was the third one test
+
+zero so test zero is passing these two
+
+are failing and so that kind of leads me
+
+logically mathematically if you will to
+
+the source of the bug and just to be
+
+clear too if you have a lot of tests
+
+this little one line output is helpful
+
+even though also a bit discouraging fail
+
+fail and dot means pass so there are the
+
+three tests just depicted graphically a
+
+little bit differently well let me
+
+rewind now and go back into
+
+calculator.pi let's fix that bug because
+
+let's suppose that i've deduced okay i'm
+
+using addition i should have been using
+
+multiplication all this time let me now
+
+after fixing the bug yet again let me go
+
+back to my big terminal let me run pi
+
+test of test calculator up high hitting
+
+enter crossing my fingers now and dot
+
+dot dot means all is well 100 of my
+
+tests passed all three of them
+
+so now i'm good it doesn't necessarily
+
+mean that my code is 100 correct but it
+
+does mean that it has passed 100 of my
+
+current tests and so it would probably
+
+behoove us to think a little harder
+
+about maybe we should test bigger
+
+numbers maybe we should test even
+
+smaller numbers maybe we should test
+
+strings or something else the onus is
+
+ultimately on you to decide what you're
+
+going to test but in the real world
+
+you're going to be very unhappy with
+
+yourself or someone else maybe your boss
+
+is going to be very unhappy with you if
+
+you did not catch a bug in your code
+
+which you could have caught had you just
+
+written a test to try that kind of input
+
+all right let me pause again and see if
+
+there's any questions now
+
+on unit testings with pi test
+
+yeah uh anjali over to you
+
+hi it's anjali anjali yes um
+
+yeah
+
+um so if you wanted to test like someone
+
+suggested before user input as well as
+
+testing your function do you do that
+
+within the same file or do you make
+
+separate files for different types of
+
+tests really good question you could
+
+absolutely make separate files to test
+
+different types of things or if you
+
+don't have that many you can keep them
+
+all in the same file at the moment i've
+
+been storing all of my tests in one file
+
+for convenience and there's not terribly
+
+many of them but we'll take a look in a
+
+bit in an example that allows me to put
+
+them into a folder and even run pi test
+
+on a whole folder of tests as well so
+
+that's possible other questions on unit
+
+testing
+
+uh yeah peuge
+
+can you hear me yes we can
+
+hi uh so i've got two questions um
+
+so uh a couple while ago you just used
+
+um an exception called assassin
+
+um i'm not sure what was yeah assertion
+
+error
+
+what exactly does that particular error
+
+catch
+
+and my second question is
+
+does the assert keyword
+
+um
+
+stand out to the compiler and exactly
+
+tell them to insert this particular
+
+line of code indeed the assert keyword
+
+we're seeing and the assertion error we
+
+saw earlier are intertwined so when you
+
+use assert and the assertion fails
+
+because whatever boolean expression
+
+you're using is not true it's false an
+
+assertion error by definition of python
+
+will be raised so those two work in
+
+conjunction
+
+those errors those assertion errors are
+
+still being raised by my code here when
+
+any of these lines of code fail however
+
+pi test this third party library is
+
+handling the process of catching those
+
+exceptions automatically for me so as to
+
+give me the standard output so we
+
+started today's story by really
+
+implementing unit testing myself i wrote
+
+all of the code myself i wrote main i
+
+did my conditional i did try and accept
+
+honestly it's going to get incredibly
+
+painful to write tests long term if you
+
+and i have to write that much code every
+
+time especially when our function is
+
+this small
+
+so pi test and unit testing frameworks
+
+like it just automates so much of that
+
+essentially pi test adds the try the
+
+accept the if the prints for you so you
+
+can just focus on the essence of the
+
+tests which really are these inputs and
+
+outputs how about time for one other
+
+question here on unit testing as well
+
+yeah over to uh jayish if i'm saying it
+
+right
+
+yes sir uh
+
+sorry
+
+am i audible sir yes we can hear you
+
+okay sir uh when we uh enter
+
+minus six or minus five uh the
+
+uh square or square uh square root of
+
+that
+
+number comes up but when we put a 6.6 or
+
+5.6 something like that integer then uh
+
+line shows the error so
+
+what's happening there
+
+what's happening there if you pass in a
+
+float instead of
+
+yes so
+
+if i'm deliberately testing integers
+
+right now in large part because i only
+
+want pow to operate on integers and that
+
+might be conveyed in python's
+
+documentation or my own documentation
+
+for that function if you were to pass in
+
+something else like a float it turns out
+
+that floating point values in python and
+
+other languages are actually very hard
+
+if not impossible to represent 100
+
+percent precisely and so if you are
+
+trying to compare it against some other
+
+value they might be slight rounding
+
+errors as a result i'm just inferring
+
+from what you've described but i'm very
+
+deliberately now testing this function
+
+with only the inputs that i would expect
+
+it might indeed throw other errors if
+
+other inputs are passed all right allow
+
+me to propose in fact that we consider
+
+not just testing code that deals with
+
+integers as inputs and outputs which as
+
+all things go is relatively
+
+straightforward what if we're dealing
+
+with strings as well and let me rewind
+
+us in time here in vs code to that very
+
+first program we wrote a few different
+
+versions of in hello.pi that ultimately
+
+looked a little something like this i
+
+had a main function that prompted the
+
+user for the value of a variable by
+
+asking them what's your name question
+
+mark and then we went ahead and did
+
+something like hello open paren name
+
+passing that user's name into a function
+
+called hello now that function hello
+
+recall ultimately looked like this we
+
+defined hello as taking a parameter
+
+called two the default value of which
+
+was world and that function very simply
+
+printed hello
+
+followed by a comma and then whatever
+
+the name that had been passed in and
+
+then we ultimately called main but for
+
+now onward i'm going to always add this
+
+if conditional if name equals equals
+
+underscore underscore main then and only
+
+then do i want to call main so that's
+
+essentially what this program looked
+
+like in its last incarnation how do we
+
+go about testing it well here again too
+
+i'm not going to test the user's input
+
+per se in main i'm going to focus really
+
+on the module the module of code here
+
+that's of interest which is the hello
+
+function itself how can i go about
+
+testing
+
+the hello function
+
+well unfortunately even if i start by
+
+doing something like code of test hello
+
+dot pi let me go about and start writing
+
+a test program i could import from my
+
+hello program a function called hello so
+
+a bit strange to see from hello import
+
+hello but notice that on this line here
+
+i'm importing from the module that is
+
+the file called hello.pi the function
+
+called hello and how do i go about
+
+testing this well
+
+if i have a function like define
+
+test argument
+
+like this well let me sue this
+
+so if i were to find a function like
+
+define
+
+test hello what could i do well i could
+
+call hello with quote unquote say
+
+david
+
+and then check if it equals what hello
+
+comma david
+
+so would this work this approach here if
+
+i've written a test
+
+called test hello that calls hello with
+
+an argument of david and then tests its
+
+return value just like we've done for
+
+our calculator with this work as written
+
+and let me go back to in just a moment
+
+the version of hello that we're testing
+
+so you can see that function hello
+
+here's the test
+
+here's the actual code
+
+would this test now work
+
+any thoughts
+
+yeah a valentino
+
+okay
+
+yeah can you hear me yes we can
+
+okay uh i think the problem is that in
+
+the first version in hello dot pi
+
+you're using the toe argument that you
+
+first declare when you declare the
+
+function instead of using the name
+
+okay i that is actually
+
+uh not a bug here so let me stipulate
+
+that in hello.pi this code actually does
+
+work as intended and let me go ahead and
+
+test it manually just to demonstrate as
+
+much let me run python of hello.pi
+
+typing in as my name david and i see in
+
+fact that it says hello david if though
+
+i were to change this program and get
+
+rid of the name argument get rid of the
+
+name variable and just call hello again
+
+running python if hello.pi this time i'm
+
+not even prompted because i got rid of
+
+my input call but it does pre-behave as
+
+i expect it does say hello world so let
+
+me stipulate that this code in its
+
+current form is actually correct but my
+
+test is not going to work as i'd hoped
+
+and there's a subtle difference between
+
+hello versus my pal function that expl
+
+versus my there's a subtle difference
+
+between my hello function and my square
+
+function that explains
+
+why might this test not work as intended
+
+michael
+
+uh because it's not returning a value
+
+yeah exactly recall our discussion early
+
+on about functions functions can either
+
+return a value like my square function
+
+hands you back the square of some value
+
+or they can have side effects sort of
+
+visual
+
+artifacts that might happen on the
+
+screen like printing something out on
+
+the screen and by definition that's how
+
+print works notice that hello it is
+
+short but it's implemented ultimately
+
+using the print function which does not
+
+return a value as i'm using it here it
+
+instead has this side effect of printing
+
+something onto the screen so it is not
+
+correct in my test function to check if
+
+the return value of hello
+
+equals equals hello david because again
+
+hello is not returning anything it's
+
+printing something that side effect but
+
+notice literally it has no return
+
+keyword unlike my square function which
+
+did
+
+so here's an opportunity to to perhaps
+
+change how i go about
+
+implementing my actual functions it
+
+turns out that as your programs get more
+
+and more sophisticated more and more
+
+complicated it tends to be best practice
+
+not to have side effects if you can
+
+avoid it especially if you want your
+
+code to be testable and in fact i'm
+
+going to propose that we change my hello
+
+program to now work as follows let me go
+
+ahead and change this function to not
+
+print hello and then that name let me go
+
+ahead and literally return maybe an f
+
+string which will clean this up a little
+
+bit hello comma 2
+
+close quote at the end so my syntax here
+
+is just the familiar f string or format
+
+string it's going to return hello world
+
+or hello david or hello whoever's name
+
+is passed in is that argument but i'm
+
+returning it now i'm not printing it out
+
+so what needs to change up here well i
+
+could do something like this i could say
+
+something like output equals hello and
+
+then print output in my main function or
+
+i can simplify that because i don't
+
+really need that variable i could
+
+instead just do this i could still call
+
+hello but i could immediately print out
+
+the result and this version of my hello
+
+program now is actually more testable
+
+why because these assert statements that
+
+we're using and we've seen this far for
+
+our tests are really designed to test
+
+arguments into functions and return
+
+values they're from not testing side
+
+effects so if you're doing equals equals
+
+you're looking for a return value
+
+something that's handed back from the
+
+function so that's fine if i modify the
+
+design of my program now not to just
+
+print hello but to return the string the
+
+sentence the phrase that i want to
+
+construct i can leave it to the caller
+
+that is the function who's using this
+
+hello function to handle the actual
+
+printing now what does this mean in my
+
+code well it means now if my hello.pi
+
+looks like this and hello is indeed
+
+returning a value in my test to low
+
+function
+
+i can test it exactly like this so let
+
+me go ahead now and run pi test of test
+
+hello dot pi crossing my fingers and it
+
+passed because passing in david does
+
+apparently return hello comma david well
+
+let's do one other test two let's call
+
+hello without any arguments and i think
+
+that the return value there should be
+
+hello world by default because the
+
+default value of its parameter was meant
+
+to be world so let me test this too oh
+
+and
+
+i cheated here let me rewind here
+
+um
+
+apologies
+
+i think we'll fix this later
+
+let me now go back to my test hello.pi
+
+file and actually run it now and we'll
+
+see that the one test we're running is
+
+to assert that the return value of hello
+
+david equals equals quote unquote hello
+
+david so let me go ahead and run pi test
+
+of test hello.pi crossing my fingers as
+
+always and voila one passed so i passed
+
+this test because apparently the return
+
+value of hello does indeed equal hello
+
+comma david well let's test the other
+
+scenario what if i pat call hello
+
+without any arguments let's assert that
+
+calling hello with nothing in those
+
+parentheses similarly equals hello comma
+
+but world the default value let me now
+
+go ahead and run pi test of test hello
+
+dot pi and that too passes entirely but
+
+there too suppose that i had made some
+
+mistakes suppose that there were a bug
+
+in my code it might not be best practice
+
+to combine multiple tests in this one
+
+function so let's make it more clear
+
+what might pass or fail let's call the
+
+first function test the default
+
+to this function and let's only include
+
+this first line of code and then let's
+
+go ahead and define another function
+
+like test argument to test this other
+
+line of code here so now i have two
+
+different tests each of which is testing
+
+something a little fundamentally
+
+different so now when i run my code it's
+
+still not broken if i run pi test of
+
+test hello.pi enter i've now passed two
+
+tests and that's just as good as before
+
+but if i did have a bug having two tests
+
+instead of one would indeed give me
+
+perhaps a bit more of a hint as to
+
+what's wrong
+
+questions now
+
+on this testing of return values when
+
+these return values are now strings
+
+instead of integers and why we've done
+
+this
+
+yeah alon if i'm saying it right or alan
+
+yes alan uh so my question is about
+
+function inside the function
+
+can we test that too
+
+or recursion we
+
+we haven't see
+
+if you have if you have a recursive
+
+function which we've not discussed in
+
+this class yes you can absolutely test
+
+those too
+
+by simply calling them exactly in this
+
+way recursion does not affect this
+
+process other questions on testing in
+
+this way
+
+yeah over to uh justice
+
+oh
+
+wrenching middle screen is frozen on me
+
+sorry one second there we go justice
+
+still muted though
+
+if you don't mind asking via the chat
+
+i'm afraid i can't hear you here but
+
+we'll do our best to answer in the chat
+
+rohit over to you
+
+rohit hello you're on the internet
+
+hello hello
+
+hello
+
+my question was can we test input
+
+yes can you test input you can and i've
+
+not done this here but it turns out it's
+
+a little more involved to test user
+
+input and the syntax for doing so is a
+
+little bit more intricate so for today's
+
+purposes we'll focus only on testing
+
+individual functions and leave for
+
+another time the testing of input itself
+
+all right how about one more question
+
+here on unit test before we look at one
+
+final example
+
+uh gulken i'm sorry if i'm not saying
+
+that right
+
+yeah that's right thank you
+
+um
+
+when testing our uh
+
+arguments like uh can we use something
+
+like a loops or
+
+inside of assets or for the values
+
+absolutely you can absolutely use a loop
+
+to test multiple values in this case for
+
+instance i could do something like this
+
+i could say for name in the following
+
+list of hermione
+
+say harry
+
+and ron
+
+i could then within this loop assert
+
+that hello of that given name equals
+
+equals
+
+say
+
+the format string of hello comma name
+
+and then run all of these here at once
+
+by running again pi test of testolo.pi
+
+it's still going to be just one test
+
+within that function but if there's
+
+something interesting about those
+
+several strings that makes it compelling
+
+to test all of them you can absolutely
+
+automate the tests in that way with that
+
+said each of your tests should ideally
+
+be pretty simple and pretty small why
+
+because you don't want to write so much
+
+code so much complicated code that your
+
+tests might be flawed what we don't want
+
+to have to do is write tests for our
+
+tests and test for our test for our test
+
+because it would never end so keeping
+
+tests nice and simple is really the goal
+
+so that a reasonable human yourself
+
+included can eyeball them and just claim
+
+yeah that is correct we don't need tests
+
+for our tests
+
+allow me to propose that we do one final
+
+thing here particularly if we end up
+
+having lots of tests instead of just one
+
+we might want to start organizing these
+
+tests into a folder and it turns out
+
+that we can do this here as well let me
+
+propose that i create a new folder this
+
+time using make dir mkdir and create a
+
+folder called test then i'm going to
+
+within that folder
+
+uh sorry let me think for a moment we
+
+haven't introduced these commands but we
+
+will in the online version of the class
+
+rest assured give me just a moment
+
+moment to think
+
+um
+
+okay
+
+god
+
+all right and how about one final
+
+feature suppose that we have not just
+
+one test in one file but we have a whole
+
+bunch of tests such that we want to
+
+organize all of those tests in a folder
+
+that too is standard practice and pi
+
+test supports that as well so for
+
+instance suppose that i want to continue
+
+testing this program hello.pi even
+
+though it itself doesn't have many
+
+functions i could go about creating a
+
+folder called test as by
+
+typing damn it
+
+one sec
+
+okay
+
+try that once more apologies
+
+let's introduce one other feature as
+
+well suppose that you want to test this
+
+program with multiple tests with someone
+
+sorry
+
+all right how about one other feature
+
+suppose that we don't have just one test
+
+but many different tests instead and we
+
+want to start to organize those tests
+
+into multiple files and even a folder
+
+well pi test and other frameworks
+
+support that paradigm as well in fact
+
+let me go ahead and test hello.pi using
+
+a folder of tests with technically just
+
+one test but it'll be representative of
+
+having even more in that folder i'm
+
+going to go ahead and create a new
+
+folder called test using makeder at my
+
+command line and then within that file
+
+i'm within that and then within that
+
+folder i'm going to go ahead and create
+
+a file called test hello dot pi
+
+within this file meanwhile i'm going to
+
+test the same things i'm going to go
+
+ahead and from hello import hello
+
+and i'm going to go ahead and define a
+
+function like test default that simply
+
+tests the scenario where hello with no
+
+arguments returns hello comma world and
+
+i'm going to have that other function
+
+where i test that an argument is passed
+
+and in this case i'll choose an argument
+
+like asserting that hello quote unquote
+
+david equals indeed hello comma not
+
+world but david so in this case i've
+
+just recreated the same test as earlier
+
+but they're in a file now in a folder
+
+called test well pi test allows me to
+
+run these here too but to do so i
+
+actually need to create one other file
+
+within my test directory i need to
+
+create a file called underscore
+
+underscore init underscore underscore
+
+dot pi which has the effect even if this
+
+file is empty of telling python to treat
+
+that folder as not just a module but a
+
+package so to speak a package is a
+
+python module or multiple modules that
+
+are organized inside of a folder and
+
+this file underscore underscore init
+
+underscore underscore pi is just a
+
+visual indicator to python that indeed
+
+it should treat that folder as a package
+
+if i had more code in this folder i
+
+could do even more things with this file
+
+but for now it's just a clue that it's
+
+indeed meant to be a package and not
+
+just a module or file alone what i can
+
+now do in closing is run pi test not
+
+even on that specific file but on a
+
+whole folder of tests so if i run pi
+
+test of test where the test is the name
+
+of that folder pi test will
+
+automatically search through that folder
+
+looking for all possible tests granted
+
+there's just those two in this one file
+
+but when i run it now with enter i'll
+
+still pass those tests i'll still get a
+
+hundred percent and i now have a
+
+mechanism ultimately for testing my own
+
+code so whether you're writing functions
+
+that return integers or something else
+
+functions that have side effects that
+
+could be rewritten as functions that
+
+return values you now have a mechanism
+
+to not just wait for want someone like
+
+us to test your code and not just test
+
+your code manually again and again which
+
+might get tedious and you might make
+
+mistakes by not including some possible
+
+inputs we now have an automated
+
+mechanism for testing one's own code
+
+that's going to be even more powerful
+
+when you start collaborating with others
+
+so that you can write tests that ensure
+
+that if they make a change to the same
+
+code they haven't broken the code that
+
+you've written
+
+all that and more in the days to come
+
+we'll see you next time
+
+okay just we're going to take a 10
+
+minute break now and we'll transition to
+
+file i o so we'll see you in 10 or so
+
+minutes
+
+okay
+
+all right we are back casually first any
+
+questions about anything we just did or
+
+what's about to happen before we dive in
+
+the next lecture will be on file io and
+
+when that one ends we'll be will be done
+
+any questions here from the group uh
+
+yeah your go
+
+hi can you hear me yes hi
+
+hi thanks for thanks for teaching us
+
+thank you so much um
+
+i just wanted to
+
+make sure i understand understood um
+
+underscore underscore init underscore
+
+underscore pi does that what does that
+
+tell python that it that the file of the
+
+folder is
+
+it tells python that it's a package
+
+which means that it's a library
+
+and it essentially makes it easier for
+
+python to load other files so for
+
+instance
+
+very concretely
+
+[Music]
+
+notice that if i open up my
+
+test directory
+
+which contained this file
+
+so in my test directory we ended up with
+
+this file that it just imported from
+
+hello import hello
+
+what's that
+
+oh yes thank you
+
+um so what i've just done here um yorgo
+
+is opened up testhello.pi
+
+in my test folder and notice that it's
+
+importing from hello import hello but
+
+recall that my hello. file is not in the
+
+test folder it's one level up so among
+
+the things the package technique does is
+
+it just makes it possible for python to
+
+find the hello file it's it's stuff like
+
+that this is sort of annoying python
+
+convention that just works uh but
+
+without it being um as obvious as it
+
+could be
+
+oh still muted
+
+oh back to yoga
+
+sorry yoga we lost you on the screen
+
+coming back yes
+
+still there we go
+
+oh thank you sorry um so otherwise
+
+um would python not find the the file to
+
+test yeah i think so
+
+let me try this let me remove the init
+
+pot file
+
+all right so let me i've just removed
+
+init.pi
+
+and now i'm going to run pi test on that
+
+folder again and hit enter and you get
+
+all of these module errors so so i
+
+deliberately did it the right way so as
+
+to not trip over this error
+
+thank you so much sure how about time
+
+for one or two other questions before we
+
+forge ahead
+
+yeah rohit
+
+hello yep
+
+hello
+
+my question is how can we know where we
+
+create our directory
+
+say that once more
+
+how can we know where we create our
+
+directory
+
+how did you how did i know where to
+
+create the test directory
+
+yes yes so that's just a convention like
+
+when you start writing bigger projects
+
+that have many tests it's just
+
+convenient to organize them in a folder
+
+called test it doesn't have to be called
+
+test you could call it anything you want
+
+but there's certain conventions and a
+
+lot of programming languages and that
+
+would be one you could call it test you
+
+could call it tests plural
+
+the point though is it just kind of
+
+keeps your folder clean so you don't
+
+have a hundred files all in one place
+
+you can organize them a little more
+
+cleanly
+
+how about one other question before we
+
+dive into file i o uh lavanya if i'm
+
+saying it right
+
+yes my question is
+
+it's general in python generally in
+
+print in double quote if you
+
+write backslash and we'll get we'll be
+
+going to the new line but if you want to
+
+print this blackbox lesson how will we
+
+do it
+
+sure yeah unrelated to the previous talk
+
+if we rewind recall that we talked about
+
+new line characters as backslash n if
+
+you want a literal backslash you do
+
+backslash backslash n so you escape the
+
+escape character and that's a common
+
+paradigm if one doesn't do it try two
+
+but that's not always the case but a
+
+good question all right give me just a
+
+moment to get set up here we're about to
+
+dive into file i o and as always please
+
+forgive if we can't get to everyone's
+
+questions but my colleague carter if you
+
+don't mind chiming in in the chat uh is
+
+available if you want to ask questions
+
+within the chat we'll do our best
+
+between him and me to answer them either
+
+on screen or off
+
+yep give me just a moment
+
+all right this is cs50s introduction to
+
+programming with python my name is david
+
+maylin and this is our week on file io
+
+input and output of files so up until
+
+now most every program we've written
+
+just stores all the information that it
+
+collects in memory that is in variables
+
+or inside of the program itself a
+
+downside of which is that as soon as the
+
+program exits anything you typed in
+
+anything that you did with that program
+
+is lost now with files of course on your
+
+mac or pc you can hang on to information
+
+long term and file io within the context
+
+of programming is all about writing code
+
+that can read from that is load
+
+information from or write to that is
+
+save information to
+
+files themselves so let's see if we
+
+can't transition then from only using
+
+memory and variables and the like to
+
+actually writing code that saves some
+
+files for us and therefore data
+
+persistently well to do this let me
+
+propose that we first consider a
+
+familiar data structure a familiar type
+
+of variable that we've seen before that
+
+of a list and using lists we've been
+
+able to store more than one piece of
+
+information in the past using one
+
+variable we typically store one value
+
+but if that variable is a list we can
+
+store multiple values unfortunately
+
+lists are stored in the computer's
+
+memory and so once your program exits
+
+even the contents of those disappear but
+
+let's at least give ourselves a starting
+
+point so i'm over here in vs code and
+
+i'm going to go ahead and create a
+
+simple program using code of names.pi a
+
+program that just collects people's
+
+names students names if you will and i'm
+
+going to do it super simply initially in
+
+a manner consistent with what we've done
+
+in the past to get user input and print
+
+it back out i'm going to say something
+
+like this
+
+name equals input quote unquote what's
+
+your name thereby storing in a variable
+
+called name the return value of input as
+
+always
+
+and as always i'm going to go ahead and
+
+very simply print out a nice f string
+
+that says hello comma and then in curly
+
+braces name to print out hello david
+
+hello world however happens to be using
+
+the program let me go ahead and run this
+
+just to remind myself what i should
+
+expect and if i run python of names.pi
+
+and hit enter type in my name like david
+
+of course i now see hello comma david
+
+suppose though that we wanted to add
+
+support not just for one name but
+
+multiple names maybe three names for the
+
+sake of discussion so that we can begin
+
+to accumulate some amount of information
+
+in the program such that it's really
+
+going to be a downside if we keep
+
+throwing it away once the program exits
+
+well let me go back into names.pi up
+
+here at top let me proactively give
+
+myself a variable this time called names
+
+plural and set it equal to an empty list
+
+recall that the square bracket notation
+
+especially if nothing's inside of it
+
+just means give me an empty list that we
+
+can add things to over time well what do
+
+we want to add to it well let's add
+
+three names each from the user and let
+
+me say something like this
+
+for underscore in range of three
+
+let me go ahead and prompt the user with
+
+the input function and getting their
+
+name in this variable and then using
+
+list syntax i can say names dot append
+
+name to that list
+
+and now i have in that list that given
+
+name one two three of them other points
+
+to note is i could use a variable here
+
+like i which is conventional but if i'm
+
+not actually using i explicitly on any
+
+subsequent lines i might as well just
+
+use underscore which is a pythonic
+
+convention and actually if i want to
+
+clean this up a little bit right now
+
+notice that my name variable doesn't
+
+really need to exist because i'm
+
+assigning it a value and then
+
+immediately appending it well i could
+
+tighten this up further by just getting
+
+rid of that variable altogether
+
+and just appending immediately the
+
+return value of input i think we could
+
+go both ways in terms of design here on
+
+the one hand it's a pretty short line
+
+and it's readable on the other hand if i
+
+were to eventually change this phrase to
+
+be not what's your name but something
+
+longer we might want to break it out
+
+again into two lines but for now i think
+
+it's pretty readable now later in the
+
+program let's just go ahead and print
+
+out those same names but let's sort them
+
+alphabetically so that it makes sense to
+
+be gathering them all together
+
+then sorting them and printing them so
+
+how can i do that well in python the
+
+simplest way to sort a list in a loop is
+
+probably to do something like this for
+
+name in
+
+names but wait let's sort the names
+
+first recall that there's a function
+
+called sorted which will return a sorted
+
+version of that list now let's go ahead
+
+and print out an f-string that says
+
+again hello bracket name
+
+close quotes all right let me go ahead
+
+and run this so python of names.pi and
+
+let me go ahead and type in a few names
+
+this time how about hermione
+
+how about harry
+
+how about ron and notice that they're
+
+not quite in alphabetical order but when
+
+i hit enter and that loop kicks in it's
+
+going to print out hello harry hello
+
+hermione hello ron in sorted order but
+
+of course now if i run this program
+
+again all of the names are lost and if
+
+this is a bigger program than this that
+
+might actually be pretty painful to have
+
+to re-input the same information again
+
+and again and again wouldn't it be nice
+
+like most any program today on a phone
+
+or a laptop or desktop or cloud to be
+
+able to save this information somehow
+
+instead and that's where file i o comes
+
+in and that's where files come in they
+
+are a way of storing information
+
+persistently on your own phone or mac or
+
+pc or some cloud servers
+
+disk so that they're there when you come
+
+back and run the program again so how
+
+can we go about saving all three of
+
+these names on in a file as opposed to
+
+having to type them again and again well
+
+let me go ahead and rewind and simplify
+
+just so we can do one thing at a time
+
+and i'm going to go ahead and do this
+
+i'm still going to prompt the user for a
+
+name and i'm going to go ahead and ask
+
+them what's your name as before storing
+
+the return value in a variable but now
+
+i'm going to do something a little
+
+different suppose i want to store this
+
+name and all future names in a file
+
+called names.txt
+
+for text file how can i do that well in
+
+python i could do this i can give myself
+
+a variable called file for instance i
+
+could call it anything i want equals
+
+open of quote-unquote
+
+names.text
+
+and then quote-unquote w so what is this
+
+doing well it turns out in python there
+
+is a function called
+
+sorry
+
+well it turns out in python there's a
+
+function called open that does literally
+
+just that you give it the name of a file
+
+to open and a second argument optionally
+
+as to how to open it and it will open
+
+the file for you in a way that you can
+
+then read from it to get information or
+
+write to it to save information now this
+
+function here is documented at this url
+
+here in python's official documentation
+
+as always and ultimately it's going to
+
+allow us to do a little something like
+
+this if i go back to vs code here and i
+
+don't want to do that
+
+all right sorry let me just rewind just
+
+so we can get this right
+
+apologies
+
+all right
+
+let me go ahead and simplify this file
+
+and again give myself just a single
+
+variable called name and set the return
+
+value of input equal to that variable so
+
+what's your name as before quote-unquote
+
+and now let me go ahead and let me do
+
+something more with this value instead
+
+of just adding it to a list or printing
+
+it immediately out let's save the value
+
+of the person's name that's just been
+
+typed in to a file
+
+well how do we go about doing that well
+
+in python there's this function called
+
+open whose purpose in life is to do just
+
+that to open a file but to open it up
+
+programmatically so that you the
+
+programmer can actually read information
+
+from it or write information to it so
+
+open is like the programmer's equivalent
+
+of like double clicking on an icon on
+
+your mac or pc but it's a programmer's
+
+technique because it's going to allow
+
+you to specify exactly what you want to
+
+read from or right to that file
+
+formally its documentation is here and
+
+you'll see that its usage is relatively
+
+straightforward it minimally just
+
+requires the name of the file that we
+
+want to open and optionally how we want
+
+to open it so let me go back to vs code
+
+here and let me propose now that i do
+
+this i'm going to go ahead and call this
+
+function called open passing in an
+
+argument for names.txt which is the name
+
+of the file i would like to store all of
+
+these names in i could call it anything
+
+i want but because it's going to be just
+
+text it's conventional to call it
+
+something dot txt but i'm also going to
+
+tell the open function that i plan to
+
+write to this file so as a second
+
+argument to open i'm going to put
+
+literally quote unquote w for write and
+
+that's going to tell open to open the
+
+file in a way that's going to allow me
+
+to change the contents and better yet if
+
+it doesn't even exist yet it's going to
+
+create the file for me now open returns
+
+what's called a file handle a special
+
+value that allows me to access that file
+
+subsequently so i'm going to go ahead
+
+and assign it equal to a variable like
+
+file and now i'm going to go ahead and
+
+quite simply write this person's name to
+
+that file so i'm going to literally type
+
+file which is the variable
+
+linking to that file dot write which is
+
+a function otherwise known as a method
+
+that comes with open files that allows
+
+me to write that name to the file and
+
+then lastly
+
+i'm going to quite simply going to go
+
+ahead and say file.close which will
+
+close and effectively save the file so
+
+these three lines of code here are
+
+essentially the programmers equivalent
+
+to like double clicking an icon on your
+
+mac or pc making some changes in
+
+microsoft word or some other program and
+
+going to file save we're doing that all
+
+in code with just these three lines here
+
+well let's see now how this works let me
+
+go ahead now and run python of names.pi
+
+and enter let's type in a name i'll type
+
+in hermione
+
+enter all right where did she end up
+
+well let me go ahead now and type code
+
+of names.txt
+
+which is a file that happens now to
+
+exist because i opened it in right mode
+
+and if i open this in a tab we'll see
+
+there is hermione well let's go ahead
+
+and run names.pi once more i'm going to
+
+go ahead and run python of names.pi
+
+enter and this time i'll type in harry
+
+let me go ahead and run it one more time
+
+and this time i'll type in ron and now
+
+let me go up to names.txt where
+
+hopefully i'll see all three of them
+
+here
+
+but no i've just actually seen ron
+
+what might explain what happened to
+
+hermione and harry even though i'm
+
+pretty sure i ran the program three
+
+times and i definitely wrote the code
+
+that writes their name to that file
+
+what's going on here do you think vishal
+
+oh still mirror
+
+um
+
+i think because we are not appending
+
+them we should append the names uh since
+
+we are writing directly it is erasing
+
+the old content and it is replacing with
+
+the last
+
+uh
+
+set of characters that we mentioned
+
+exactly unfortunately quote unquote w is
+
+a little dangerous not only will it
+
+create the file for you it will also
+
+recreate the file for you every time you
+
+open the file in that mode so if you
+
+open the file once and write hermione
+
+that worked just fine as we saw but if
+
+you do it again for harry if you do it
+
+again for ron the code is working but
+
+each time it's opening the file and
+
+recreating it with brand new contents so
+
+we had one version with hermione one
+
+version with harry and one final version
+
+with ron but ideally i think we probably
+
+want to be appending as vishal says each
+
+of those names to the file not just
+
+clobbering that is overwriting the file
+
+each time so how can i do this it's
+
+actually a relatively easy fix let me go
+
+ahead and do this as follows i'm going
+
+to first remove the old version of
+
+names.txt and now i'm going to change my
+
+code to do this i'm going to change the
+
+w quote-unquote to just a quote-unquote
+
+a for append which means to add to the
+
+bottom to the bottom to the bottom again
+
+and again now let me go ahead and rerun
+
+python of names.pi enter i'll again
+
+start from scratch with hermione because
+
+i'm creating the file new
+
+notice that if i now do code of
+
+names.txt enter
+
+we do see that hermione is back so we've
+
+after removing the file it did get
+
+recreated even though i'm using append
+
+which is good but now let's see what
+
+happens when i go back to my terminal
+
+and this time i run python of names.pi
+
+again this time typing in harry and let
+
+me run it one more time this time typing
+
+in ron so hopefully this time in that
+
+second tab names.txt i should now see
+
+all three of them but
+
+but but but
+
+this doesn't look ideal
+
+what have i clearly done wrong
+
+something tells me even though all three
+
+names are there it's not going to be
+
+easy to read those back unless you know
+
+where each name ends and begins hope
+
+hope
+
+the english form it's not correct
+
+the english format is not correct like
+
+it's a
+
+it's contaminating them
+
+it is it's it's
+
+well it appears to be concatenating but
+
+technically speaking it's just appending
+
+to the file first hermione then harry
+
+then ron it has the effect of combining
+
+them back to back but it's not
+
+concatenating per se it really is just
+
+appending let's go to another hand here
+
+what really have i done wrong
+
+or equivalently how might i fix
+
+it would be nice if there were some kind
+
+of gaps between each of the names so we
+
+could read them more cleanly
+
+how about we call on
+
+uh elena over to you
+
+hello uh we should add a new line before
+
+we
+
+write new name
+
+good we want to add a new line ourselves
+
+so whereas print by default recall
+
+always outputs automatically a line
+
+ending of backslash n unless we override
+
+it with the named parameter called end
+
+write does not do that right takes you
+
+literally and if you say right hermione
+
+that's it you're getting the h through
+
+the e if you say right harry you get the
+
+h through the uh y you don't get any
+
+extra new lines automatically so if you
+
+want to have a new line at the end of
+
+each of these names we've got to do that
+
+manually so let me again close names.txt
+
+and let me remove the current file and
+
+let me go back up to my code here and i
+
+can fix this in any number of ways but
+
+i'm just going to go ahead and do this
+
+i'm going to write out an f string that
+
+contains name and backslash n at the end
+
+we could do this in different ways we
+
+could manually print just the new line
+
+or some other technique but i'm going to
+
+go ahead and use my f strings as i'm in
+
+the habit of doing and just print to the
+
+name and the new line all at once i'm
+
+going to go ahead now and down to my
+
+terminal window run python of names.pi
+
+again enter we'll type in hermione i'm
+
+going to run it again type in harry i'm
+
+going to type it again and this time ron
+
+now i'm going to run code of names.txt
+
+and open that file and now it looks like
+
+the file is a bit cleaner indeed i have
+
+each of the name on its own line as well
+
+as align ending which ensures that we
+
+can separate one from the other now if i
+
+were you know writing code i bet i could
+
+parse that is read the previous file by
+
+looking at differences between lowercase
+
+and uppercase letters but that's going
+
+to get messy quickly generally speaking
+
+when storing data long term in a file
+
+you should probably do it somehow
+
+cleanly like doing one name at a time
+
+well let's now go back and i'll propose
+
+that this code is now working correctly
+
+but we can design it a little bit better
+
+it turns out that it's all too easy when
+
+writing code to sometimes forget to
+
+close files and sometimes this isn't
+
+necessarily a big deal but sometimes it
+
+can create problems files could get
+
+corrupted or accidentally deleted or the
+
+like depending on what happens in your
+
+code so it turns out that you don't
+
+strictly need to call close on the file
+
+yourself if you take another approach
+
+instead more pythonic when
+
+manipulating files is to do this to
+
+introduce this other keyword called
+
+quite simply with that allows you to
+
+specify that in this context i want you
+
+to open and automatically close some
+
+file so how do we use with it simply
+
+looks like this let me go back to my
+
+code here i've gotten rid of the closed
+
+line and i'm now just going to say this
+
+instead instead of saying file equals
+
+open i'm going to say with open then the
+
+same arguments as before and somewhat
+
+curiously i'm going to put the variable
+
+at the end of the line why that's just
+
+the way this is done you say with you
+
+call the function in question and then
+
+you say as and specify the name of the
+
+variable that should be assigned the
+
+return value of open then i'm going to
+
+go ahead and indent the line underneath
+
+so that the line of code that's writing
+
+the name is now in the context of this
+
+with statement which just ensures that
+
+automatically if i had more code in this
+
+file down below no longer indented the
+
+file would be automatically closed as
+
+soon as line four is done executing so
+
+it doesn't change what has just happened
+
+but it does automate the process of at
+
+least closing things for us just to
+
+ensure i don't forget and so that
+
+something
+
+doesn't go wrong
+
+but suppose now that i wanted to read
+
+these names from the file all i've done
+
+thus far is write code that writes names
+
+to the file but let's assume now that we
+
+have all of these names in the file and
+
+heck let's go ahead and add one more let
+
+me go ahead and run this one more time
+
+python of names.pie and let's add in
+
+draco to the mix so now that we have all
+
+four of these names here how might we
+
+want to read them back well let me
+
+propose that we go into names.pi now or
+
+we could create another program
+
+altogether but i'm going to keep reusing
+
+the same name just to keep us focused on
+
+this and now i'm going to write code
+
+that reads an existing file with
+
+hermione harry ron and draco together
+
+and how do i do this well it's similar
+
+in spirit i'm going to start this time
+
+with with
+
+open and then the first argument is
+
+going to be the name of the file that i
+
+want to open as before and i'm going to
+
+open it this time in read mode quote
+
+unquote r and to read a file just means
+
+to load it not to save it
+
+and i'm going to name the return value
+
+file and now i'm going to do this and
+
+there's a number of ways i can do this
+
+but one way to read all of the lines
+
+from the file at once would be this let
+
+me declare a variable called lines let
+
+me access that file and call a function
+
+or a method that comes with it called
+
+read lines so if you read the
+
+documentation on file i o in python
+
+you'll see that open files come with a
+
+special method whose purpose in life is
+
+to read all the lines from the file and
+
+return them to me as a list so what this
+
+line two is doing is it's reading all of
+
+the lines from that file storing them in
+
+a variable called lines now suppose i
+
+want to iterate over all of those lines
+
+and print out each of those names for
+
+line in lines this is just a standard
+
+for loop in python lines is a list line
+
+is the variable that will be
+
+automatically sippy set to each of those
+
+lines let me go ahead and print out
+
+something like oh hello
+
+comma and then i'll print out the line
+
+itself
+
+all right so let me go to my terminal
+
+window run python of names.pi now i have
+
+not deleted names.txt so it still
+
+contains all four of those names and hit
+
+enter
+
+and okay it's not bad but it's a little
+
+ugly here
+
+what's going on when i ran names.pie
+
+it's saying hello to hermione to harry
+
+to ron to draco but there's these gaps
+
+now between the lines
+
+what's explains that symptom if if
+
+nothing else it just looks ugly uh
+
+overfall if i'm saying it right
+
+[Music]
+
+yeah that's right uh
+
+it happens because in the text file we
+
+have a new line symbols
+
+in between those names and the print
+
+always adds another new line at the end
+
+so you
+
+use the same symbol twice perfect and
+
+here's a good example of a bug a mistake
+
+in a program but if you just think about
+
+those first principles like how do each
+
+of the lines of code work that i'm using
+
+you should be able to reason exactly as
+
+raphael did there to say that all right
+
+well one of those new lines is coming
+
+from the file after each name and then
+
+of course print all of these weeks later
+
+is still giving us for free that extra
+
+new line so there's a couple possible
+
+solutions i could certainly do this
+
+which we've done in the past and pass in
+
+a named argument to print like end
+
+equals quote unquote and that's fine i
+
+would argue a little better than that
+
+might actually be to do this to strip
+
+off of the end of the line the actual
+
+new line itself so that print is
+
+handling the printing of everything the
+
+person's name as well as the new line
+
+but you're just stripping off what is
+
+really just an implementation detail in
+
+the file we chose to use new lines in my
+
+text file to separate one name from
+
+another so arguably it should be a
+
+little cleaner in terms of design to
+
+strip that off and then let print print
+
+out what is really just now a name but
+
+that's ultimately a design decision the
+
+effect is going to be exactly the same
+
+well if i'm going to open this file and
+
+read all the lines and then iterate over
+
+all of those lines and print them each
+
+out i could actually combine this into
+
+one thing because right now i'm doing
+
+twice as much work i'm reading all of
+
+the lines then i'm iterating over all of
+
+the lines just to print out each of them
+
+well in python with files you can
+
+actually do this i'm going to erase
+
+almost all of these lines now keeping
+
+only the with statement at top and
+
+inside of this with statement i'm going
+
+to say this
+
+for line in file
+
+go ahead and print out quote unquote
+
+hello comma and then line.rstrip so i'm
+
+going to take the approach of stripping
+
+off the end of the line but notice how
+
+elegant this is so to speak i've opened
+
+the file in line one and if i want to
+
+iterate over every line in the file i
+
+don't have to very explicitly load all
+
+read all the lines then iterate over all
+
+of the lines i can combine this into one
+
+thought in python you can simply say for
+
+line in file and that's going to have
+
+the effect of giving you a for loop that
+
+iterates over every line in the file one
+
+at a time and on each iteration updating
+
+the value of this variable line to be
+
+hermione then harry then ron then draco
+
+so this again is one of the appealing
+
+aspects of python is that it reads
+
+rather like english for line and file
+
+print this it's a little more compact
+
+when written this way
+
+well what if though
+
+i don't want quite this behavior because
+
+notice now if i run python of names.pi
+
+it's correct i'm seeing each of the
+
+names in each of the hellos and there's
+
+no extra spaces in between
+
+but just to be
+
+difficult i'd really like us to be
+
+sorting these hellos really i'd like to
+
+see draco first then harry then hermione
+
+then ron no matter what order they
+
+appear in the file so i could go in of
+
+course to the file and manually change
+
+the file but if that file is changing
+
+over time based on who is typing their
+
+name into the program that's not really
+
+a good solution in code i should be able
+
+to load the file no matter what it looks
+
+like and just sort it all at once
+
+now here is a reason to not do what i've
+
+just done i can't iterate over each line
+
+in the file and print it out but sort
+
+everything in advance right logically if
+
+i'm looking at each line one at a time
+
+and printing it out it's too late to
+
+sort i really need to read all of the
+
+lines first without printing them sort
+
+them then print them so we have to take
+
+a step back in order to add now this new
+
+feature so how can i do this well let me
+
+combine some ideas from before let me go
+
+ahead and start fresh with this let me
+
+give myself a list called names and
+
+assign it an empty list just so i have a
+
+variable in which to accumulate all of
+
+these lines and now let me open the file
+
+with open
+
+quote-unquote names.txt and it turns out
+
+i can tighten this up a little bit it
+
+turns out if you're opening a file to
+
+read it you don't need to specify quote
+
+unquote r that is the implicit default
+
+so you can tighten things up by just
+
+saying open names.txt and you'll be able
+
+to read the file but not write it i'm
+
+going to give myself a variable called
+
+file as before i am going to iterate
+
+over the file in the same way for line
+
+in file but instead of printing each
+
+line
+
+i'm going to do this i'm going to take
+
+my names list and append to it and this
+
+is appending to a list in memory not
+
+appending to the file itself i'm going
+
+to go ahead and append the current line
+
+but i'm going to strip off the new line
+
+at the end so that all i'm adding to
+
+this list is each of the students names
+
+now i can use that familiar technique
+
+from before let me go outside of this
+
+with statement because now i've read the
+
+entire file presumably so by the time
+
+i'm done with lines four and five again
+
+and again and again for each line in the
+
+file i'm done with the file it can close
+
+i now have all of the students names in
+
+this list variable let me do this for
+
+name in not just names but the sorted
+
+names using our python function sorted
+
+which does just that and do print quote
+
+unquote with an fstring hello comma
+
+and now i'll plug in bracket name
+
+so now what have i done
+
+i'm creating a list at the beginning
+
+just so i have a place to gather my data
+
+i then on lines three through five
+
+iterate over the file from top to bottom
+
+reading in each line one at a time
+
+stripping off the new line and adding
+
+just the student's name to this list and
+
+the reason i'm doing that is so that on
+
+line seven i can sort all of those names
+
+now that they're all in memory and print
+
+them in order i need to load them all
+
+into memory before i can sort them
+
+otherwise i'd be printing them out
+
+prematurely and draco would end up last
+
+instead of first so let me go ahead in
+
+my terminal window and run python of
+
+names.pi now and hit enter and there we
+
+go the same list of four hellos but now
+
+they're sorted and this is a very common
+
+technique when dealing with files and
+
+information more generally if you want
+
+to change that data in some way like
+
+sorting it
+
+creating some kind of variable at the
+
+top of your program like a list adding
+
+or appending information to it just to
+
+collect it in one place and then do
+
+something interesting with that
+
+collection that list is exactly what
+
+i've done here let me pause and see if
+
+there's any questions now on file i o
+
+reading or writing or now accumulating
+
+all of these values in some list
+
+yeah nathan question
+
+hi is there a way to sort the files but
+
+instead if you want it from
+
+alphabetically from a to z
+
+is there a way to reverse it from z to a
+
+is there like a little extension you can
+
+add to the end to do that or would you
+
+have to create a new function
+
+if you wanted to reverse the contents of
+
+the file
+
+did i hear you right
+
+yeah so if you instead of sorting them
+
+from a to z in ascending order if you
+
+wanted them in descending order
+
+is there an extension for that
+
+there is indeed and as always the
+
+documentation is your friend so if the
+
+goal is to sort them not in alphabetical
+
+order which is the default but maybe
+
+reverse alphabetical order you can take
+
+a look for instance at the formal python
+
+documentation there and what you'll see
+
+is this summary you'll see that the
+
+sorted function takes a first argument
+
+generally known as an iterable and
+
+something that's iterable means that you
+
+can iterate over it that is you can loop
+
+over it one thing at a time what the
+
+rest of this line here means is that you
+
+can specify a key like how you want to
+
+sort it but more on that later but this
+
+last named parameter here is reverse and
+
+by default per the documentation it's
+
+false it will not be reversed by default
+
+but if we change that to true i bet we
+
+can do that so let me go back to vs code
+
+here and do just that let me go ahead
+
+and pass in a second argument to sorted
+
+in addition to this iterable which is my
+
+names list iterable again in the sense
+
+that it can be looped over and let me
+
+pass in reverse equals true thereby
+
+overriding the default of false let me
+
+now run python of names.pi and now ron's
+
+at the top and draco's at the bottom so
+
+there too whenever you have a question
+
+like that moving forward consider what
+
+does the documentation say and see if
+
+there's a germ of an idea there because
+
+odds are if you have some problem odds
+
+are some programmer before you have had
+
+the same question other thoughts
+
+on these uh maria
+
+can we limit a number or numbers of
+
+names
+
+and the second question uh can we find
+
+specific name in list
+
+really good question can we limit the
+
+number of the names in the file and can
+
+we find a specific one we absolutely
+
+could
+
+if we were to write code we could for
+
+instance open the file first count how
+
+many lines are already there and then if
+
+there's too many already we could just
+
+exit with sys.exit or some other message
+
+to indicate to the user that sorry the
+
+class is full as for finding someone
+
+specifically absolutely you could
+
+imagine opening the file iterating over
+
+it with a for loop again and again and
+
+then adding a conditional like if the
+
+current line equals equals harry then we
+
+found the chosen run and you can print
+
+something like that so you can
+
+absolutely combine these ideas with
+
+previous ideas like conditionals to ask
+
+those same questions
+
+how about one other question on
+
+file i o
+
+yeah how about over to philip
+
+oh yeah hello
+
+uh so i just thought about
+
+this function like
+
+uh read all lines
+
+and
+
+it looks like it's
+
+uh
+
+like separate all the lines by this
+
+special character a backslash n but it
+
+looks like we don't needed a character
+
+and we
+
+we always strip it
+
+and
+
+it looks like some bad design of
+
+function why
+
+why wouldn't we just strip it inside
+
+this function a really good question so
+
+we are in my examples thus far using r
+
+strip to reverse uh to strip from the
+
+end of the line all of this white space
+
+you might not want to do that in this
+
+case i am stripping it away because i
+
+know that each of those lines isn't some
+
+generic line of text each line really
+
+represents a name that i have put there
+
+myself i'm using the new line just to
+
+separate one value from another in other
+
+scenarios you might very well want to
+
+keep that line ending because it's a
+
+very long series of text or a paragraph
+
+or something like that where you want to
+
+keep it distinct from the others but
+
+it's just a convention we have to use
+
+something presumably to separate one
+
+chunk of text from another there are
+
+other functions in python that will in
+
+fact handle the removal of that white
+
+space for you
+
+read lines though does literally that
+
+though it reads all of the lines as is
+
+well allow me to turn our attention back
+
+to where we left off here which is just
+
+names to propose that with names.txt we
+
+have an ability it seems to store each
+
+of these names pretty straightforwardly
+
+but what if we wanted to keep track of
+
+other information as well suppose that
+
+we wanted to store information
+
+including a student's
+
+name and their house at hogwarts be it
+
+gryffindor or slytherin or something
+
+else well where do we go about putting
+
+that you know hermione lives in
+
+gryffindor so we could do something like
+
+this in our text file harry lives in
+
+gryffindor so we could do that ron lives
+
+in gryffindor so we could do that and
+
+draco lives in slytherin so we could do
+
+that but i worry here
+
+but i worry now that we're mixing apples
+
+and oranges so to speak like some lines
+
+or names some lines or houses so this
+
+probably isn't the best design if only
+
+because it's confusing or it's ambiguous
+
+so maybe what we could do is adopt a
+
+convention and indeed this is in fact
+
+what a lot of programmers do they change
+
+this file not to be names.txt but
+
+instead let me create a new file called
+
+names.csv
+
+csv stands for comma separated values
+
+and it's a very common convention to
+
+store multiple pieces of information
+
+that are related in the same file and so
+
+to do this i'm going to separate each of
+
+these types of data not with another new
+
+line but simply with a comma i'm going
+
+to keep each student on their own line
+
+but i'm going to separate the
+
+information about each student using a
+
+comma instead and so now we sort of have
+
+a two-dimensional file if you will row
+
+by row we have our students but if you
+
+think of these commas as representing a
+
+column even though it's not perfectly
+
+straight because of the lengths of these
+
+names it's a little rat it's a little
+
+jagged you can think of these commas as
+
+representing a column and it turns out
+
+these csv files are very commonly used
+
+when you use something like microsoft
+
+excel apple numbers or google
+
+spreadsheets and you want to export the
+
+data to share with someone else as a csv
+
+file or conversely if you want to import
+
+a csv file into your preferred
+
+spreadsheet software like excel or
+
+numbers or google spreadsheets you can
+
+do that as well so csv is a very common
+
+very simple text format that just
+
+separates values with commas and
+
+different types of values ultimately
+
+with new lines as well
+
+so suppose now that i have this file
+
+called names.csv
+
+and actually i'm going to make a quick
+
+change for our video here apologies
+
+um
+
+apologies
+
+i'm going to rename this file just for
+
+the sake of discussion and andrew let me
+
+ramone let me give you guys the audio
+
+let me go ahead and run
+
+sorry
+
+let me go ahead and run code of
+
+students.csv
+
+and paste all of those same names in but
+
+dot dot okay that gives us the footage
+
+for that
+
+all right
+
+all right give me one moment apologies
+
+i'm going to do that once more just so
+
+we get the logic here correct so i don't
+
+break things for us later
+
+let me go ahead and create a new let me
+
+go ahead and create a new file called
+
+students.csv
+
+pasting in those same names dot dot
+
+oh sure apologies uh i just need to do
+
+something for our video team here then
+
+we'll get back on track
+
+okay
+
+giving them some silence deliberately
+
+let me go ahead and run code of
+
+students.csv to create a brand new file
+
+that's initially empty and we'll add to
+
+it those same names but also some other
+
+information as well
+
+okay
+
+all right and ramona we can fix it later
+
+if need be i think
+
+okay
+
+so if i now have this new file
+
+students.csv inside of which is one
+
+column of names so to speak and one
+
+column of houses how do i go about
+
+changing my code to read not just those
+
+names but also those names and houses so
+
+that they're not all on one line we
+
+somehow have access to both type of
+
+value separately well let me go ahead
+
+and create a new program here called
+
+students.pi
+
+and in this program let's go about
+
+reading not a text file per se but a
+
+specific type of text file a csv a comma
+
+separated values file and to do this i'm
+
+going to use similar code as before i'm
+
+going to say with
+
+open quote-unquote students.csv
+
+i'm not going to bother specifying
+
+quote-unquote r because again that's the
+
+default but i'm going to give myself a
+
+variable name of file and then in this
+
+file i'm going to go ahead and do this
+
+for line in file as before
+
+and now i have to be a bit clever here
+
+let me go back to students.csv
+
+looking at this file
+
+and it seems that on my loop on each
+
+iteration i'm going to get access to the
+
+whole line of text i'm not going to
+
+automatically get access to just
+
+hermione or just gryffindor
+
+recall that the loop is going to give me
+
+each full line of text so logically what
+
+would you propose that we do inside of a
+
+for loop that's reading a whole line of
+
+text at once but we now want to get
+
+access to the individual values like
+
+hermione and gryffindor harry and
+
+gryffindor how do we go about taking one
+
+line of text and gaining access to those
+
+individual values do you think just
+
+instinctively even if you're not sure
+
+what the name of the functions would be
+
+yeah dev your thoughts
+
+still muted
+
+you can access access it as you would
+
+and if you were using the dictionary
+
+like using a key and value
+
+so ideally we would access it using a
+
+key in value but at this point in the
+
+story all we have is this loop and this
+
+loop is giving me one line of text that
+
+is the time i'm the programmer now i
+
+have to solve this there is no
+
+dictionary yet in question how about
+
+another suggestion here
+
+what can i do once i have this loop here
+
+uh
+
+anjali did i get it right this time
+
+okay
+
+anjali um so you can somehow split the
+
+two words based on the comma
+
+yeah even if you're not quite sure what
+
+function is going to do this intuitively
+
+you want to take this whole line of text
+
+hermione comma gryffindor harry comma
+
+gryffindor and so forth and split that
+
+line into two pieces if you will and it
+
+turns out wonderfully the function we'll
+
+use is actually called split that can
+
+split on any characters but you can tell
+
+it what character to use so i'm going to
+
+go back into students.pie and inside of
+
+this loop i'm going to go ahead and do
+
+this i'm going to take the current line
+
+i'm going to remove the white space at
+
+the end as always using r strip here and
+
+then whatever the result of that is i'm
+
+going to now call split
+
+and quote unquote comma so the split
+
+function or method comes with strings
+
+stirs in python any stir has this method
+
+built in and if you pass in an argument
+
+like a comma what this strip split
+
+function will do is split that current
+
+string into one two three maybe more
+
+pieces by looking for that character
+
+again and again ultimately strip uh
+
+ultimately split is going to return to
+
+us a list of all of the individual parts
+
+to the left and to the right of those
+
+commas so i can give myself a variable
+
+called row here and this is a common
+
+paradigm when you know you're iterating
+
+over a file specifically a csv it's
+
+common to think of each
+
+line of it as being a row and each of
+
+the values they're in separated by
+
+commas as columns so to speak so i'm
+
+going to deliberately name my variable
+
+rho just to be consistent with that
+
+convention and now what do i want to
+
+print well i'm going to go ahead and say
+
+this
+
+print how about the following
+
+an f string that starts with
+
+curly braces
+
+well how do i get access to the first
+
+thing in that row well the row is going
+
+to have how many parts two because if
+
+i'm splitting on commas and there's one
+
+comma per line that's going to give me a
+
+left part and a right part like hermione
+
+and gryffindor harry and gryffindor
+
+when i have a list like row how do i get
+
+access to individual values well i can
+
+do this i can say row
+
+bracket 0 and that's going to go to the
+
+first element of the list which should
+
+hopefully be the student's name
+
+then after that i'm going to say is in
+
+and i'm going to have another curly
+
+brace here for row bracket 1 and then
+
+i'm going to close my whole quote so it
+
+looks a little cryptic at first glance
+
+but most of this is just f string syntax
+
+with curly braces to plug in values and
+
+what values am i plugging in well row
+
+again is a list and it has two elements
+
+presumably hermione in one and
+
+gryffindor and the other and so forth so
+
+bracket zero is the first element
+
+because remember we start indexing at
+
+zero in python and one is going to be
+
+the second element so let me go ahead
+
+and run this now and see what happens
+
+python
+
+of
+
+students.pie
+
+enter
+
+and we see hermione is in gryffindor
+
+harry's and gryffindor ron is in
+
+gryffindor and draco is in slytherin so
+
+we have now implemented our own code
+
+from scratch that actually parses that
+
+is reads and interprets a csv file
+
+ultimately here
+
+now let me pause to see if there's any
+
+questions but we'll make this even
+
+easier to read in just a moment
+
+any questions on what we've just done
+
+here by splitting by comma
+
+yeah uh
+
+sharia if i'm saying it right
+
+oh
+
+no question
+
+okay someone else
+
+vishal question
+
+uh thanks uh for uh
+
+so my question is uh can we uh edit uh
+
+any line of code anytime we want or uh
+
+the only option that we have is to
+
+append uh
+
+the lines or uh let's say if we want to
+
+let's say change harry's uh house to
+
+let's say slytherin or some other house
+
+yeah a really good question what if you
+
+want to in python change a line in the
+
+file and not just
+
+append to the end you would have to
+
+implement that logic yourself so for
+
+instance you could imagine now
+
+opening the file and reading all of the
+
+contents in
+
+then maybe iterating over each of those
+
+lines and as soon as you see that the
+
+current name equals equals harry you
+
+could maybe change his house to
+
+slytherin and then it would be up to you
+
+though to write all of those changes
+
+back to the file so in that case you
+
+might want to in simplest form read the
+
+file once and let it close
+
+then open it again but open for writing
+
+and change the whole file it's not
+
+really possible or easy to go in and
+
+change just part of the file though you
+
+can do it it's easier to actually read
+
+the whole file make your changes in
+
+memory then write the whole file out but
+
+for larger files where that might be
+
+quite slow you can be more clever than
+
+that
+
+well let me propose now that we clean
+
+this up a little bit because i actually
+
+think this is a little cryptic to read
+
+row bracket zero row bracket one it's
+
+it's not that well written at the moment
+
+i would say but it turns out that when
+
+you have a variable that's a list like
+
+row you don't have to throw all of those
+
+variables into a list you can actually
+
+unpack that whole sequence at once that
+
+is to say if you know that a function
+
+like split returns a list but you know
+
+in advance that it's going to return two
+
+values in a list the first and the
+
+second you don't have to throw them all
+
+into a variable that itself is a list
+
+you can actually unpack them
+
+simultaneously into two variables doing
+
+name comma house so this is a nice
+
+python technique to not only create but
+
+assign
+
+automatically
+
+in parallel two variables at once rather
+
+than just one so this will have the
+
+effect of putting the name in the left
+
+hermione and it will have the effect of
+
+putting gryffindor the house in the
+
+right variable and we now no longer have
+
+a row we can now make our code a little
+
+more readable by now literally just
+
+saying name down here and for instance
+
+house down here so just a little more
+
+readable even though functionally the
+
+code now is exactly the same
+
+all right so this now works and i'll
+
+confirm as much by just running it once
+
+more python of students.pi enter and we
+
+see that the text is as intended but
+
+suppose for the sake of discussion that
+
+i'd like to sort
+
+this list of output i'd like to say
+
+hello again to draco first then hello to
+
+harry than hermione then ron how can i
+
+go about doing this well let's take some
+
+inspiration from the previous example
+
+where we're only dealing with names and
+
+instead do it with these full phrases so
+
+and so is in house well let me go ahead
+
+and do this i'm going to go ahead and
+
+start scratch and give myself a list
+
+called students equal to an empty list
+
+initially and then with open
+
+students.csv
+
+as file i'm going to go ahead and say
+
+this for line in file and then below
+
+this i'm going to do exactly as before
+
+name comma house equals the current line
+
+stripping off the white space at the end
+
+splitting it on a comma so that's exact
+
+same as before but this time before i go
+
+about
+
+printing the sentence i'm going to store
+
+it temporarily in a list so that i can
+
+accumulate all of these sentences and
+
+then sort them later so let me go ahead
+
+and do this students which is my list
+
+dot append
+
+let me append the actual sentence i want
+
+to show on the screen so another f
+
+string so name is in house just as
+
+before but notice i'm not printing that
+
+sentence i'm appending it to my list not
+
+a file but to my list why am i doing
+
+this well just because as before i want
+
+to do this for student in the sorted
+
+students i want to go ahead and print
+
+out students like this well let me go
+
+ahead and run python of students.pi and
+
+hit enter now and i think we'll see
+
+indeed draco is now first harry is
+
+second hermione's third and ron is
+
+fourth
+
+but this is arguably a little sloppy
+
+right it seems a little hackish that i'm
+
+constructing these sentences and even
+
+though i'm technically want to sort by
+
+name i'm technically sorting by these
+
+whole english sentences so it's not
+
+wrong it's achieving the intended result
+
+but it's not really well designed
+
+because i'm just kind of getting lucky
+
+that english is reading from left to
+
+right and therefore when i print this
+
+out it's sorting properly it would be
+
+better really to come up with a
+
+technique for sorting by the students
+
+names not by some english sentence that
+
+i've constructed here on line six
+
+so to achieve this
+
+i'm going to need to make my life more
+
+complicated for a moment and i'm going
+
+to need to collect information about
+
+each student
+
+before i bother assembling that sentence
+
+so let me propose that we do this let me
+
+go ahead and undo these last few lines
+
+of code so that we currently have two
+
+variables name and house each of which
+
+has name in the student's house
+
+respectively and we still have our
+
+global variable students but let me do
+
+this recall that python supports
+
+dictionaries and dictionaries are just
+
+collections of keys and values so you
+
+can associate something with something
+
+else like a name with hermione like a
+
+house with gryffindor that really is a
+
+dictionary so let me do this let me
+
+temporarily create a dictionary that
+
+stores this association of name with
+
+house let me go ahead and do this let me
+
+say that the student here is going to be
+
+represented initially by an empty
+
+dictionary and just like you can create
+
+an empty list with square brackets you
+
+can create an empty dictionary with
+
+curly braces so give me an empty
+
+dictionary that will soon have two keys
+
+name and house how do i do that well i
+
+could do it this way student open
+
+bracket name
+
+equals the student's name that we got
+
+from the line student bracket house
+
+equals the house that we got from the
+
+line and now i'm going to append to the
+
+students list plural
+
+that particular student now why have i
+
+done this i've admittedly made my code
+
+more complicated it's more lines of code
+
+but i've now collected all of the
+
+information i have about students while
+
+still keeping track what's a name what's
+
+a house the list meanwhile has all of
+
+the students names and houses together
+
+now why have i done this well let me for
+
+the moment just do something simple let
+
+me do four students in students and let
+
+me very simply now say print the
+
+following f string the current student
+
+with this name
+
+is in
+
+this current student's house
+
+and now notice one detail inside of this
+
+f string i'm using my curly braces as
+
+always
+
+i'm using inside of those curly braces
+
+the name of a variable as always
+
+but then i'm using not bracket 0 or 1
+
+because these are dictionaries now not
+
+list but why am i using single quotes
+
+to surround house and to surround name
+
+why single quotes inside of this
+
+f-string
+
+to access those
+
+keys yeah armando
+
+yes um because you have double quotes
+
+in that in that line 12 and so you have
+
+to tell python to differentiate
+
+exactly because i'm already using double
+
+quotes outside of the f string if i want
+
+to put quotes around any strings on the
+
+inside which i do need to do for
+
+dictionaries because recall when you
+
+index into a dictionary you don't use
+
+numbers like lists 0 1 2 onward you
+
+instead use strings which need to be
+
+quoted but if you're already using
+
+double quotes it's easiest to then use
+
+single quotes on the inside so python
+
+doesn't get confused about what lines up
+
+with what so at the moment when i run
+
+this program it's going to print out
+
+those hellos but they're not yet sorted
+
+in fact what i now have is a list of
+
+dictionaries and nothing is yet sorted
+
+but let me tighten up the code too to
+
+point out that it doesn't need to be
+
+quite as verbose if you're in the habit
+
+of creating an empty dictionary like
+
+this on line six and then immediately
+
+putting in two keys name and house each
+
+with two values name and house
+
+respectively you can actually do this
+
+all at once so let me show you a
+
+slightly different syntax i can do this
+
+give me a variable called student and
+
+let me use curly braces on the right
+
+hand side here but instead of leaving
+
+them empty let's just define those keys
+
+and those values now quote unquote name
+
+will be name and quote-unquote house
+
+will be house this achieves the exact
+
+same effect in one line instead of three
+
+it creates a new non-empty dictionary
+
+containing a name key the value of which
+
+is the student's name and a house key
+
+the value of which is the student's
+
+house nothing else needs to change that
+
+will still just work
+
+so that if i again run python of
+
+students.pie i'm still seeing those
+
+greetings but they're still not quite
+
+actually sorted well what might i go
+
+about doing here in order to what could
+
+i do to improve upon this further
+
+well we need some mechanism now of
+
+sorting those students but unfortunately
+
+you can't do this we can't sort all of
+
+the students now because those students
+
+are not names like they were before they
+
+aren't sentences like they were before
+
+each of the students is a dictionary and
+
+it's non-obvious how you would sort a
+
+dictionary inside of a list
+
+so ideally what do we want to do we are
+
+currently aspiring to print sentences
+
+whoops
+
+so what do we want to do
+
+okay let me undo that
+
+so what do we
+
+all right so what do we actually want to
+
+do if at the moment we hate hit line
+
+nine we have a list of all of these
+
+students and inside of that list is one
+
+dictionary per student and each of those
+
+dictionaries has two keys name and house
+
+wouldn't it be nice if there were a way
+
+in code to tell python sort this list by
+
+looking at this key in each dictionary
+
+because that would give us the ability
+
+to sort either by name or even by house
+
+or even by any other field that we add
+
+to that file so it turns out we can do
+
+this we can tell the sorted function not
+
+just to reverse things or not it takes
+
+another positional
+
+it takes another named parameter called
+
+key where you can specify what key
+
+should be used in order to sort some
+
+list of dictionaries and i'm going to
+
+propose that we do this i'm going to
+
+first define a function temporarily for
+
+now called get name and this function's
+
+purpose in life given a student is to
+
+quite simply return the student's name
+
+from that particular dictionary so if
+
+student is a dictionary this is going to
+
+return literally the student's name and
+
+that's it that's the sole purpose of
+
+this function in life
+
+what do i now want to do well now that i
+
+have a function that given a student
+
+will return to me the student's name i
+
+can do this i can change sorted to say
+
+use a key that's equal to whatever the
+
+return value of get name is and this now
+
+is a feature of python
+
+python allows you to pass functions as
+
+arguments
+
+in two other functions so getname is a
+
+function sorted is a function and i'm
+
+passing in get name to sorted as the
+
+value of
+
+that key parameter
+
+now why am i doing that well if you
+
+think of the getname function as just a
+
+bunch a block of code that will get the
+
+name of a student that's handy because
+
+that's the capability that sorted needs
+
+when given a list of students each of
+
+which is a dictionary
+
+sorted needs to know how do i get the
+
+name of the student in order to do
+
+alphabetical sorting for you the authors
+
+of python didn't know that we were going
+
+to be creating students here in this
+
+class so they couldn't have anticipated
+
+writing code in advance that
+
+specifically sorts on a field called
+
+student let alone called name let alone
+
+house
+
+so what did they do they instead built
+
+into the sorted function this named
+
+parameter key that allows us all these
+
+years later to tell their function
+
+sorted how to sort this list of
+
+dictionaries so now watch what happens
+
+if i run python of students.pi and hit
+
+enter i now have a sorted list of output
+
+why because now that list of
+
+dictionaries has all been sorted by the
+
+student's name
+
+i can further do this if as before we
+
+want to reverse the whole thing by
+
+saying reverse equals true we can do
+
+that too let me rerun python of
+
+students.pi and hit enter now it's
+
+reversed now it's ron then hermione
+
+harry and draco but we can do something
+
+different as well what if i want to sort
+
+for instance by house name reversed i
+
+could do this i could change this
+
+function from get name to get house i
+
+could change the implementation up here
+
+to be git house and i can return not the
+
+student's name but the student's house
+
+and so now notice if i run python of
+
+students.pi enter notice now it is
+
+sorted by house in reverse order
+
+slytherin is first and then gryffindor
+
+if i get rid of the reverse but keep the
+
+get house and rerun this program now
+
+it's sorted by house gryffindor is first
+
+and slytherin is last and the upside now
+
+of this is because i'm using this list
+
+of dictionaries and keeping the students
+
+data together until the last minute when
+
+i'm finally doing the printing i now
+
+have full control over the information
+
+itself and i can sort by this or that i
+
+don't have to construct construct those
+
+sentences in advance like i rather
+
+hackishly did the first time
+
+all right that was a lot let me pause
+
+here to see if there are questions
+
+yeah uh let's see uh got kim from saying
+
+it's right
+
+still muted
+
+there we go
+
+yeah hello uh
+
+so when when we sorting the files should
+
+we every time we use the
+
+loops or
+
+like uh like a dictionary or or any kind
+
+of list can we sort by just sorting not
+
+looping or
+
+any kind of stuff
+
+a good question and the short answer
+
+with python alone you're the programmer
+
+you need to do the sorting with
+
+libraries and other techniques
+
+absolutely you can do more of this
+
+automatically because someone else has
+
+written that code what we're doing at
+
+the moment is doing everything from
+
+scratch ourselves but absolutely with
+
+other functions or libraries some of
+
+this could be made uh more uh easily
+
+done
+
+some of this could be made easier other
+
+questions
+
+on this technique here
+
+uh yeah let's see
+
+abdelaram if i'm saying it right
+
+yeah hey how are you
+
+okay
+
+inserted sorted function yeah in what
+
+and what uh in what way is the search
+
+function arranged graphender
+
+in pause of trigger venture
+
+let's see i was having a little
+
+trouble hearing you can you say it once
+
+more
+
+okay in what
+
+in what way
+
+a sorted search function arranged it
+
+griffinder in
+
+this regular venture
+
+in what way is sorted arranging things
+
+so sorted will return to a list of items
+
+that are assorted according to whatever
+
+the key is by default if you just pass
+
+sorted a list of strings which we did
+
+earlier it's just going to sort the
+
+strings alphabetically if though you
+
+pass sorted a list of dictionaries and a
+
+dictionary again is a collection of keys
+
+and values
+
+there's no default understanding of what
+
+it means to sort things that are
+
+dictionaries you need to tell the sorted
+
+function what key in each dictionary
+
+should be compared against all the other
+
+keys so i'm currently doing this by
+
+house and i could also do it as before
+
+by student because the authors of python
+
+didn't know that our dictionaries all
+
+these years later would have names and
+
+houses or other keys as well other
+
+questions now on this technique
+
+ibrahim if i'm saying it right
+
+oh yes you hear me yes we can
+
+no i just missed the part uh what uh
+
+this uh student civ includes
+
+student civ file includes students.csv
+
+only includes these two columns name on
+
+the left and house on the right
+
+thank you thank you i didn't see it how
+
+about time for one more question on
+
+this csv approach
+
+uh yeah push
+
+nope okay
+
+one more
+
+oh
+
+push we actually can't hear you even
+
+though you're unmuted maybe you're
+
+headphones weren't working
+
+muhammad over to you
+
+i have two questions if you sure
+
+the first one
+
+the key can it equal to uh just a
+
+variable not outcome of a github
+
+function this is my first question
+
+i'm not sure i caught that did you
+
+i
+
+the key the key yeah the key
+
+yes uh
+
+it's equal to the returned value of the
+
+function
+
+uh can it be
+
+equal to
+
+just a
+
+variable or a
+
+value
+
+it well yes it should equal a value so i
+
+am specif and i should clarify actually
+
+since this was not obvious
+
+so when you pass in a function like get
+
+name or get house to the sorted function
+
+as the value of key that function is
+
+automatically called by the get
+
+by the sorted function for you on each
+
+of the dictionaries in the list and it
+
+uses the return value of get name or get
+
+house to decide what strings to actually
+
+use to compare in order to decide which
+
+is alphabetically correct so this
+
+function which you pass just by name you
+
+do not pass in parentheses at the end
+
+is called by the sorted function in
+
+order to figure out for you how to
+
+compare these same values
+
+oh sure go ahead
+
+uh
+
+how can we use the nested dictionaries
+
+i have
+
+read about nested dictionaries what is
+
+the difference between nested
+
+dictionaries and the dictionary inside a
+
+list yeah i think it is sure um
+
+uh so we are using a list of
+
+dictionaries why because each of those
+
+dictionaries represents a student and a
+
+student has a name and a house and we
+
+want to i claim maintain that
+
+association and it's a list of students
+
+because we've got multiple students four
+
+in this case you could create us a
+
+structure that is a dictionary of
+
+dictionaries but i would argue it just
+
+doesn't solve a problem i don't need a
+
+dictionary of dictionary i need a list
+
+of key value pairs right now that's all
+
+so let me propose if we go back to
+
+students.pi here and we revert back to
+
+the approach where we have get name as
+
+the function both used and defined here
+
+and that function returns the student's
+
+name what happens to be clear is that
+
+the sorted function will use the value
+
+of key get name in this case
+
+calling that function on every
+
+dictionary in the list that it's
+
+supposed to sort
+
+and that function getname returns the
+
+string that sorted will actually use to
+
+decide whether things go in this order
+
+left right or in this order right left
+
+it alphabetizes things based on that
+
+return value so notice that i'm not
+
+calling the function get name here with
+
+parentheses i'm passing it in only by
+
+its name so that the sorted function can
+
+call that get name function for me now
+
+it turns out as always if you're
+
+defining something be it a variable or
+
+in this case a function
+
+and then immediately using it
+
+but never once again needing the name of
+
+that function like get name we can
+
+actually tighten this code up further i
+
+can actually do this i can get rid of
+
+the get name function altogether just
+
+like i could get rid of a variable that
+
+isn't strictly necessary and instead of
+
+passing key the name of a function i can
+
+actually pass key what's called in a
+
+lambda function which is an anonymous
+
+function a function that just has no
+
+name why because you don't need to give
+
+it a name if you're only going to call
+
+it in one place and the syntax for this
+
+in python is a little weird but if i do
+
+key equals literally the word lambda
+
+then something like student which is the
+
+name of the parameter i expect this
+
+function to take and then i don't even
+
+type the return key i instead just say
+
+student bracket name so what am i doing
+
+here with my code
+
+this code here that i've highlighted is
+
+equivalent to the get name function i
+
+implemented a moment ago the syntax is
+
+admittedly a little different i don't
+
+use def i didn't even give it a name
+
+like get name i instead i'm using this
+
+other keyword in python called lambda
+
+which says hey python here comes a
+
+function but it has no name it's
+
+anonymous that function takes a
+
+parameter i could call it anything i
+
+want i'm calling it student why because
+
+this function that's passed in as key is
+
+called on every one of the students in
+
+that list every one of the dictionaries
+
+in that list what do i want this
+
+anonymous function to return well given
+
+a student i want to index into that
+
+dictionary and access their name so that
+
+the string hermione and harry and ron
+
+and draco is ultimately returned and
+
+that's what the sorted function uses to
+
+decide how to sort these bigger
+
+dictionaries that have other keys like
+
+house as well
+
+so if i now go back to my terminal
+
+window and run python of students.pi it
+
+still seems to work the same but
+
+it's arguably a little better design
+
+because i didn't waste lines of code by
+
+defining some other function calling it
+
+in one and only one place i've done it
+
+all sort of in one breath if you will
+
+all right let me pause here to see if
+
+there's any questions specifically about
+
+lambda or anonymous functions and this
+
+tightening up of the code
+
+uh yeah uh suyan if i'm saying it right
+
+uh professor it is swam
+
+and i have a question like whether we
+
+could define lambda twice can you you
+
+can use lambda twice you can create as
+
+many anonymous functions as you'd like
+
+and you generally use them in context
+
+like this where you want to pass to some
+
+other function uh a function that itself
+
+does not need a name so you can
+
+absolutely use it in more than one place
+
+i just have only one use case for it
+
+right now other questions on lambda and
+
+these anonymous functions rohit
+
+hello
+
+yes hello
+
+my question is not from lambda but
+
+i have a doubt can we sort characters
+
+from a word
+
+can you sort by what
+
+characters from a word
+
+can you sort the characters in a word
+
+yes you can but let me save that problem
+
+for another day you could absolutely do
+
+something like that but we need to do
+
+more work than we're doing here at the
+
+moment we're operating on strings how
+
+about one other question on lambda or
+
+anonymous function specifically philip
+
+oh yeah
+
+uh uh what what if our lambda
+
+would take more than one line for
+
+example
+
+if and imagine this sure if your lambda
+
+function takes multiple parameters that
+
+is fine you can simply specify
+
+commas followed by the names of those
+
+parameters maybe x and y or so forth
+
+after the name student so here too
+
+lambda looks a little different from def
+
+in that you don't have parentheses you
+
+don't have the keyword def you don't
+
+have a function name but ultimately they
+
+achieve that same effect they create a
+
+function anonymously and allow you to
+
+pass it in for instance as some value
+
+here
+
+well let me propose that we're cut we're
+
+in a good place now even though this is
+
+a lot to digest all at once because
+
+we've gone from just reading files to
+
+now writing them and then reading them
+
+with multiple fields separated by commas
+
+unfortunately our code is still a little
+
+fragile it seems to work fine for these
+
+inputs but suppose that we were to
+
+change our csv file not to store
+
+students home how not to store students
+
+houses but their homes like where those
+
+students from hogwarts actually grew up
+
+so let me propose that we actually do
+
+this suppose that we jot down that um
+
+say
+
+uh draco
+
+lives in slytherin now but grew up in
+
+malfoy manor uh
+
+let's fix this
+
+sorry just one moment
+
+okay
+
+let's make a change so let's now change
+
+students.csv to contain not students
+
+houses at hogwarts but their homes where
+
+they grew up so draco for instance grew
+
+up in malfoy manor
+
+ron grew up in the borough
+
+harry grew up in
+
+number four
+
+privet drive
+
+and according to the internet no one
+
+knows where hermione grew up the movies
+
+apparently took certain liberties with
+
+where she grew up so for this purpose
+
+we're actually going to remove hermione
+
+because it is unknown exactly where she
+
+was born so we still have some three
+
+students but if anyone can spot the
+
+potential problem now
+
+how might this be a bad thing well let's
+
+go and try and run our own code here let
+
+me go back to students.pie here and let
+
+me propose that i just changed my
+
+semantics because i'm now not thinking
+
+about hogwarts houses but the students
+
+own home so i'm just going to change
+
+some variables i'm going to change this
+
+house to a home
+
+this house to a home as well as this one
+
+here i'm still going to sort the
+
+students by name but i'm going to say
+
+that they're not in a house but rather
+
+from a home so i've just changed the
+
+names of my variables and my grammar in
+
+english here ultimately to print out
+
+that for instance harry is from number
+
+four privet drive and so forth but let's
+
+see what happens here when i run python
+
+of this version of students.pi having
+
+changed students.csv to contain those
+
+homes and not houses enter
+
+huh our first value error like the
+
+program just doesn't work
+
+what might explain this value error the
+
+explanation of which rather cryptically
+
+is too many values to unpack and the
+
+line in question is this one involving
+
+split
+
+how did all of a sudden after all of
+
+these successful runs of this program
+
+did line five suddenly now break asanda
+
+um in the line in students that says
+
+you have three values there's a line
+
+that you have three values and
+
+instruments yeah i spent a lot of time
+
+trying to figure out where uh every
+
+student should be from so that we could
+
+create this problem for us and
+
+wonderfully like the first sentence of
+
+the book is number four privet drive and
+
+so the fact that that address has a
+
+comma in it is problematic why because
+
+you and i decided some time ago to just
+
+standardize on commas csv comma
+
+separated values to denote the uh
+
+we standardized on commas in order to
+
+delineate one value from another and if
+
+we have commas grammatically in the
+
+student's home we're clearly confusing
+
+it as this special symbol and the split
+
+function is now for just harry trying to
+
+split it into three values not just two
+
+and that's why there's too many values
+
+to unpack because we're only trying to
+
+assign two variables name and house now
+
+what could we do here well we could just
+
+change our approach for instance like
+
+one paradigm that is not uncommon is to
+
+use something a little more
+
+a little less common like a vertical bar
+
+so i could go in and change all of my
+
+commas to vertical bars that too could
+
+eventually come back to bite us in that
+
+if my file eventually has vertical bar
+
+somewhere it might still break so maybe
+
+that's not the best approach i could
+
+maybe do something like this i could
+
+escape the data as i've done in the past
+
+and maybe i could put quotes around any
+
+english string that itself contains a
+
+comma and that's fine i could do that
+
+but then my code students.pie is going
+
+to have to change too because i can't
+
+just naively split on a comma now i'm
+
+going to have to be smarter about it i'm
+
+going to have to take into account split
+
+only on the commas that are not inside
+
+of quotes and oh it's getting
+
+complicated fast and at this point you
+
+need to take a step back and consider
+
+you know what if we're having this
+
+problem odds are many other people
+
+before us have had this same problem it
+
+is incredibly common to store data in
+
+files it is incredibly common to use csv
+
+files specifically and so you know what
+
+why don't we see if there's a library in
+
+python that exists to read and or write
+
+csv files rather than reinvent a wheel
+
+so to speak let's see if we can write
+
+better code by standing on the shoulders
+
+of others who have come before us
+
+programmers passed and actually use
+
+their code to do the reading and writing
+
+of csvs so we can focus on the part of
+
+our problem that you and i care about so
+
+let's propose that we go back to our
+
+code here and see how we might use the
+
+csv library indeed within python there
+
+is a module called csv the documentation
+
+for it is at this url here in python's
+
+official documentation but there's a few
+
+functions that are pretty readily
+
+accessible if we just dive right in and
+
+let me propose that we do this let me go
+
+back to my code here and instead of
+
+reinventing this wheel and reading the
+
+file line by line and splitting on
+
+commas and dealing now with quotes and
+
+privet drives and so forth let's do this
+
+instead at the start of my program
+
+let me go up and import the csv module
+
+let's use this library that someone else
+
+has written that's dealing with all of
+
+these corner cases if you will i'm still
+
+going to give myself a list initially
+
+empty in which to store all these
+
+students but i'm going to change my
+
+approach here now just a little bit when
+
+i open this file with with
+
+let me go in here and change this a
+
+little bit i'm going to go in here now
+
+and say this
+
+reader equals csv dot reader passing in
+
+file as input so it turns out if you
+
+read the documentation for the csv
+
+module it comes with a function called
+
+reader whose purpose in life is to read
+
+a csv file for you and figure out where
+
+are the commas where are the quotes
+
+where are all the potential corner cases
+
+and just deal with them for you you can
+
+override certain defaults or assumptions
+
+in case you're using not a comma but a
+
+pipe or something else but by default i
+
+think it's just going to work now how do
+
+i iterate over a reader and not the raw
+
+file itself it's almost the same the
+
+library allows you still to do this for
+
+each row in the reader so you're not
+
+iterating over the file directly now
+
+you're iterating over the reader which
+
+is again going to handle all of the
+
+parsing of commas and new lines and more
+
+for each row in the reader what am i
+
+going to do
+
+well at the moment i'm going to do this
+
+i'm going to append to my students list
+
+the following dictionary a dictionary
+
+that has a name whose value is the
+
+current rows first column and whose
+
+house or rather home now is the rows
+
+second column
+
+so here it's worth noting that reader
+
+isn't quite as fancy as my dictionary
+
+based approach a moment ago
+
+whereby
+
+sorry
+
+ah
+
+now it's worth noting that the reader
+
+isn't quite as foreign reader oh can i
+
+do that
+
+sorry let me test one thing real fast uh
+
+name
+
+um
+
+i will explain in just a moment just to
+
+want to misspeak and disappoint
+
+perfect okay
+
+now it's worth noting that the reader
+
+for each line in the file indeed returns
+
+to me a row but it returns to me a row
+
+that's a list which is to say that the
+
+first element of that list is going to
+
+be the student's name as before the
+
+second element of that list is going to
+
+be the students home
+
+as now before but if i want to access
+
+each of those elements remember that
+
+lists are zero indexed we start counting
+
+at zero and then one rather than one and
+
+then two so if i want to get at the
+
+student's name i use row bracket 0 and
+
+if i want to get at the student's home i
+
+use row bracket 1. but in my for loop we
+
+can do that same unpacking as before if
+
+i know this csv is only going to have
+
+two columns i could even do this for
+
+name
+
+home in reader and now i don't need to
+
+use list notation i can unpack things
+
+all at once and say name here and home
+
+here
+
+the rest of my code can stay exactly the
+
+same because what am i doing now on line
+
+eight i'm still constructing the same
+
+dictionary as before albeit for homes
+
+instead of houses and i'm grabbing those
+
+values now not from the file itself and
+
+my use of split but the reader and again
+
+what the reader is going to do is figure
+
+out where are those commas where are the
+
+quotes and just solve that problem for
+
+you so let me go now down to my terminal
+
+window and run python of students.pi and
+
+hit enter and now we see successfully
+
+sorted no less that draco is from
+
+malform manor harry is from number four
+
+comma privet drive and ron is from the
+
+borough
+
+questions now on this technique of using
+
+csv
+
+reader from that csv module
+
+which again is just getting us out of
+
+the business of reading each line
+
+ourselves and reading each of those
+
+commas and splitting piyush
+
+hi there
+
+um so my questions are related to
+
+something
+
+in the past
+
+i recognize that you are reading a file
+
+every time you well you we're
+
+we're assuming that we have the csv file
+
+to hand already in this case
+
+um is it possible to make
+
+a file
+
+readable and writeable so in in case if
+
+you want you could uh you could write
+
+some stuff to the file
+
+but then at the same time you could have
+
+another function that
+
+reads through the phone that's changes
+
+to it as you go along a really good
+
+question and the short answer is yes
+
+however historically the mental model
+
+for a file is that of a cassette tape
+
+years ago not really in use anymore but
+
+cassette tapes are sequential whereby
+
+they start at the beginning and if you
+
+want to get to the end you kind of have
+
+to
+
+unwind the tape to get to that point the
+
+closest analog nowadays would be
+
+something like netflix or any streaming
+
+service where there's a scrubber that
+
+you have to go left to right you can't
+
+just jump there or jump there you don't
+
+have random access so the problem with
+
+files if you want to read and write them
+
+you or some library needs to keep track
+
+of where you are in the file so that if
+
+you're reading from the top and then you
+
+write at the bottom and you want to
+
+start reading again you seek back to the
+
+beginning so it's not something we'll do
+
+here in class it's more involved but
+
+it's absolutely doable
+
+for our purposes we'll generally
+
+recommend read the file and then if you
+
+want to change it write it back out
+
+rather than trying to make more
+
+piecemeal changes which is good if
+
+though the file is massive and it would
+
+just be very expensive time wise to
+
+change the whole thing
+
+other questions on this
+
+csv reader
+
+uh yeah
+
+over to uh
+
+dokaba if i'm saying it right
+
+yeah exactly
+
+um
+
+is possible to write
+
+a paragraph in that file
+
+absolutely right now i'm writing very
+
+small strings just names or houses as i
+
+did before but you can absolutely write
+
+as much text as you want
+
+indeed
+
+other questions on csv reader
+
+uh yeah maria
+
+yes uh can a user choose
+
+himself a key like input key will be a
+
+name or home
+
+now the program will
+
+be so short answer
+
+yes we could absolutely write a program
+
+that prompts the user for a name and a
+
+home a name and a home and we could
+
+write out those values and in a moment
+
+we'll see how you can write to a csv
+
+file for now i'm assuming as the
+
+programmer who created students.csv that
+
+i know what the columns are going to be
+
+and therefore i'm naming my variables
+
+accordingly however this is a good segue
+
+to one final feature of reading csvs
+
+which is that you don't have to rely on
+
+either getting a row as a list and using
+
+bracket zero or bracket one and you
+
+don't have to unpack things manually in
+
+this way we could actually be smarter
+
+and start storing the names of these
+
+columns in the csv file itself and in
+
+fact if any of you have ever opened a
+
+spreadsheet file before be it in excel
+
+apple numbers google spreadsheets or the
+
+like odds are you've noticed that the
+
+first row very frequently is a little
+
+different it actually is bold phase
+
+sometimes or it actually contains the
+
+names of those columns the names of
+
+those attributes below and we can do
+
+this here in students.csv i don't have
+
+to just keep assuming that the student's
+
+name is first and that the student's
+
+home is second i can explicitly bake
+
+that information into the file just to
+
+reduce the probability of mistakes down
+
+the road i can literally use the first
+
+row of this file and say name comma home
+
+so notice that
+
+name is not literally someone's name and
+
+home is not literally someone's home it
+
+is literally the words name and home
+
+separated by a comma and if i now go
+
+back into students.pie and don't use csv
+
+reader but instead i use a dictionary
+
+reader i can actually
+
+treat my csv file even more flexibly not
+
+just for this but for other examples too
+
+let me do this instead of using a csv
+
+reader let me use a csv dict reader
+
+which will now
+
+iterate over the file top to bottom
+
+loading in each line of text not as a
+
+list of columns but as a dictionary of
+
+columns what's nice about this is that
+
+it's going to give me automatic access
+
+now to those columns names i'm going to
+
+revert to just saying for row in reader
+
+and now i'm going to append a name and a
+
+home but how am i going to get access to
+
+the current rows
+
+name and the current rows home well
+
+earlier i used bracket 0 for the first
+
+and bracket 1 for the second when i was
+
+using a reader a reader returns lists a
+
+dict reader or dictionary reader returns
+
+dictionaries one at a time and so if i
+
+want to access the current row's name i
+
+can say row quote-unquote name i can say
+
+here for home row quote-unquote home and
+
+i now have access to those same values
+
+the only change i had to make to be
+
+clear was in my csv file i had to
+
+include on the very first row little
+
+hints as to what these columns are and
+
+if i now run this code i think it should
+
+behave pretty much the same python of
+
+students.pi and indeed we get the same
+
+sentences but now
+
+my code is more robust against changes
+
+in this data if i were to open this csv
+
+file in excel or google spreadsheets or
+
+apple numbers and for whatever reason
+
+change the columns around maybe this is
+
+a file that you're sharing with someone
+
+else and just because they decide to
+
+sort things differently left to right by
+
+moving the columns around
+
+previously my code would have broken
+
+because i was assuming that name is
+
+always first and home is always second
+
+but if i did this be it manually in one
+
+of those programs or here home comma
+
+name and suppose i reversed all of this
+
+the home comes first followed by harry
+
+the borough then by ron
+
+and then lastly malfoy manor then draco
+
+notice that my file is now completely
+
+flipped the first column's now the
+
+second and the seconds the first but i
+
+took care to update the header of that
+
+file the first row notice my python code
+
+i'm not going to touch it at all i'm
+
+going to rerun python of students.pi and
+
+hit enter and it still just works and
+
+this too is an example of like coding
+
+defensively like what if someone changes
+
+your csv file your data file ideally
+
+that won't happen but even if it does
+
+now because i'm using a dictionary
+
+reader that's going to infer from that
+
+first row for me what the columns are
+
+called my code just keeps working and so
+
+it keeps getting if you will better and
+
+better
+
+any questions now
+
+on this approach
+
+or anything else with csvs
+
+uh yeah nelly
+
+what is important of new line in cs3
+
+file
+
+uh what about the new line in the csv
+
+file
+
+yeah what is the importance of newline
+
+csv file what's the importance of the
+
+new line in the csv file it's partly a
+
+convention in the world of text files we
+
+humans have just been for decades in the
+
+habit of storing
+
+data line by line it's visually
+
+convenient it's just easy to extract
+
+from the file because you just look for
+
+the new lines so the new line just
+
+separates some data from some other data
+
+we could use any other symbol on the
+
+keyboard but it's just common to hit
+
+enter to just move the data to the next
+
+line just a convention
+
+other questions from
+
+kb
+
+um thank you sure um
+
+so
+
+it seems to be working fine
+
+if you just have name at home i'm
+
+wondering what will happen
+
+if you want to
+
+put in more data
+
+um
+
+say
+
+you wanted to add the house to both the
+
+name and the home
+
+sure if you wanted to add the house back
+
+so if i go in here and at house last and
+
+i go here and say gryffindor for harry
+
+gryffindor for ron and slytherin for
+
+draco now i have three columns
+
+effectively if you will home on the left
+
+name in the middle house on the right
+
+each separated by commas with weird
+
+things like number four comma privet
+
+drive still quoted notice if i go back
+
+to students.pi and i don't change the
+
+code at all
+
+and run python of students.pi it still
+
+just works and this is what's so
+
+powerful about a dictionary reader it
+
+can change over time it can have more
+
+and more columns your existing code is
+
+not going to break your code would break
+
+would be much more fragile so to speak
+
+if you were making assumptions like the
+
+first column's always going to be name
+
+the second column is always going to be
+
+house things will break fast if those
+
+assumptions break down
+
+so not a problem in this case
+
+well let me propose that besides reading
+
+csvs let's at least take a peek at how
+
+we might write a csv too if you're
+
+writing a program in which you want to
+
+store not just students names but maybe
+
+their homes as well in a file how can we
+
+keep adding to this file well let me go
+
+ahead and propose that we do this let me
+
+go ahead and remove students.csv
+
+so that it no longer exists and we'll
+
+recreate it now programmatically
+
+in code i'm going to go ahead and open
+
+up students.pie and in students.pai
+
+let's go ahead and still import csv at
+
+the top let's go ahead now and prompt
+
+the user for two things a name of a
+
+student and the home of the same so name
+
+equals input quote unquote what's your
+
+name question mark and then this one
+
+home equals input quote unquote where's
+
+your home so now the file doesn't yet
+
+exist we're going to create it
+
+programmatically in code
+
+with open quote unquote students.csv but
+
+but but this time i'm going to open it
+
+in append mode i erase the file so it
+
+doesn't yet exist append will
+
+automatically create it if need be but
+
+it's not going to change it again and
+
+again it's going to keep appending to it
+
+it won't overwrite so once i have this
+
+file open as a variable called file
+
+let's do this i need a different feature
+
+of the csv module called a dictionary
+
+writer so i'm going to do this
+
+writer equals csv.dictwriter
+
+and this is just a feature of the
+
+library that gives you the ability to
+
+write to a csv file and i'm going to
+
+pass in as input two things not just one
+
+i'm going to pass in the file itself so
+
+that it knows where to write the csv val
+
+these comma separated values too and i'm
+
+going to pass in a named parameter
+
+called field names and you only know
+
+about this from the documentation alone
+
+or this example here the field names i
+
+want to write to this file are going to
+
+be respectively name
+
+and home i'm going to go with just two
+
+left to right what do i want to do now
+
+that i've created that dictionary writer
+
+well let me call a function that comes
+
+with the writer a method called write
+
+row and it takes as input a dictionary
+
+and that's why this is a dictwriter and
+
+not just a
+
+writer alone that takes lists a
+
+dictionary writer takes a dictionary for
+
+each row a collection of key value pairs
+
+that you want this library to put in the
+
+right columns so what do i want to write
+
+i'm going to write a dictionary using my
+
+curly braces as always whose name is
+
+whatever the student's name is in that
+
+variable from earlier and whose home is
+
+whatever the value of that home variable
+
+is from earlier
+
+so again i'm not going to bother
+
+printing out any commas i'm not going to
+
+print out any new lines i'm going to let
+
+the dict writer function handle all of
+
+that for me so that's it i don't even
+
+need to close the file because once
+
+you're at the end of a width it will
+
+just close automatically so let me go
+
+ahead and run python of students.pie and
+
+hit enter
+
+all right what's your name let's go
+
+ahead and start with harry enter where's
+
+your home
+
+number 4 comma privet drive which could
+
+potentially break things but i think the
+
+library will be smart enter
+
+and nothing bad seems to happen which is
+
+generally a good thing let's open
+
+students.csv and see what the new
+
+version looks like
+
+it looks like as hoped that module
+
+the csv module handled the comma and
+
+handled the quoting for me let's try one
+
+other student let's go back to
+
+students.pi let's go ahead and run
+
+python of students dot pi what's your
+
+name ron the borough enter
+
+okay no errors that's good let's go back
+
+to students.csv and there's ron and the
+
+borough let's try one more and i'll
+
+leave the csv open python
+
+of students.pie enter what's your name
+
+draco and lives in uh malfoy manor enter
+
+and watch the csv file at the top of the
+
+screen
+
+there it is he appears at the top
+
+so that's how we might edit this file
+
+using a dictionary writer which allows
+
+us to automate this process of creating
+
+that file not needing to do it from
+
+scratch
+
+any questions now
+
+on writing
+
+or
+
+reading csvs
+
+uh harris over to you
+
+uh hello david and this is harris from
+
+new zealand i only have one question and
+
+is there any specifics specific
+
+situation for me to use single quotation
+
+or double quotation because
+
+after the print we use single quotation
+
+to represent the key of the dictionary
+
+but after the
+
+reading or writing we use the double
+
+quotation
+
+it's a good question in python you can
+
+generally use double quotes or you can
+
+use single quotes and it doesn't matter
+
+you should just be self-consistent so
+
+that stylistically your code looks the
+
+same all throughout
+
+sometimes though it is necessary to
+
+alternate if you're already using double
+
+quotes as i was earlier for a long f
+
+string but inside that f string i was
+
+interpolating the values of some
+
+variables using curly braces and those
+
+variables were dictionaries and in order
+
+to index into a dictionary you use
+
+square brackets and then quotes but if
+
+you're already using double quotes out
+
+here you should generally use single
+
+quotes here or vice versa but otherwise
+
+i'm in the habit of using double quotes
+
+everywhere others are in the habit of
+
+using single quotes everywhere it only
+
+matters sometimes if one might be
+
+confused for the other
+
+other questions on dictionary uh writing
+
+or reading uh metalli if i'm saying it
+
+right
+
+uh yeah daily my question is can we use
+
+multiple csv files in any program
+
+absolutely you can use as many csv files
+
+as you want and it's just one of the
+
+formats that you can use to save data
+
+other questions on csvs or file io
+
+yeah michael
+
+yeah um
+
+thanks for
+
+taking my question uh so when you're
+
+reading from the file the um
+
+you had the um
+
+as a dictionary you had the fields
+
+called
+
+um couldn't you just call when you're
+
+reading could couldn't you just call the
+
+row
+
+couldn't you just call them
+
+uh
+
+so
+
+in the previous version of the of the
+
+students
+
+uh pie file
+
+um
+
+when you're reading the uh
+
+when you're reading each row you are
+
+splitting out the um
+
+the fields by name
+
+can you
+
+yeah so when you're appending to the uh
+
+to the student's list can you just call
+
+the for row and reader students not
+
+append row rather than
+
+uh
+
+rather than naming each of the fields oh
+
+very clever uh short answer yes insofar
+
+as dict reader returns one dictionary at
+
+a time
+
+when you loop over it row is already
+
+going to be a dictionary so yes you
+
+could actually get away with doing this
+
+and the effect would really be the same
+
+in this case good observation how about
+
+one more question on csvs
+
+yeah joaquim
+
+um
+
+yeah when reading in csvs from my past
+
+work with data a lot of things can go
+
+wrong i don't know if it's a fair
+
+question that you can answer in a few
+
+sentences but are there any best
+
+practices
+
+to double check that sort of no mistakes
+
+occurred it's a really good question and
+
+i would say in general if you're using
+
+code to generate the csvs and to read
+
+the csvs and you're using a good library
+
+theoretically nothing should go wrong it
+
+should be 100 correct if the libraries
+
+are 100 correct uh you and i tend to be
+
+the problem like when you let a human
+
+touch the csv or when excel or apple
+
+numbers or some other tools involved
+
+that might not be aligned with your
+
+code's expectations things then yes can
+
+break
+
+the goal really sometimes honestly the
+
+solution is manual fixes you go in and
+
+fix the csv or you have a lot of error
+
+checking or you have a lot of try except
+
+just to tolerate mistakes in the data
+
+but generally i would say if you're
+
+using csv or any file format internally
+
+to a program to both read and write it
+
+you shouldn't have concerns there you
+
+and i the humans are the problem
+
+generally speaking and not the
+
+programmers the users of those files
+
+instead we'll allow me to propose that
+
+we pivot ultimately
+
+from csvs to one other type of file
+
+indeed actually let me fix this so this
+
+is not on the screen
+
+i may reset sorry
+
+all right allow me to propose that we
+
+leave csvs behind but to note that
+
+they're not the only file format you can
+
+use in order to read or write data in
+
+fact they're a popular format as is just
+
+raw text files.txt files but you can
+
+store data really any way that you want
+
+we've just picked csvs because it's
+
+representative of how you might read and
+
+write from a file and do so in a
+
+structured way where you can somehow
+
+have multiple keys multiple values all
+
+in the same file without having to
+
+resort to what would be otherwise known
+
+as a binary file so a binary file is a
+
+file that's really just zeros and ones
+
+and they can be laid out in any pattern
+
+you might want particularly if you want
+
+to store not textual information but
+
+maybe graphical or audio or video
+
+information as well so it turns out that
+
+python is really good when it comes to
+
+having libraries for really everything
+
+and in fact there's a popular library
+
+called pillow that allows you to
+
+navigate image files as well and to
+
+perform operations on image files you
+
+can apply filters a lot instagram you
+
+can
+
+animate them as well and so what i
+
+thought we'd do is leave behind text
+
+files for now and tackle one more
+
+demonstration this time focusing on
+
+this particular library and image files
+
+instead so let me propose that we go
+
+over here to vs code and create a
+
+program ultimately that creates an
+
+animated gif these things are everywhere
+
+nowadays in the form of memes and
+
+animations and stickers and the like in
+
+an animated gif is really just an image
+
+file that has multiple images inside of
+
+it and your computer or your phone shows
+
+you those images one after another
+
+sometimes on an endless loop again and
+
+again and so long as there's enough
+
+images it creates the illusion of
+
+animation because your mind and mind
+
+kind of fills in the gaps visually and
+
+just assumes that if something is moving
+
+even though you're only seeing one frame
+
+per second or some sequence thereof it
+
+looks like an animation so it's like a
+
+simplistic version of a video file well
+
+let me propose that we start with maybe
+
+a couple of uh costumes from another
+
+popular programming language and let me
+
+go ahead and open up my first costume
+
+here number one so suppose here that
+
+this is a costume or really just a
+
+static image here
+
+costume1.jiff and it's just a static
+
+picture of a cat no movement at all let
+
+me go ahead now and open up a second one
+
+costume2.jiff that looks a little bit
+
+different notice and i'll go back and
+
+forth this cat's legs are a little bit
+
+aligned differently so that this was
+
+version one
+
+and this was version two now these cats
+
+come from a programming language from
+
+mit called scratch that allows you very
+
+graphically to animate all this and more
+
+but we'll use just these two static
+
+images costume 1 and costume 2 to create
+
+our own animated gif that after this you
+
+could text to a friend or message them
+
+much like any meme online well let me
+
+propose that we create this animated gif
+
+not by just using some off-the-shelf
+
+program that we downloaded but by
+
+writing our own code i'm going to go
+
+ahead and create a new file here
+
+with code called costumes.pi whose
+
+purpose in life is going to be to oops
+
+spoiler sorry
+
+sorry
+
+well you'll see how that's about what
+
+we're about to do
+
+let me go ahead and run code of
+
+costumes.pie and create our very own
+
+program that's going to take as input
+
+two or even more image files and then
+
+generate an animated gif from them by
+
+essentially creating this animated gif
+
+by toggling back and forth endlessly
+
+between those two images well how am i
+
+going to do this well let's assume that
+
+this will be a program called
+
+costumes.pi that expects
+
+two command line arguments the names of
+
+the files the individual costumes that
+
+we want to animate back and forth so to
+
+do that i'm going to import sys so that
+
+we ultimately have access to sis.rgv
+
+i'm then from this pillow library going
+
+to import support for images
+
+specifically so from pil import image
+
+capital i as per the library's
+
+documentation now i'm going to give
+
+myself an empty list called images just
+
+so i have a list in which to store one
+
+or two or more of these images and now
+
+let me do this
+
+for each argument in
+
+sys.org v
+
+i'm going to go ahead and create a new
+
+image variable set it equal to this
+
+image
+
+dot
+
+open function passing in arg now what is
+
+this doing i'm proposing that eventually
+
+i want to be able to run python of
+
+costumes.pi and then as command line
+
+arguments specified costume1.gif space
+
+costume2.gif so i want to take in those
+
+file names from the command line as my
+
+arguments so what am i doing here well
+
+i'm iterating over sys.rgv all of the
+
+words in my command line arguments i'm
+
+creating a variable called image and i'm
+
+passing to this function image.open from
+
+the pillow library that specific
+
+argument and that library is essentially
+
+going to open that image in a way that
+
+gives me a lot of functionality for
+
+manipulating it like animating now i'm
+
+going to go ahead and
+
+append to my images list
+
+that particular image and that's it so
+
+this loop's purpose in life is just to
+
+iterate over the command line arguments
+
+and open those images using this library
+
+the last line is pretty straightforward
+
+i'm going to say this i'm going to grab
+
+the first of those images which is going
+
+to be in my list at location 0
+
+and i'm going to save it to disk that is
+
+i'm going to save this file now in the
+
+past when we use csvs or text files i
+
+had to do the file opening i had to do
+
+the file writing maybe even the closing
+
+i don't need to do that with this
+
+library the pillow library takes care of
+
+the opening the closing and the saving
+
+for me by just calling save i'm going to
+
+call this save function and just to
+
+leave space because i have a number of
+
+arguments to pass i'm going to move to
+
+another line so it fits i'm going to
+
+pass in the name of the file that i want
+
+to create
+
+costume.gif that will be the name of my
+
+animated gif i'm going to tell this
+
+library to save all of the frames
+
+that i passed to it so the first costume
+
+the second costume and even more if i
+
+gave them i'm going to then append to
+
+this first image the image is zero
+
+the following images
+
+equals this list of images and this is a
+
+bit clever but i'm going to do this i
+
+want to append the next image there
+
+images one and now i want to specify a
+
+duration of 200 milliseconds for each of
+
+these frames and i want this to loop
+
+forever and if you specify loop equals
+
+zero that is time zero it means it's
+
+just not going to loop a finite number
+
+of times but an infinite number of times
+
+instead and i need to do one other thing
+
+recall that sys.rgv
+
+contains not just the words i typed
+
+after my program's name but what else
+
+does sys.org v contain
+
+if you think back to our discussion of
+
+command line arguments
+
+what else is in sis.rgv besides the
+
+words i'm about to type like
+
+costume1.gif and costume2
+
+uh how about mackenzie your thoughts
+
+yeah hi can you hear me yes we can
+
+yeah so we'll actually get in that the
+
+original name of the program we want to
+
+run indeed a costume set pie indeed
+
+we'll get the original name of the
+
+program costumes.pie in this case which
+
+is not a gif obviously so remember that
+
+using slices in python we can do this if
+
+sys.rgb is a list and we want to get a
+
+slice of that list everything after the
+
+first element we can do one colon which
+
+says start it in location one not zero
+
+and take a slice all the way to the end
+
+so give me everything except the first
+
+thing in that list which to mackenzie's
+
+point is the name of the program now if
+
+i haven't made any mistakes let's see
+
+what happens i'm going to run python of
+
+costumes.pie
+
+i'm going to oops sorry
+
+i'm going to run pythonofcostumes.pi
+
+there we go
+
+i'm going to run python of costumes.pi
+
+and now i'm going to specify the two
+
+images that i want to animate so
+
+costume1.gif and costume2.jiff
+
+what is the code now going to do well to
+
+recap we're using the sys library to
+
+access those command line arguments
+
+we're using the pillow library to treat
+
+those files as images and with all the
+
+functionality that comes with that
+
+library i'm using this images list just
+
+to accumulate all of these images one at
+
+a time from the command line and in
+
+lines seven through nine i'm just using
+
+a loop to iterate over all of them and
+
+just add them to this list after opening
+
+them with the library and the last step
+
+which is really just one line of code
+
+broken onto three so that it all fits
+
+i'm gonna save the first image but i'm
+
+asking the library to append this other
+
+image to it as well not bracket zero but
+
+bracket one and if i had more i could
+
+express those as well i want to save all
+
+of these files together i want to pause
+
+200 milliseconds a fifth of a second in
+
+between each frame and i want it to loop
+
+infinitely many times so now if i cross
+
+my fingers as always hit enter
+
+nothing bad happened and that's almost
+
+always a good thing let me now run
+
+codeofcostumes.gif
+
+to open up in vs code the final image
+
+and what i think i should see is a very
+
+happy cat and indeed so now we've seen
+
+not only that we can read and write
+
+files be it textually we can read and
+
+now write files that are binary zeros
+
+and ones we've just scratched the
+
+surface this is using the library called
+
+pillow but ultimately this is going to
+
+give us the ability to read and write
+
+files however we want so in order to use
+
+this technique in your programs it'll
+
+amount to using functions like open in
+
+libraries and we can't wait to see what
+
+you achieve with them next all right
+
+that's it for this week we will see you
+
+next time
+
+all right can they are we live again
+
+okay we are officially a wrap for today
+
+but wanted to leave a couple minutes for
+
+questions if folks have them before we
+
+drop off here
+
+thank you again for joining us it's such
+
+a
+
+such a fun
+
+time to gather each week to actually do
+
+this even though we're learning to
+
+program but somehow uh
+
+hopefully it's all fun questions from
+
+the group here roderick over to you
+
+hi uh
+
+hi david uh so my question is uh in
+
+python aren't we allowed
+
+aren't we required
+
+to actually uh explicitly uh write the
+
+path of those
+
+um
+
+file let's say for example for the
+
+custom that give
+
+uh aren't we uh required to actually uh
+
+write the path to access those
+
+file
+
+or python actually
+
+reads it on its own by importing some of
+
+those libraries uh it's not the latter
+
+it's something in between what you
+
+propose so when you don't specify the
+
+path python and a lot of languages just
+
+look in the current directory so
+
+whatever folder your python file is in
+
+the program will assume that your gifs
+
+are in as well
+
+so if co if these files were elsewhere
+
+for instance in a subfolder i might have
+
+needed to do something like this
+
+folder slash costume.gif
+
+folder slash costume2.gif you might have
+
+to specify but i have very deliberately
+
+put them all in my same folder just to
+
+make my life easier for now
+
+good question others from the group uh
+
+yashfie
+
+oh yeah first of all thank you for
+
+today's lecture it was very much fun
+
+and my question was that how can we
+
+introduce
+
+costume.gif in our uh code space
+
+oh these files so if you go to if carter
+
+you don't mind uh take a look at the
+
+chat yes and we'll paste the url of
+
+today's code and i included the gifs
+
+costume one and two in the folder for
+
+today so that you can create the same
+
+other questions uh rajul if i'm saying
+
+it right
+
+yes uh so my question was related uh
+
+generally to computer science okay so if
+
+i want to go inside like in the field of
+
+ai and ml and i have taken cs15 cs50
+
+python this one so what should i take
+
+next so if you really like ai a
+
+colleague of ours teaches an ai course
+
+with python if carter you wouldn't mind
+
+pasting that one too um keep an eye on
+
+the chat in a moment rajul and i might
+
+suggest that one
+
+next oh sorry
+
+wrenching can we unmute yeah
+
+yes i have another question uh it was
+
+related to someone asked a question
+
+yesterday like he asked that
+
+python will be used to develop apps
+
+and you said only java would be used not
+
+too much of python so if the app uses
+
+machine learning
+
+so will python player on there or java
+
+could do that stuff oh you can
+
+absolutely do um machine learning stuff
+
+with java but if you're thinking about
+
+an app in like the mobile device sense
+
+like an uh a tablet or a phone
+
+a lot of the machine learning stuff is
+
+probably done server side anyway so you
+
+could write python code on a server that
+
+the app talks to over the internet and
+
+then you could use any python libraries
+
+that might be popular that you might
+
+want to use as well um when i said that
+
+python generally speaking it's and for
+
+android it's java and kotlin and for ios
+
+it's swift and um objective-c that are
+
+typically used for apps
+
+okay thank you sure i think we have time
+
+for one more question if that's okay
+
+then we have to drop off here in
+
+cambridge over to um
+
+how about uh dogoba if you can hear me
+
+yes yes for sure
+
+so i would
+
+like to
+
+ask about
+
+the gif
+
+costume
+
+could we
+
+have
+
+more
+
+extra stickers
+
+to try to animate
+
+oh interesting um
+
+we weren't planning on that if you
+
+post in one if you email me after class
+
+my email address should be on the
+
+course's website we can point you at
+
+some others what i did to grab those
+
+costumes was i used scratch which has a
+
+web page and i just exported the images
+
+in order to get the frames to use them
+
+for this and we can point out so i have
+
+one question can we add a html and
+
+python together to make something fun
+
+like animation work
+
+uh short answer yes um
+
+you could do it for animation it's often
+
+python used for web programming more
+
+generally if carter you wouldn't mind
+
+pasting the link of another class a
+
+colleague of ours teaches one on python
+
+and web stuff
+
+you might like that as well
+
+sure and i hope you'll forgive that we
+
+need to drop off here in cambridge but
+
+we'll be in touch via email but the next
+
+class thank you all so much again for
+
+spending time with us and for tolerating
+
+all of my mistakes uh you'll see the new
+
+and improved version online ultimately
+
+but see you all online soon thank you
+
+you
+

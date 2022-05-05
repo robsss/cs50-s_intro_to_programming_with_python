@@ -1,0 +1,980 @@
+lecture 3, 4
+
+
+# lec4
+
+## modules, random, import
+
+### What is the difference then between libraries and header files?
+
+header file. Okay, header file, I'm sorry the speaker is a little quiet here.
+
+**What is the difference then between libraries and header files?**
+
+So a library is perhaps the most generic term. It
+
+refers to code that someone else has written,
+
+perhaps even you that you can use and reuse in your own projects.
+
+A header file is a feature of languages like C and C plus plus and some other languages
+
+that simply specifies, among other things,
+
+the functions that have been implemented for you.
+
+But in a language like C,
+
+your code would generally be in a file like something
+
+dot see that's where you actually implement those functions,
+
+but in C you would have another file called something
+
+dot h a So called header file and that contains
+
+only the names of those functions and a little more
+
+detail that essentially teaches the compiler the program you're using,
+
+what functions will exist.
+
+Some languages like python don't make that distinction between your header files
+
+and your actual code files rather it's all in one file,
+
+like something called random dot pi.
+
+That's in some sense,
+
+a little more convenient for programmers and so
+
+not all languages take that hetero file approach,
+
+but a header file is something very specific and technical.
+
+A library is the general term and indeed the focus overall today.
+
+### Can you set these probabilities not using these same functions?
+
+Can you set the probabilities?
+
+But you can absolutely implement some of
+
+your own functions or use more sophisticated
+
+functions that do exist in this library and others to exercise more control.
+
+These are meant to be very user friendly and simple functions.
+
+Certainly the ones we looked at that give you equal probability
+
+for all of those but absolutely you could skew things though.
+
+Hopefully if you're implementing a gambling game or the
+
+like you're not actually making some cards more probable
+
+than others.
+
+## sys.argv
+
+### Could we pass the full name of one person ?
+
+```shell
+
+pythonn name.py David Malan
+```
+
+instead
+
+```shell
+
+python name.py "David Malan"
+
+```
+
+on how we handled the error before with the index error
+
+or how now we're just pro actively avoiding
+
+all index errors altogether by just checking first.
+
+Is it too few. Is it too many or is it exactly what we want
+
+to go?
+
+Oh yeah, thank you.
+
+Um So I was wondering you you touched upon kind of using your full name.
+
+Um Could we,
+
+could we then um is there a way going forward that perhaps we have
+
+people that want their full names and want their just their first name?
+
+That we separate that into like oh this person has full name, This person has
+
+just the one name? Absolutely.
+
+And allow me to allow me to propose,
+
+we come back to that support for multiple names but
+
+indeed we could do that and I should know too
+
+though we can support full names right now if I
+
+do this instead of typing in David space malin,
+
+which is problematic because again by definition of how RGB works,
+
+each word ends up in a specific location in the list.
+
+But if I add quotes, single quotes or double quotes at the command line.
+
+Now python will view this as to total things, the name of the file and this full name.
+
+And now when I hit enter I don't see the quotes,
+
+the whole thing is passed in as my full name and if I want to
+
+adapt this further for multiple people will be able to do that as well.
+
+### Can you use multiple else's statements if ... elif ... else statement?
+
+* TLDR: No.
+
+I want to ask you can we use multiple else statement?
+
+Can you use multiple else's statements?
+
+No else is the last catch all statement that you can have.
+
+You can have multiple L if statements in the middle but not multiple else's
+
+Okay.
+
+## sys.exit
+
+### Can we use multiple arguments in the prompt?
+
+a short answer? Yes.
+
+I think if I understand your question
+
+correctly whereby you're proposing to have many words
+
+at the end of the command and you want to access those individual words.
+
+Absolutely. At some point it gets a little fragile.
+
+I would say if you're typing so many words at the prompt
+
+that the order really matters.
+
+And so it turns out there's a lot of programs and there's functionality in
+
+python that can allow you to provide those values like name or age or
+
+any number of other fields in any order you want but pass in a
+
+bit more information texturally that tells the program how you want to use it.
+
+So in short what you're describing is possible.
+
+## slices
+
+### 
+Yeah, let's go over to Melvin.
+
+Mhm.
+
+Can we slice starting from the end of the argument argument vector?
+
+You can you can slice something from the end of the argument vector
+
+and this might uh this might blow one's mind a little bit.
+
+Let me go ahead and do this.
+
+Uh Let's see,
+
+let me go ahead and do negative one at the end
+
+using a negative number here and running the same command.
+
+We've just uninvited wrong, shin from receiving a name tag here.
+
+So if you use a negative number it has the effect of counting
+
+to the uh in the other direction from the end of the list.
+
+### Q
+
+Yeah. Eric question
+
+Hi.
+
+So I remember very early on when we were talking about
+
+only having two decimal places in a in a float value.
+
+Um
+
+Does this, is that in the same vein like because we use the colon .2 f.
+
+So that is that the same thing then why would the F.
+
+B included then in the 0.2 F as opposed to here. When you just have the numbers.
+
+A really good question and it's just the short answer is that context matters.
+
+So there's only so many keys on our keyboard.
+
+And so we sometimes use the same symbols for different things.
+
+So what you're alluding to is the format code in an F.
+
+String for actually formatting a number using a colon.
+
+Using a period, using a number, using the letter F and so forth.
+
+And that is very specific to the F string feature of python.
+
+This case has nothing to do with any of that syntax per se.
+
+This is just using a colon in a different
+
+context to solve this problem to implement a slice.
+
+The authors of python could have chosen another symbol,
+
+but honestly looking down at my keyboard here,
+
+we don't have that many to choose from that are easy to type.
+
+So sometimes they have different meanings. A good question as well,
+
+## cowsay
+
+### Um So my first question is
+
+the packages that you're calling um to use in the program,
+
+are they the same as um let's say
+
+I'm doing java the same as calling a class of java file in order to use its functions.
+
+the first question about the comparison with java.
+
+Python packages are similar to java packages where
+
+you have something dot something dot something at
+
+the top of your program that gives you access to a class or something else.
+
+Python itself supports classes more on those down the
+
+road and you can do very similar things in
+
+python is you can do with java but the
+
+analog really is python packages to java packages here.
+
+### And my second question is,
+
+what's the actual purpose of using command line arguments as you've used? Because
+
+it's not really the best way to,
+
+as you say, the user friendly
+
+where as in
+
+let's say the person who's
+
+using the program doesn't know what it, what they want,
+
+what the program is asking them
+
+and they just say, okay, run the program and
+
+nothing happens and they don't understand it
+
+and then they say okay if the if someone tells them,
+
+oh the program is asking you to print its name
+
+and you have to pass into the why couldn't you just prompt
+
+the user to say please enter your name and then print out its
+
+here's the name, say hello, my name. Is this
+
+
+As for command line arguments, you ask a good question. Why do we use them?
+
+Especially if they're a little yes user friendly.
+
+They're a little less user friendly to people who aren't in this zoom.
+
+To be honest,
+
+you and I as we learn more and more about
+
+programming and more about command line arguments I dare say,
+
+will become more comfortable with and tend to prefer the
+
+ability to customize commands using these command line arguments.
+
+Why
+
+productivity?
+
+It tends to make you faster because you get
+
+into the habit of knowing exactly how you can
+
+configure your software without having to manually answer questions
+
+and case in point all of this time.
+
+Have we been running python of something dot pi?
+
+You could imagine not doing that.
+
+You can imagine typing only python hitting enter and then you're
+
+prompted for the name of the file you want to run.
+
+So you type in something dot pi and then it runs
+
+not a big deal.
+
+But I I would argue that over time you're gonna get a little tired of that
+
+tedium and you would much prefer to just
+
+automate the command again and again and again.
+
+Especially with little conveniences like being able to hit up and down in your
+
+keyboard history so as to rerun the same command automation is big too.
+
+If you emerge from a class like this and start using python two
+
+automate processes at work or for personal projects
+
+or the like the ability to specify all
+
+of your inputs on the one line just means you can get work done more quickly.
+
+So hands down. Absolutely. Using command line arguments is a more arcane
+
+feature of systems that most of us are no
+
+longer as familiar with because of Windows and Mac.
+
+Os and other operating systems that have buttons and buoys and menus.
+
+But the more comfortable yet you get with programming, I dare say,
+
+the more you will tend to prefer these capabilities
+
+because they allow you to do things more quickly
+
+## APIs
+
+### Can we use break instead sys.exit()
+
+Questions now
+
+on this program which integrates python with a real world's third party
+
+A P I
+
+questions here from
+
+how can we use break instead of systems. Exit, exit. Good question.
+
+But no break again is used to break out of things like loops like we
+
+saw earlier sys dot exit is used to break out of the whole program itself.
+
+Use break for loops for now and uses dot exit to terminate the whole program.
+
+### Can we change the results the name?
+
+Other questions now on this program are others Mohammed.
+
+Uh
+
+from where we bring the name of the key results
+
+from? Where do we get the name of the key
+
+results itself. Can we change the
+
+results the name? You cannot. So we could in our program.
+
+So the keys that come back in, that Jason response to be clear,
+
+come from itunes dot apple dot com.
+
+Some engineer,
+
+some team of engineers decided for us what all of those keys would be called,
+
+including track name, results,
+
+results count and everything else you and I
+
+can absolutely store those same values in variables.
+
+Just like I'm doing here with oh just like I'm doing here with results,
+
+you can rename those keys, anything you want using python variables.
+
+But the Jason response is coming from that third party server.
+
+## fast Q&A
+
+### What sort of ascii graphics is it capable of putting the cows a package?
+
+Other questions on this approach here. Uh
+
+If I'm saying it right,
+
+yes, so I have a question related to
+
+package. Sure. So like yes. So sort of what sort of asking graphics uh is it
+
+capable of uh of putting the cows a package? Um I would refer you to the U. R. L.
+
+And the slides earlier.
+
+Uh If only because it's more thorough,
+
+they have not just cows but tyrannosaurus rexes and several other animals as well.
+
+I should emphasize that this is not a package.
+
+I suspect you will use much in the real world.
+
+It's really just meant to be representative of the types of packages you can
+
+install but allow me to refer to the documentation for what more is there.
+
+But asking art uh is the all we had before, there were emojis,
+
+let alone gifts and jpeg and pings, but it's what is immortalized in cows.
+
+### If I use so many methods of and if I don't want to write to dot then what I have to do correct?
+
+my question is if every time I don't want to write anything like as we as we as dot
+
+then what I want to write as you say that again. If you
+
+uh
+
+every time if if I use so many methods of
+
+and if I don't want to write every time
+
+dot then what I have to do correct? You let me just pull up a blank file here real quick.
+
+So if you're tired,
+
+if you have import sys at the top and you have lots of lines like sys
+
+dot org or sys dot exit and you don't want to keep typing sis that's fine.
+
+You can say instead from sys import org, comma, exit.
+
+And now you can literally just say RgB down here, bracket one.
+
+You can literally just say exit. You don't need to prefix it anymore.
+
+However, you cannot have your own exit function
+
+or variable. You can't have your own R G function or variable.
+
+You have to decide which is more important.
+
+### Can we use Python to develop mobile apps?
+
+Yeah. Let's see
+
+if I'm saying that right?
+
+Yeah. Hi, David, I wanted to ask that, can we make mobile labs in python later?
+
+What? Later in python? Sorry?
+
+Mobile app.
+
+Mobile app. Oh, um probably. But not really.
+
+Like python is not a language people reach for when implementing mobile apps.
+
+I suspect there are libraries that make it possible.
+
+I'm completely guessing, but it's just not.
+
+Sorry. Oh,
+
+can we meet again?
+
+Yeah,
+
+I researched on that but I tried something here and
+
+there but they were not died good in design.
+
+Yeah,
+
+I think for mobile apps you generally for android want to use
+
+java or Cartland for IOS you want to use swift or objective.
+
+C or you want to build for both platforms at the same time using html,
+
+javascript and CSS using libraries you might use python on
+
+the back end for the database or for the servers,
+
+but it would be unusual if even possible to use python for the maps themselves?
+
+### Can we make our own web APIs?
+
+I had one more question to like, can we make our own a PS for like? Mhm.
+
+Yeah, absolutely
+
+a good question. Hard to answer quickly.
+
+Um, carter, can you google python rest api and try to blink to a library?
+
+Um short answer.
+
+You can uh if you're interested in this,
+
+I would take CS fifty's course on web programming where
+
+one of the week's focuses on making a P.
+
+I. S.
+
+If carter you wouldn't mind pasting into the chat. CS 50 W
+
+too hard to answer a single question. But I can give you a whole week. Of course.
+
+### Do you have to import all the files you have imported in those libraries?
+
+When you imported the library you have created. Uh do you have to import
+
+uh
+
+all the fights you have imported in those libraries you have created
+
+or you don't call them anymore in your main
+
+uh so if I'm hearing you correctly, if your own library uses other libraries,
+
+that's fine.
+
+So long as the library imports them, that's fine.
+
+You the developer don't need to import everything. It all happens automatically.
+
+Recursive. Lee, so to speak.
+
+### is that the method that you can use in web scraping?
+
+mama. What if I'm saying it? Right.
+
+Yeah.
+
+Okay.
+
+Hello. So the method that you used um with the link.
+
+Um is that the same method that you can use in web scraping?
+
+Oh, short answer. Yes.
+
+So web scraping for those unfamiliar refers to writing code that scrapes data
+
+from websites that is grabs the data and then does something with it.
+
+Um,
+
+you can absolutely use the requests library and the
+
+get function to get the contents of a website.
+
+Like I've done,
+
+it tends to be more painful because websites change and sometimes your code breaks,
+
+but there's other libraries that you can use to make your life a little easier.
+
+And if you google something called beautiful soup, if carter,
+
+you wouldn't mind googling that too.
+
+This is a very popular library to use with the requests library. Beautiful soup.
+
+And I suspect the name means like, oh, it's a beautiful web page,
+
+but it's a soupy mess of html tags in the like makes it much easier to analyze that.
+
+But when you can using a P I. S like itunes so much better because it's clean data.
+
+Good question.
+
+### What the difference between module, package and library?
+
+
+Others. Uh let's see uh
+
+if I'm saying that right.
+
+Mm hmm.
+
+Yes. Hi.
+
+I was it's not really clear for me what is the difference between a module,
+
+library and a package?
+
+Sure. So in python, specifically a module is a library that's implemented in a file.
+
+So if you have um like uh we used um,
+
+random random dot pi is a file somewhere on your Mac or pc
+
+or the server you're using that contains functions that we're using a package.
+
+is code that's in a folder in python and
+
+the difference is that it can be more structured.
+
+You can have folders and sub folders and
+
+you can organize it a little differently and you
+
+can expose only a subset of the functions
+
+with that said if you read python's documentation,
+
+they say module everywhere, even when they mean package.
+
+So honestly they're effectively synonyms and it
+
+doesn't really matter what you say.
+
+And they're all libraries at the end of the day to
+
+um But those are the biggest different.
+
+Those are the simplest differences modules.
+
+A file, packages, a folder but that's not always the case.
+
+
+### Is it safe to use other's code ?
+
+
+Other questions. Amber.
+
+Hi can you hear me? We can. Yes.
+
+So this was something that happened with Java but
+
+I have a question with python libraries. And that is when you're importing a library
+
+it's technically locally onto your I. D.E Onto your machine.
+
+So it's not technically live on the web where someone can mess with the code per se.
+
+And then if you really um
+
+let's just say you decide to use that library locally on your machine.
+
+It's not going to do funny things.
+
+Well yes and no.
+
+So first of all when you install a package like I
+
+did with pip you are indeed downloading it from a server,
+
+installing it on your own Mac and pc and then that's it it shouldn't
+
+be making connections to the internet or snooping on you or anything like that.
+
+However, at the end of the day,
+
+you can do anything with code And it's possible that
+
+a library could be doing what you're worried about their
+
+and one of the biggest risks to about using
+
+other people's code is you have to trust them.
+
+And honestly,
+
+who's to say that today my machine is not
+
+now hacked because the cows a package while pretending to
+
+just say move on the screen is actually deleting all
+
+of my files or stealing all of my passwords.
+
+Like there's a huge amount of trust that goes into using other people's code.
+
+Either commercial or open source.
+
+One of the upsides though of open source and the fact
+
+that you can go look at the source code for cows
+
+is the presumption is there's enough of us,
+
+smart people in the world more by by the day that read code odds
+
+are someone's gonna notice if the person
+
+who wrote cows is doing something inappropriate.
+
+However, it might be too late for you.
+
+So at the end of the day, the only advice I really have is to
+
+be beware, be careful,
+
+don't use any and all packages, make sure you're using reputable ones.
+
+But even that just decreases the risk. It doesn't eliminate it.
+
+Thank you.
+
+And I really hope the calcite packages safe.
+
+Otherwise we created a problem here Maria.
+
+### Can we use argc in Python sys module like c or c plus plus?
+
+Hello there. Thank you, promising
+
+lecture. Can we use taxi
+
+when we check conditional, Did we write a name or not.
+
+Oh, say the first part of the question again?
+
+Can we use
+
+X. C.
+
+XC.
+
+I am not hearing that word. Right.
+
+Oh except I agree.
+
+Unlike like we use we use it in C plus plus.
+
+Uh
+
+I'm sorry. Okay. Um Python does not have RGC.
+
+Python only has Argov but because python has a length function, L E N.
+
+You can get the length of our G. Which is the same as RGC.
+
+So the only way to get access to command line
+
+arguments in python is using Cis like we did today.
+
+It doesn't happen automatically like it doesn't C and C plus plus.
+
+### what is the type of the requests response ?
+
+* TLDR: response object
+
+Let's go to a bar.
+
+Hi, I was wondering in the itunes file online. Eight. What is the
+
+what is the type of response? Let me go to line eight.
+
+Oh, what is the type of response? That is a good question. Um
+
+It's a request object. Let me check, python
+
+requests. Uh get
+
+so when in doubt you read the documentation because I don't recall what it is called.
+
+So let me see if I can find this real fast for you.
+
+This is the documentation that we linked earlier. I'm going to a P I reference a P I.
+
+For what it's worth. Doesn't have to mean a third party remote server. Local code.
+
+Local functions and files can have their own a P I. S.
+
+It's a very generic term meaning,
+
+what are the functions? What are the inputs?
+
+What are the outputs same thing on the itunes side.
+
+So here I am in this function and let me see if I can find returns, it returns this.
+
+So we'll talk about this later in the class,
+
+python does support object oriented programming 00.
+
+P. And there's a class in the request package called response. So um
+
+a bit literally returns a response object.
+
+### Can we write our own AI assistant?
+
+* TLDR: Yes, and there is a course on Python AI on cs50.
+
+Let's see other questions. Time for maybe two more here. Yes, I'm saying it right.
+
+Yes sir.
+
+I have a couple of questions. Uh
+
+can we create I have seen on youtube many programs like
+
+creating the job is with python creating ai with python.
+
+Is it possible to create like your personal assistant on python?
+
+Absolutely. Um python is very versatile I would say per the other question.
+
+The only thing that's really not good at or designed for is mobile apps,
+
+but absolutely for artificial intelligence type applications,
+
+it is incredibly popular.
+
+You yourself could write the Ai functions. However, there's a lot of commercial and
+
+free libraries you can use to do that for facial recognition.
+
+Um For objects in optical character recognition, speech synthesis,
+
+natural language processing and the like there's third party a p i is that you
+
+can send audio recordings to and they'll translate it back for you short answer.
+
+Yes.
+
+And by the end of this class you should have not
+
+firsthand experience with that but enough programming experience to tackle it.
+
+Um carter,
+
+if you could paste the Ai class you are l a colleague of
+
+ours teaches a class on ai in python that you might really like
+
+### How human invent Python?
+
+hey I just I addressed some questions that is
+
+not related to but it's not related to the
+
+lecture but it's like how how do one like
+
+who how does one make a programming language?
+
+I just a question how did bison came to the world?
+
+How and what was the first question? How does someone make a programming language?
+
+Yeah,
+
+yeah,
+
+it's a good question.
+
+And if this is an academic interest,
+
+you can take whole courses on this because all languages were invented by humans.
+
+Um
+
+The
+
+I mean to oversimplify a bit,
+
+you the human decide what are all of the functions gonna be called,
+
+what is all the syntax gonna be the curly braces, the parentheses, The equal signs.
+
+You come up with what's called a grammar and a grammar like in english or any language
+
+is like the fundamental syntax that you have
+
+to use to express yourself in that language,
+
+then what you generally do is you write something like an interpreter.
+
+So someone years ago wrote a program called python and its purpose in life
+
+is to read a file top to bottom left to right and convert each of
+
+the functions that sees each of the
+
+variables that sees essentially into the equivalent
+
+zeros and ones that the computer understands and that's a bit of an overstatement.
+
+You don't have to worry about the zeros and ones,
+
+but essentially you use an existing language to write an interpreter for
+
+a new language and you know what if people like your language,
+
+someone else 10,
+
+20 years from now might use your language
+
+to write an interpreter for yet another language.
+
+And so we keep layering and layering on top of things. Um, and python itself.
+
+Honestly, I would refer you to Wikipedia.
+
+If you google Wikipedia python, you'll see the history.
+
+It came out, I think in the late nineties it was the brainchild of one individual
+
+who was involved with the community for many years
+
+now. There's a whole group that governs updates to.
+
+It's, the language itself keeps evolving.
+
+I know we still have hands up, but we need to get out of the space here on campus.
+
+So I hope you won't mind if we officially adjourn here. Thank you all so much.
+
+We will see you next week. If you can join us for more
+
+python, Have a good weekend.

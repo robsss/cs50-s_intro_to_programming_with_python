@@ -1,0 +1,118 @@
+lecture_5_6
+
+# lecture_3_4 remnant
+
+## __name__ == "__main__"
+
+### Is there any reason whether to underscores in front and before?
+
+Is that is there a specific reason whether there are,
+
+is not just a way of defining them?
+
+Any questions here? Yeah. How about over 2?
+
+Uh, Nathan
+
+from you?
+
+Mm hmm. Yeah.
+
+Is there any reason whether to underscores in front and before?
+
+Is that is there a specific reason whether there are,
+
+is not just a way of defining them?
+
+It's a convention. So it's that way.
+
+Just because that's what the authors of python decided in many languages though
+
+it is conventional for the authors of the language to reserve sort of unofficially
+
+any variable that starts with underscore.
+
+Underscore is belonging to the language itself, like you,
+
+the programmer should not write functions that
+
+start with underscore underscore single underscores.
+
+Okay, double underscore is bad.
+
+Um, it's a little weird that there's underscores at the end of it too,
+
+but that's just what the python community has done.
+
+It's a visual clue that this isn't your special thing. It's someone else's design
+
+a good question.
+
+### Does that mean that by default if we run a particular file, even though we have said that __name__ to be __main__, python assumes that the file name is still __main__?
+
+* TLDRs: When the module been call directly by python, the `__name__` is set to `__main__`, when this module imported by other file, the `__name__` will be set to the file name of itself. However, all of this happen automatically, since the author of python have decide for us.
+
+Other questions on this use of name and main a niche if I'm saying it.
+
+Right.
+
+Hi, David given I have one pretty like if you'll run ST stop by then it will output us.
+
+Hello world. Goodbye world.
+
+So does that mean that by default if we run a particular file,
+
+even though we have said that underscore name to be underscore underscore main underscore underscore,
+
+python assumes that the file name is still underscore
+
+underscore main underscore underscore.
+
+When you run it directly, this all happens automatically for you.
+
+But when you import it, underscore, underscore name is not set to maine.
+
+It's not for demonstration's sake, let me try this.
+
+Let me do this instead of doing all of this.
+
+Let me go into sayings dot pi and do print underscore
+
+underscore name underscore underscore and now let me do this.
+
+Let me run python of sayings dot pi
+
+enter and you'll see that the name of this file by convention,
+
+even though we've named it something else is underscore underscore main.
+
+If I now do this python of say dot pi, which imports from this file. We see this.
+
+We see that the name of the file is not underscore underscore
+
+main because it hasn't been run from the command line directly.
+
+It's instead the name of the file itself.
+
+And this is useful to be clear because recall
+
+the libraries we did talk about last week.
+
+If you were here we looked at the random library,
+
+the statistics library and there's so many others as well.
+
+Cause a library, it would be really bad.
+
+Really obnoxious if any of those libraries had their own main function.
+
+And just because you import one of those libraries, boom,
+
+you're seeing someone else's output.
+
+So this is a solution to that problem.
+
+To avoid other people's libraries or your
+
+own libraries from having these side effects.
+
