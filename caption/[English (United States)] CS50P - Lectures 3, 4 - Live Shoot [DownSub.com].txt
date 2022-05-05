@@ -1,0 +1,6384 @@
+one.
+
+All right. Hello world. Can everyone hear me okay?
+
+Testing 123. All right, well, so nice to see everyone again.
+
+Whether it's morning, evening or afternoon, where you are, my name is David Malin.
+
+This is going to be our live shoot of CS 50 PS lectures three and four.
+
+The goal of which then is to cover too broad topics
+
+today we'll take a break in between the two of them.
+
+So even though at the end of the first lecture, you hear me say goodbye,
+
+we'll take a break and then resume,
+
+of course you can tune out or go to sleep at any point you would like before we begin,
+
+especially if you are new here, know that you can go to this U.
+
+R. L.
+
+Here if you want to get copies of any of today's slides or the source
+
+code that we are going to be writing and allow me to make this suggestion,
+
+we found it to be a net positive to leave zoom's chat enabled,
+
+even though it can get a little annoying with all of the pop ups,
+
+especially with so many people here.
+
+So if you're unfamiliar with this,
+
+you can find next to your chat window and zoom on desktop, not on a mobile device.
+
+You can go to the little triangle at the top left hand corner of
+
+the chat window and choose pop out and that's gonna pop out a window.
+
+The language might be different if you're not using english and
+
+then what you can do very hacky Schley is drag and drop
+
+it to like the bottom corner of your screen so that
+
+it doesn't keep alerting you with all of the pop ups.
+
+Um Andrew, I'm seeing my third monitor over here is me instead of gallery mode.
+
+Do we need to rewire rewire something reroute?
+
+Sorry, I'll just chatting with the team here
+
+and back. Right monitor is off.
+
+Can I forge ahead with the conversation while we fix this?
+
+Okay, so we're gonna make a few fixes here and then lastly,
+
+if you would like to follow along with what we're doing here, hands on today,
+
+you can go to this U.
+
+R. L.
+
+Here which is CS fifty's own adaptation of a tool called code
+
+spaces which will allow you to use a product called V.
+
+S.
+
+Code Visual Studio Code for free in the
+
+cloud you can alternatively download and install the s
+
+code on your own macro pc but there
+
+tend to be some technical support headaches sometimes.
+
+So we would encourage you both today and beyond
+
+in this class if you want to play along,
+
+use this U.
+
+R. L. Here.
+
+However, with that said today,
+
+if you've been here before will go pretty
+
+quickly and we'll move from example to example.
+
+And so don't feel you need to follow along live.
+
+The whole point is to introduce topics today and then in the
+
+courses problem sets or programming homework
+
+to actually apply these lessons learned.
+
+So not to worry if you find it's a little too fast and you can't keep up,
+
+That's not the goal.
+
+The goal is really to introduce you to some of the ideas today.
+
+Um why don't we go ahead and take a few
+
+hellos and photos after our traditional souvenir photo here.
+
+So if you'd like to participate in this, make sure your camera is on.
+
+If you would like to opt out of appearing on the internet in this photo,
+
+turn your camera off and in just a moment I see a few of you are super eager already.
+
+That's great. Go ahead and wave and put on your best smile.
+
+If you'd like to appear in this souvenir photo,
+
+I'm gonna put up a more flattering slide here uh from my own here.
+
+Here we go. So if you want to go ahead and keep waving and smiling for a moment here,
+
+my colleague function here in the lecture hall
+
+is paging through all of the zoom tiles,
+
+Screen shotting and screen shotting and screen shotting.
+
+And he's going to run some fancy software ultimately to stitch them all
+
+together into one big gallery as though we're all in one big room
+
+and I'm still stalling. He's still screen shotting,
+
+still waving
+
+tragically. We only need you waiting for like a second.
+
+We just don't know which second we need. Okay. And we are now done.
+
+Give us just a moment Andrew. Do you think we're gonna be able to rewire this.
+
+Okay, just rewriting some signals here,
+
+why don't we take a moment to take like two or three hellos.
+
+If you'd like to first say hello in the chat window,
+
+feel free to say hi and where you are in the world.
+
+And then maybe via a volunteer.
+
+Could we call on someone to say hello on camera as well?
+
+Let's see. We have a few hands up. How about we go to uh,
+
+if I'm saying that right?
+
+Hello. I am the young.
+
+I'm from Pakistan and I am very good, grateful and happy to be here.
+
+Nice. Well, welcome to the class. Glad to have you.
+
+How about another group hand from the group Maria?
+
+Yeah.
+
+Hi, this is Valerie. I'm from Toronto.
+
+Oh, Valerie from Toronto. So are you? You might be using Maria zoom then. I see
+
+who.
+
+I'm very happy to be a part of this.
+
+Um, this free programming python python class with you.
+
+And yeah, I look forward to learning more about programming. Wonderful.
+
+We're glad to have you aboard as well. And let's see America if I'm saying that.
+
+Right, welcome to the class.
+
+Hi, my name is America from Nigeria. This is really very interesting class.
+
+I'm so happy to be part of this class. Thank you. Likewise, welcome and nice to meet.
+
+Let me see if we're almost ready here.
+
+We're just adjusting some of our monitor
+
+close, we're getting close. So, time for some more Hellos for those unfamiliar.
+
+I have all of these big monitors in front of me.
+
+So if you see me looking over here, over here over there.
+
+I'm looking at you on just these various screens, um, function. Could we
+
+spotlight someone else unless your attention is split.
+
+How about we go over to?
+
+Let's see
+
+if I'm saying it. Right?
+
+There we go.
+
+Hi, Thank you for having me. I'm I'm I'm pierce. I'm from the UK.
+
+Um, ah,
+
+I I already am it at a computer science course in one of the universities up here.
+
+But I'm taking this course to broaden my knowledge.
+
+And pythons are pretty new for me. And it's very good. So yeah, you have me.
+
+Wonderful. Well, welcome to you as well.
+
+And I think we're just about set here. We're just fixing some wires.
+
+Just a test function. Can we go back into gallery mood for mode for everyone?
+
+Middle monitor too.
+
+I hope you'll forgive so many hands up, but so much python to learn.
+
+Let me just make sure we're working though correctly.
+
+I still see if you pinned on middle.
+
+Okay, Now we're good. Okay,
+
+Good. Good. Good. Yes. Now we're good.
+
+Again. Let me give the team here a moment.
+
+Just about set.
+
+Yeah, We're just pinning the one this time to yes, function.
+
+Okay.
+
+We're just pinning me for them. We're just pinning me today.
+
+Spotlighting me.
+
+I thought we didn't want to spotlight the laptop anymore because it's redundant.
+
+Oh, I see. Okay. Gotcha. Gotcha. But they can resize anyway. Right,
+
+okay. Gotcha. Okay. How about one more? Hello?
+
+I know there's so many hands up, but let's do one more. Hello.
+
+Before we learn some python,
+
+who do we have lastly here. Alright. And we have Melvin, if you'd like to say hello,
+
+Hello. I'm Melvin Dagestan from the Philippines and it's currently 12 am here.
+
+Likewise. Well, nice to have you aboard too.
+
+And we're gonna go ahead and put down the hands if that's okay.
+
+But we're gonna give ourselves just a moment to reset here.
+
+The overarching topics today, as you'll soon see are going to be um
+
+are going to be exceptions first and handling errors followed by a break,
+
+followed by ultimately a look at libraries
+
+and actually using third party and first party
+
+libraries in python to solve all the more
+
+problems with your and other people's code.
+
+Alright, give us just a moment here to reset and we'll begin
+
+Andrew. Do you need to pop out again.
+
+Okay.
+
+All right.
+
+And so we can start when you are when whenever I'm ready.
+
+Okay. Cool.
+
+Mhm.
+
+Okay.
+
+Uh Still pinned on the middle function.
+
+Okay. We're good now. Yeah.
+
+All right. This is CS fifty's introduction to programming with python.
+
+My name is David malin.
+
+And this is our week on exceptions exceptions in python as well
+
+as in other programming languages refer to problems in your code.
+
+Indeed.
+
+When something is exceptional in your program,
+
+it actually doesn't mean it's a good thing.
+
+It means something has gone wrong that ideally you will somehow solve.
+
+So what are some of the things that can go wrong?
+
+Well, let me propose that we go over here and pull up V. S.
+
+Code and start writing a program. Something very simple like again, Hello world.
+
+So I'm going to go ahead in my terminal window and run
+
+code of Hello dot pi in order to create a new tab.
+
+Running Dammit. Sorry. Andrew the file already existed.
+
+Yeah.
+
+Do you want me to start that from the top or do it from
+
+from here?
+
+Okay.
+
+Alright.
+
+This is the movie magic part, pretend everything just happened and here we go.
+
+So I'm gonna go ahead and open up V. S.
+
+Code on my computer here and in the terminal window,
+
+I'm gonna go ahead and run code of Hello dot pi That's
+
+gonna of course open up a brand new tab for me.
+
+Hello dot pi in which I can write my code.
+
+And let me go ahead and write some very simple code just to say hello to the world.
+
+Let's go ahead and say print, quote, hello, comma world.
+
+And then let me go ahead and I'm forgetting to close that quote.
+
+So a mistake that you yourself might have already
+
+made or might surely in the future make.
+
+And it's a little subtle because you might not
+
+necessarily notice that you've just missed that one character.
+
+Well,
+
+let me go ahead and somewhat optimistically go down to my terminal
+
+window now and run python of hello dot pi and hit enter
+
+and that's the first of my errors.
+
+My gosh I've only written one line of code and I
+
+seem to have more lines of errors on the screen.
+
+But the salient point is this bottom most
+
+thing here notice where it says syntax error,
+
+syntax error is a problem with the code that you have typed your
+
+syntax just like english and other human
+
+languages have syntax associated with them,
+
+so does my code and it's not quite correct.
+
+Something is awry.
+
+I didn't follow the instructions properly and it does elaborate for me.
+
+Unterman ated string, literal.
+
+Now that's a bit arcane,
+
+that is a bit of a confusing error message but Unterman ated
+
+would generally mean that I started something but didn't stop it,
+
+I didn't terminate it.
+
+String of course is a sequence of text like we discussed before or
+
+stir in python and literal generally refers to something that you literally typed.
+
+It's not a variable, it's something like quote, unquote or just quote Hello world.
+
+So the fix here of course is going to be to go
+
+ahead and terminate that string and actually close the quote and if
+
+I now go back down into my terminal window and rerun python
+
+of hello dot pi Now I'm saying hello to the world.
+
+So the catch with syntax errors here is that
+
+syntax errors are entirely on you to solve a syntax
+
+error is a problem that you've got to go back into your code and fix from the get go.
+
+You can't just kind of hope that it's going to resolve itself or
+
+expect that other parts of your code will catch it for you.
+
+Syntax errors just must be fixed.
+
+But there's a lot of other types of errors in python that might be described
+
+as runtime errors that happen while your code is running and it's really up to
+
+you to write some additional code defensively
+
+to detect when those errors happen because you
+
+don't necessarily know for instance what input humans
+
+are going to type into your program.
+
+And so you better be ready defensively to accommodate
+
+things that they type or even miss type.
+
+So for instance, let's go back over here to V.
+
+S code and let me propose that we take a look at a new file altogether.
+
+I'm gonna close Hello dot pi and I'm going to write code of say a number dot pi.
+
+So let's play around with some numbers in python.
+
+And the first thing I'm going to go ahead here and
+
+do with number dot pi after opening this new tab is I
+
+think I'm gonna go ahead and print type up a relatively simple
+
+program that maybe prompts the user for an integer like X.
+
+And then just prints out what X is. So we're gonna start. Super simple.
+
+But again in starting simple we'll be able
+
+to really see where I've done something wrong.
+
+Well here we go.
+
+I'm gonna go ahead and say a variable called X is going
+
+to get assigned the value of the return value of input,
+
+quote unquote, what's X.
+
+Question mark?
+
+And I'm going to include a space to move the cursor over a
+
+little bit and then ultimately I'm gonna go ahead and wait a minute.
+
+If I'm wanting to get an inch from the
+
+user recall that I need to do something proactively,
+
+I need to actually convert that
+
+input to an integer using the function in python.
+
+So now I'm passing the return value of input as the argument
+
+to end and that will store in ex ultimately an integer,
+
+not a string that looks like an integer.
+
+Alright, let me go ahead now and just quite simply print out what this is.
+
+I'm gonna go ahead and print out quote unquote, X is X.
+
+But I don't want to literally say X is X. I want to plug in the value of X.
+
+So maybe the easiest way to do that is to surround it with curly braces.
+
+And then if I'm using these curly braces and I want python to interpolate the value
+
+of that variable that is substitute what X
+
+actually is in between those curly braces,
+
+recall that I need to use a format string or an F.
+
+String by pre fixing this whole thing with an F.
+
+Now that I've done that. Let's go ahead and see what happens.
+
+I'm going to go ahead in my terminal window and run python
+
+of number dot pi I hit enter and so far so good.
+
+All is well. And being prompted for X. Let me go ahead and type in a number like 50.
+
+Alright, that seems to work. Program seems to be correct.
+
+Or is it
+
+what could go wrong in this program, even though nothing did just go wrong.
+
+But if I run it and run it and run it again
+
+during the running of my program, what could still go wrong,
+
+Especially if I'm not the human interacting with it.
+
+But some other human instead any volunteers here for this one,
+
+what could go wrong?
+
+And in what way is this program? Not really correct.
+
+Even though at first glance it seems. So
+
+how about let's see uh Shawshank if I'm saying it right.
+
+Yes.
+
+So I have a doubt.
+
+Have a doubt, sir.
+
+Sorry, you were a little quiet. Can you say again?
+
+I have a daughter.
+
+I have a note.
+
+Say again. I'm sorry. Having trouble hearing you.
+
+Yeah.
+
+What what is an interpreter? Uh My recording a integrated
+
+we can't put in an interpreter.
+
+So I'm not calling an integer. I'm still having trouble hearing you.
+
+But what I think I heard is that if what the user types in is not in fact an integer.
+
+I can't just blindly convert it
+
+to an end.
+
+If I'm not putting too many words into your mouth.
+
+I think what I should perhaps do here is be a little defensive.
+
+And let me see if I can't simulate exactly the problem that could go wrong here.
+
+Let me go ahead and run again, python of number dot pi.
+
+Let me try another number.
+
+And in fact when testing your code generally, it's a good idea to test corner cases.
+
+Maybe numbers that aren't quite as plain as 50 or 49 or 51. Let's choose some numbers.
+
+That might be a little more interesting if only mathematically like zero.
+
+Alright, zero seems to work. My code still prints out that X-0.
+
+What might be another corner case to consider.
+
+Well, let me go ahead and try a negative number.
+
+That too is pretty different in spirit. From 50 -1.
+
+Okay, that works too well, let me try it one more time.
+
+I've tried positive numbers, negative numbers zero.
+
+Let me try something like a cat. So literally see 80 typing in a string.
+
+That doesn't even look like a number.
+
+And yet, let's see now what happens when I hit enter.
+
+All right, we'll see Now we've got another kind of error.
+
+It's not a syntax error because I didn't make a typographical mistake.
+
+I didn't forget some piece of syntax.
+
+I actually now have a error with one of my values and it's in a value.
+
+I didn't even anticipate the human me in this case
+
+typed it in long after I wrote the code.
+
+So what does this refer to? A value error? Well let's see what the explanation is
+
+invalid, literal for integer with base 10 quote unquote cat.
+
+Now this too is a bit of a mouthful.
+
+And unfortunately in python and a lot of programming languages,
+
+the error messages are written for pretty comfortable programmers.
+
+And of course when you're learning programming for the first time,
+
+you might not be so comfortable with the programming language,
+
+let alone the error messages.
+
+But let's see if we can't
+
+glean some insight. So invalid, literal.
+
+Well again a literal is just something that's been typed in.
+
+It would seem for a moment. What is in
+
+exactly?
+
+Well it is the function I'm using to convert the user's input to
+
+a corresponding into your base 10 that refers to the decimal system,
+
+which is this the default that Python is using.
+
+And it looks like at the end of the day,
+
+what python really doesn't like is that I passed cat quote unquote
+
+to the in function. So how do I go about actually fixing this problem?
+
+Well, I could just add instructions in my program.
+
+Maybe I could add a line of print telling the user more explicitly.
+
+Be sure to type an integer or please don't type cat. Please don't type strings.
+
+Of course the user might still not obliged.
+
+They might not be reading the instructions.
+
+So that too is probably not an effective strategy.
+
+What we really want to do is write our code with error handling in mind.
+
+We want to write lines of code that not only accomplished the problems we care about,
+
+but that also handle errors that might unexpectedly happen.
+
+And in general,
+
+when programming programming defensively assume that the users
+
+aren't going to be paying attention or worse,
+
+their malicious, they're trying to crash your program.
+
+So we want to handle as many errors as we can.
+
+Now, how do we go about doing that in python?
+
+Well,
+
+it turns out whether you want to catch a value
+
+error or other types of errors as well though,
+
+not syntax error.
+
+Python actually has this keyword called Try and it's sort of aptly named.
+
+If you want to try to do something in python,
+
+you can literally use this keyword and you
+
+can check whether or not something exceptional,
+
+something erroneous has happened.
+
+So using both try and this other keyword except can I
+
+go and try to do something except if something goes wrong,
+
+I can do something else instead.
+
+So let's consider.
+
+How can I go about trying to convert the user's
+
+input to an end except if something goes wrong.
+
+Well, let me go back to my code here
+
+and let me propose that. I now modify this example as follows.
+
+Let me go ahead and above. My first line of code.
+
+I literally right, try and a colon telling python, try to do the following.
+
+I'm gonna go ahead and invent my existing lines of codes
+
+here by the same number of spaces for in this case.
+
+And then I'm gonna add one more new line down here that's literally says except
+
+value error.
+
+And notice it's important that I've capitalized the V and I've capitalized the e.
+
+These symbols are case sensitive and this is now an opportunity
+
+after this colon to tell python what I want to do.
+
+In exceptional cases when
+
+the number or the input from the user is not in fact a number and
+
+I'm going to say something plain like prince quote unquote X is not an integer.
+
+I'm at least gonna tell the user roughly what the problem actually is.
+
+So notice another detail.
+
+The indentation is important because I have try online
+
+one and I've indented lines two and three.
+
+Those are the two lines of code that I'm trying except if I see a
+
+value error line five because it's indented is what is going to get executed in cases
+
+of those errors.
+
+Let me go ahead now back to my terminal window and run python of hello of
+
+python of number dot pi enter and let's go ahead and type in 50 again.
+
+Still seems to work and of course I'm trying and succeeding.
+
+Let me go ahead and try once more this really.
+
+Anything that's not a decimal number and now you'll
+
+see much more cleanly X is not an integer.
+
+I'm not seeing some scary error message that I have a
+
+user and I'm gonna have no idea how to handle.
+
+Now you the programmer have anticipated that something exceptional can happen
+
+and you've gone about actually handling the error for the user,
+
+giving them an appropriate error message. Instead,
+
+let me pause here and see are there any questions
+
+now on what we've just done by introducing try and accept
+
+to handle this value error?
+
+Yeah. Dev question
+
+his value ever. The only type wherever you can get or the other types
+
+is value are the only thing you can catch.
+
+There are other errors as well and we'll see a few of them today and there's many,
+
+many more honestly that if you continue programming and programming in python,
+
+you're gonna see a lot of them over the weeks, the months, the years to come.
+
+But the technique for handling them is going to be largely
+
+the same other questions on try except for these exceptions.
+
+More generally, yussef.
+
+Mhm
+
+Yes sir, actually to use the accept block,
+
+you need to know the type of error right here.
+
+You need it for the value of 40,
+
+40 if you can't anticipate this particular type of theater, a really good question.
+
+So I'm being very good about catching, so to speak.
+
+The very error that I know might happen.
+
+I don't know when it might happen because it's going to depend
+
+on the user but I know what kind of error will happen
+
+from the end function.
+
+There is a way in python where you can say except if anything
+
+goes wrong and you can literally omit value error and just catch everything.
+
+The problem with that is that it sometimes hides other bugs in your code because you
+
+don't necessarily know what's going wrong and if
+
+you don't necessarily know what's going wrong,
+
+how can you possibly handle it correctly?
+
+So bad practice.
+
+And it put another way,
+
+it's lazy to do that to just say catch everything and I'll deal with it here.
+
+So a much better practice would be to figure out what kind of errors could
+
+happen and include mention of them explicitly as I've done now with that said,
+
+if you read python's official documentation as you'll eventually invariably do.
+
+It is not great about telling you proactively what
+
+kinds of errors can be raised in this way.
+
+So it's a bit of contradictory advice, you should do it this way,
+
+but it's not always obvious what you should be checking for,
+
+but you get better at it with practice and some of
+
+the times the documentation does spell out what could go wrong,
+
+Let me turn our attention now back to this and
+
+point out that even though this is better code,
+
+it is more correct in the sense that I'm not just leaving it to the user to see some
+
+really ugly default python air message that most people
+
+are gonna have no idea what to do with.
+
+I'm at least handling it more elegantly and I'm printing out X is not an integer,
+
+so it's at least more instructive.
+
+But this isn't necessarily the best way to implement this code. Y
+
+Well, here too, I'm actually still being a little lazy,
+
+so notice that I'm trying to do not one line of code, but two lines of code.
+
+And this isn't a huge deal because we're only talking about two lines of code.
+
+But in the interest of preaching best practices,
+
+you should really only be trying to do the one or very few lines of
+
+code that can actually raise an exception that can actually fail in some way.
+
+I am pretty sure that calling print here is not going to raise the value error,
+
+whether X is an inch or a string or a float or anything else.
+
+The format string feature of python is gonna handle printing it just fine.
+
+So really what I'm gonna do is this,
+
+I'm gonna move this line three down to the bottom of my code.
+
+I no longer need to invent it. I'm just gonna execute it at the bottom of my file here.
+
+Unfortunately, by doing this, I've done a good thing by now,
+
+only trying to do the minimal amount of work
+
+necessary that might raise the exception of value error.
+
+But I fear I've introduced a new mistake. Well, let's see what is now incorrect.
+
+Let me go ahead and again. Run python of number dot pi enter.
+
+Let me go ahead and do it correctly with 50 and all seems to be well, but again,
+
+let's try those corner cases, the zeros,
+
+the negative numbers or in this case the cat,
+
+let me go ahead and type in C A T. Again enter.
+
+Now. I have a name error.
+
+So now it's yet another type of error in my code that I've introduced here.
+
+And what is this name error mean?
+
+Well, just as a value error refers to that the value of some variable,
+
+the value that someone has typed in is incorrect.
+
+Name error tends to refer to your code.
+
+Like you're doing something with the name of a
+
+variable that you shouldn't And why might that be?
+
+Well, let me turn our attention back to the code here and consider
+
+what is it complaining about?
+
+Well, the name errors, what I see down here and it's telling me name,
+
+quote unquote X is not defined.
+
+And notice if I look further here, it is mentioning line six.
+
+So I know the problem is with my code online. Six. And that worked a moment ago
+
+and I'm defining X online too.
+
+But let me ask the group here, Why does X not in fact exist online? six.
+
+Why is it not defined?
+
+Even though I'm pretty sure I was intending to define it online too.
+
+What's the explanation for this error? Alan from saying it? Right.
+
+Yes, thank you. I think that in the, in the indentation is the cause of her
+
+a good instinct, but not because go ahead.
+
+Yeah, because we are defining X in line to indent indentation
+
+in the tri function of sort of speaking try statement. But print is out of
+
+So really good instincts and a correct answer in other
+
+languages like C and C plus plus and java,
+
+it turns out in python,
+
+no matter where you define a variable inside of a file like this,
+
+whether it's indented or not, it's going to exist everywhere else thereafter,
+
+after the line of code executes.
+
+That's not true in certain other languages. So a good instinct.
+
+But let's push a little harder here on why this still might be airing someone else,
+
+why this error Divya,
+
+maybe the scope of the variable is between the dry block.
+
+So good terminology scope refers to the portion of code in which a variable exists.
+
+That too though isn't quite right in python, that would be true and C,
+
+C plus plus and java where indentation or curly
+
+braces tend to define the scope of a variable.
+
+But again here in general and this worked a moment ago
+
+X exists once it's defined online too because remember I printed out excess 50
+
+a little bit ago. Let's try one more
+
+hypothesis here. One more hand.
+
+Why is X somehow still not defined gable in if I'm saying it Right.
+
+Um, yeah.
+
+So is it because it's local varietal meaning that
+
+like it doesn't define outside of this focus,
+
+like what people have mentioned.
+
+It's it's as it prompts the input and try right.
+
+But outside of it is sunday.
+
+So it's still good instincts and good terminology to there's this
+
+notion of local variables which tend to exist inside of functions,
+
+for instance, global variables,
+
+which tend to exist in entire files in this case too.
+
+Though that's not quite the case.
+
+What's happening here boils down to order of operations.
+
+Let me come back to the code here and
+
+recall that anytime we've discussed the assignment operator,
+
+the single equal sign that copies the value from the right to the left.
+
+But consider for a moment at what point something is going wrong.
+
+Well,
+
+the input function is probably working just fine because we've
+
+used that a lot now to get users input.
+
+It always returns a string or a stir in python. But what could be going wrong?
+
+Well, if I'm passing that string
+
+to the input function
+
+as its argument, it's probably the in function that's airing.
+
+And indeed, if you think back earlier when we had the value error,
+
+it was in fact the function that did not like quote unquote cat as input.
+
+So this is all to say that this portion of my
+
+code highlighted now to the right of the equal sign.
+
+That's the code that's creating a problem.
+
+That's the code that was creating a value error.
+
+And in this case we're catching the value error.
+
+But because the value error is happening on the right of the equal sign,
+
+there's no value being copied to the left.
+
+The error is interrupting that whole process.
+
+So even though we see X equals dot dot dot online too,
+
+the parson of that line to the left of the equal sign
+
+isn't getting evaluated ultimately because the value error is happening too soon.
+
+And so when we finally get down to line six,
+
+even though it looked like I was defining online too,
+
+and I would have defined X online too if all had gone well,
+
+we didn't get to the part where the value is copied
+
+from right to left because the value error happened first.
+
+So this code is just incorrect now. So how do I go about solving something like this?
+
+Well,
+
+it turns out that there's another feature of
+
+the try and except syntax that python supports,
+
+which is that it also supports
+
+the keyword else. Now we've seen else before.
+
+If you think back to our discussion of conditional,
+
+we saw if we saw l if we saw else which was kind of this catch all,
+
+what you should do in the event that nothing else is relevant.
+
+That's kind of the same intuition here for the try except feature of python,
+
+what you can do is this,
+
+you can try to do the following as I've done except
+
+if this goes wrong but if nothing goes wrong else,
+
+go ahead and do this.
+
+So this is one way I can solve the same problem now, no matter what now,
+
+Python is going to try to execute line to if something goes wrong,
+
+it's going to executes lines three and 4 to handle that value error.
+
+However, if you try and this code succeeds then there is no exception to handle.
+
+So you're then going to execute this line here so it's a little
+
+confusing perhaps and that we're now using else both for conditional if LF,
+
+LF, LF else and we're also using else with these try except blocks but that's OK.
+
+That's part of the language, that's one of the features.
+
+So now if I rerun this code in my terminal window,
+
+python of number dot pi let's do something correct. Like 50. I see that X is 50.
+
+So line one is executed,
+
+we're trying to do the following.
+
+Line two is executed because the conversion happened successfully and
+
+the number 50 gets copied from right to left.
+
+The exception does not happen.
+
+So we ignore lines three and four, we jump immediately to line five and six
+
+which prints out the result. By contrast though, let's do this one.
+
+Last time python of number dot pi let's type in cat or again any other word
+
+and hit enter Now we don't see what X is rather we see quote unquote,
+
+X is not an integer, which is what's being handled in my except clause.
+
+Alright,
+
+let me pause here because that's a lot of new
+
+syntax and see here if there's any questions on try
+
+on except on else, name error or value error.
+
+Yeah let's see uh daniel.
+
+Yes, we can hear you
+
+daniel.
+
+Oh sorry I I raised up the hand before
+
+before Okay we'll call on someone else. Not a problem.
+
+Questions on try except else name errors. Value errors. How about over two?
+
+Yeah, so it's
+
+Hello? Yes, we can hear you
+
+yes.
+
+Can you please repeat
+
+dr function,
+
+Can I please repeat what
+
+number?
+
+Hello,
+
+Second
+
+the name?
+
+Yes, so I'm just having trouble hearing you down here but my colleague is filling in,
+
+repeat the name error.
+
+What's the problem with the name error?
+
+Yeah,
+
+so let's let's just rewind a couple of lines here before
+
+I fixed this problem by now getting rid of the else.
+
+A moment ago we had code that looks like this whereby I was getting a name error,
+
+python of number dot pi enter typing in cat that
+
+looked like this where name X is not defined.
+
+And the problem was online. Six. According to this output in python.
+
+Well let's think about this now deductive
+
+lee let's try a different approach online.
+
+Six, I'm seeing an error. That name X is not defined.
+
+Okay, python is already telling me X does not exist at that point.
+
+So how could that possibly be? Well, where should X be defined?
+
+Well, presumably X is defined on line two up here. So what could go wrong?
+
+Well,
+
+if the user has inputted something that doesn't look like a number like the word cat
+
+passing cat,
+
+the return value of input as the argument to end
+
+to convert the word to an ent makes no sense.
+
+You can't convert a cat C a T to an integer at all.
+
+So the in function is raising a value error at that
+
+point and the error is being handled with this code here.
+
+But notice this line six is not indented, it's left aligned with the rest of my code,
+
+which means no matter what line six is going to execute,
+
+its going to execute whether I typed in 50 or I typed in cat.
+
+But if I typed in cat again, X never gets a value. So it's not defined here on line six.
+
+So when I introduced finally the else statement that
+
+makes sure that these things are mutually exclusive.
+
+I only execute the else
+
+if I tried and succeeded up above.
+
+Well,
+
+let me propose that we refine this just a little bit further as
+
+well and consider how we might improve this example a little bit more.
+
+It's a little it's a little unfriendly of me to be rejecting the user's
+
+input after they failed to provide an integer and just quitting the program really.
+
+It'd be more user friendly If I just prompt or re
+
+prompt the user again and again and in the chat.
+
+If you could.
+
+What's the feature of python that you can use if you want to do something again and
+
+again and again until such time as the user
+
+cooperates and gives you what you're looking for,
+
+like
+
+a number. So yeah, loop loop, loop.
+
+So a loop is something that happens again and again and again and maybe we
+
+can use that same mechanism a loop in order to prompt the user for X.
+
+And if they don't give us a number,
+
+prompt them again and if they don't prompt them again and again and again,
+
+we don't need to just quit out of the program so quickly.
+
+So let me propose this.
+
+Let me propose here that I improve this code by deliberately doing this.
+
+Let me induce a infinite loop at the very top of my code with Wild true recall that
+
+the wild keyword induces a loop a cycle that behaves like this and it asks a question,
+
+a boolean expression that needs to evaluate either true or false.
+
+Well, if I want this thing to loop forever,
+
+at least initially will just say while true because true is true.
+
+So this has the effect of doing something no matter
+
+what forever unless we break out of it early.
+
+Now I'm gonna go ahead and do this.
+
+I'm gonna go ahead and move my try except code indented
+
+underneath this loop so that I'm trying to get an X.
+
+If I have a value error instead, I print out X is not an integer.
+
+But this time,
+
+what do I want to do if the user does try and
+
+succeed in giving me a number while I can do this,
+
+I can just break out of my code here and down here.
+
+Now I can use that same line of code from before an F. String that says X.
+
+Is and then in curly braces X again.
+
+So what's going on here?
+
+I think this code now because I've added the loop is
+
+going to have the effect of trying at least once,
+
+maybe a second time.
+
+Maybe a third time.
+
+Maybe 500 times until the user finally gives me what I want, which is an integer.
+
+And once they do,
+
+once there's no value error happening then I break out
+
+of the loop and line nine executes as I would
+
+hope so let me go ahead and try executing this
+
+version python of number dot pi enter what's X.
+
+Let me go ahead and type in the easy thing. 1st 50.
+
+X is 50. What just happened in terms of the control flow of this program?
+
+The flow of my logic? Well, I first found myself online, one inside of a loop.
+
+Hopefully I'll get out of this loop. What did I then do online. Two and three.
+
+I tried to get input from the user and convert it to an end.
+
+Well, I was a nice guy this time and I typed in 50 which looks like and is a number.
+
+So the in function converted it just fine and stored it from right to left in ex except
+
+value where there is no value error because if
+
+I type in a number there's nothing exceptional happening.
+
+This is a boring good execution of my program. So what happens I break out of the loop.
+
+So again,
+
+the else clause is associated with the try not with
+
+the except and once I'm out of the loop,
+
+of course I'm just printing out what X is.
+
+Well, let's try the other scenario that might happen,
+
+python of number dot pi enter what's X.
+
+Let's try cat or any other word enter.
+
+Ah This is now a new feature. I'm being informed what I did wrong.
+
+X is not an integer so I'm getting some useful
+
+user feedback but notice again I'm prompted What's X.
+
+Well, let me try typing in dog. X is not an integer, what's X. Let me try.
+
+Bird enter X is not an integer. What's X.
+
+And suffice it to say this will happen now forever
+
+if I'm in an infinite loop until I try and succeed
+
+At which point I break out.
+
+So let's try again 50 enter now I'm out of
+
+the loop and I'm printing out what X actually is.
+
+All right. Let me pause here and see if there are any questions.
+
+The logic is almost the same,
+
+but what is different now is I'm in a loop and I'm using the keyword
+
+break in python two deliberately break out of the loop when I'm ready to.
+
+Once the user has cooperated.
+
+Let's see question from.
+
+Let's see your go if I'm saying it. Right.
+
+Hi, thank you so much. Um We really need to break, can't we just print
+
+or what? What keeps us from? Just printing? Good question. So let me try that.
+
+Couldn't I just print? Well, let's see what happens if I do that.
+
+Let me move this print line at the end into my loop here,
+
+thereby shortening the program.
+
+And in general, that's been a good thing, python of number dot pi enter,
+
+let me go ahead and type in 50.
+
+Okay, exit 50. What's X. Okay, maybe it's 49 X. 49. Okay. Maybe 48.
+
+Unfortunately, I think you're you're laughing you see it?
+
+I never break out of the loop, which maybe that's a feature.
+
+Maybe you want this to be your program,
+
+but I didn't I'd eventually like this game to stop so I need to break out in that way,
+
+but I can do it a little differently.
+
+And let me propose that we modify this a little bit.
+
+But first any other questions on this syntax here. Let me rewind to
+
+the prior version.
+
+Yeah, question from
+
+ah cecilia if I'm saying it. Right.
+
+Hi, can I use a break or exceptional except in else, for example,
+
+in another print when you use printing else you can
+
+use print to get a break or something like this.
+
+Yeah.
+
+So you can use break inside of land, you can use it inside of a conditional,
+
+like an if and LF or else you can do it inside of a try except
+
+else statement to any time you're in a loop that you want to break out of.
+
+You can use this keyword break,
+
+I'm using it in the context of exceptions but it's not restricted to that.
+
+And let me show you too.
+
+It doesn't even have to be in the else if I wanted to, I could actually do this,
+
+I could get rid of my else
+
+And I could go back to line three at another
+
+line that's indented line four and break out here now,
+
+why is this logically?
+
+Okay, we'll consider what I'm now trying to do.
+
+I'm trying to execute line three and converting the user's input to an end
+
+and I'm trying to store the result from right to left an X.
+
+If something goes wrong,
+
+the code we've already seen is immediately going to jump
+
+to line five and then six to handle the exception.
+
+But if nothing goes wrong.
+
+My code presumably should just keep on executing line by line.
+
+So I could technically logically put the break here
+
+and watch what happens when I run this version,
+
+python of number dot pi 50 enter it worked.
+
+I broke out of the loop
+
+now. Which way is better?
+
+Honestly,
+
+I think it could go either way at this point this program so
+
+relatively short that even though I'm trying to do two things now,
+
+one of which the break is not going to fail, like you either break or you don't,
+
+there's no piece of data from the user that's going to influence that.
+
+We don't strictly need to have those two lines of code there, but it's only two lines.
+
+So I think it's okay.
+
+And if you recall our discussion in the past,
+
+not just of correctness does the code work as it should, but design,
+
+I think you could argue it either way if you prefer the readability
+
+of this and the fact that you don't have an else that's fine.
+
+If though you prefer to minimize just how many lines of
+
+code you're trying to execute in case something goes wrong.
+
+The else is a reasonable approach to
+
+well, allow me to propose to now that we refine this further.
+
+I think we're at the point where it's pretty darn correct.
+
+But suppose now that I find myself today and tomorrow
+
+trying to get numbers from the user quite a bit,
+
+it would be nice as we've seen to maybe just invent my own function.
+
+Get into
+
+to get an integer from the user,
+
+both today and tomorrow and beyond and heck maybe I can even share that function
+
+with other people if they want to write programs to get integers from users.
+
+So how might I go about doing this? Well, let me go ahead and propose that we do this.
+
+Let me get rid of the print line but keep most of my loop here.
+
+Let me define a function called get into
+
+that takes no arguments for now and I'm gonna go ahead
+
+and invent all of the code I already wrote underneath.
+
+Get into. So now I have a function called get into
+
+that tries to do the following.
+
+Try to get in from the user if something goes wrong and there's a value error,
+
+yell at them with X.
+
+Is not an integer else break,
+
+but it's not just breaking that I want to do here now that I'm in a function,
+
+recall our discussion of return values if you're inventing your own function
+
+whose purpose in life isn't just to print something on the screen.
+
+Like a side effect but is to hand back a value
+
+to hand you back a value.
+
+Like on that same post, it note from our discussion of functions.
+
+Well you need to return ex explicitly. How do I now use this function?
+
+Well, as soon as we start making our own functions,
+
+it tends to be convenient to define our own main function as well,
+
+that's the main part of our program and I'm gonna keep this simple,
+
+I'm now gonna say X equals get into and then on the next line I'm
+
+going to do that print from before quote unquote X is in curly braces X.
+
+And at the very bottom of my program recall,
+
+I'm gonna call main so that no matter what
+
+I'm invoking my main function after everything's been defined.
+
+Well, let's see how this works. Let me go ahead and run python
+
+of number dot pi enter let's type in 50 and it seems to work as before.
+
+Let's go ahead and run it again, typing in cat C A T.
+
+This time X is not an intruder and I'm being prompted
+
+dog and I'm being prompted bird and I'm being prompted.
+
+Fine fine fine 50. That's an infant. And so it is printed.
+
+So what's worth noting here while I'm manifesting a couple of good properties here.
+
+one I have kind of abstracted away this notion of getting an integer.
+
+And even though I just artificially hit enter a whole
+
+bunch of times just to hide that function for now.
+
+It needs to be there.
+
+But we don't need to see it at this point,
+
+notice that now this entire program really boils down
+
+to just these three lines of code now.
+
+Why?
+
+Because I've abstracted away that whole process of getting an
+
+inch from the user into this new function of my own
+
+called get into
+
+But can I improve upon this.
+
+Well,
+
+let me go ahead and undo all of those blank lines and pull
+
+this up just so we can see more on the screen at once.
+
+Can I tighten up my implementation of get into it is correct. I claim this is correct.
+
+It's handling errors and it's returning X.
+
+But I don't strictly speaking need to write the code as long.
+
+What else could I do?
+
+Well,
+
+let me propose that if all you're doing on
+
+this line 13 is braking and then immediately after that
+
+per the indentation you're executing return X online 14
+
+why are you wasting everyone's time once you know,
+
+you're ready to return the value, you could just return X.
+
+And so in my else I could break out and return the value. So here too.
+
+Return is used to return values from functions.
+
+Break is used to break out of loops,
+
+but it turns out that return is sort of stronger than break.
+
+It will not only break you out of a loop, it will also return a value for you.
+
+So it's doing two things for once if you will.
+
+But can I make this even more compact?
+
+If if if my goal is to just tighten the code up, even though it's already correct?
+
+Can anyone think of a further refinement,
+
+whether you've programmed in python before or not.
+
+Can I shorten this implementation further? Just a little bit
+
+if only to decrease the probability that I've made a mistake by having fewer lines
+
+and just make it a little easier to read because it's shorter.
+
+Any suggestions for tightening up my implementation of get into
+
+Yeah. Problem if I'm saying that right? Your suggestions?
+
+Oh, still muted though.
+
+Still muted charge once more.
+
+You can just return the value on the drive function
+
+when you're trying. Yeah,
+
+good. We can just return X a little higher up and let me correct folks.
+
+As we go, it's not a try function. It would be a try statement.
+
+Technically a function typically has a parenthesis and another
+
+one in this case it's just a statement.
+
+So but we can do exactly that.
+
+I don't technically need the else if I really want,
+
+I could do this right after line nine, I could return X here
+
+or recall our discussion of defining variables unnecessarily. Sometimes.
+
+Like why define a variable here?
+
+If you're immediately going to use it here and then never again.
+
+So we could avoid a new line here and I could avoid even defining ex explicitly.
+
+I could just say something like this. I could return into
+
+input, quote unquote what sex I can do it all at once
+
+now, which is better. I don't know.
+
+I mean, again this is where reasonable people might disagree.
+
+I'd argue that on the one hand, we're tightening up the code,
+
+we're using fewer lines.
+
+It's easier to read the error probability that I've made a mistake.
+
+On the other hand, it's a little more complicated to understand.
+
+Perhaps it's a little less obvious where I'm returning from?
+
+So I think arguments can be made either way at the end of the day,
+
+what's important is that you've done this consciously.
+
+You've made a decision to do it this way or this way and you can justify it in your mind.
+
+Not that your answer is it worked. So I left it alone.
+
+Like have a good reason,
+
+come up with a good reason and that will come with experience and practice.
+
+Well, let me propose to that. We make one other refinement here, suppose that
+
+you're finding your programs to be a little
+
+noisy and it's a little obnoxious that you
+
+keep telling the user X is not an integer X is not an integer X.
+
+Is not an integer.
+
+What if you want to make things a little gentler
+
+and just prompt the user again with the same words,
+
+What's X?
+
+What is X? What's X again and again. Well, you can do that as well.
+
+And it turns out that if you want to handle an exception in python,
+
+but you want to pass on doing anything with it.
+
+So you want to catch it.
+
+But you essentially want to ignore it. You don't want to print anything.
+
+You don't want to quit the program. You just want to silently ignore it.
+
+Like if you're talking in a room full of people and
+
+your it's your turn to talk and you're just like pass,
+
+they're still calling on you but you're not doing or saying anything more.
+
+Well we can add this keyword to our code here.
+
+Let me go back to my program here and instead of printing out again and again, X.
+
+Is not an integer. I could just do this. I could pass on handling the error further.
+
+I'm still catching it so the user is not going
+
+to see a scary message even mentioning value error.
+
+My code is catching it but I'm passing on saying anything about it.
+
+I'm going to stay in the loop.
+
+I'm gonna stay in the loop and keep prompting and re prompting the user.
+
+So now the effect looks a little something like this python of number dot pi.
+
+Let's type in cat,
+
+what's sex again? Let's type in dog. What's X. Again? Type in bird.
+
+So it's just a little maybe more user friendly and
+
+that you're just reminding the user what you want.
+
+Maybe it's worse.
+
+Maybe it would be helpful to tell the user why you're prompting them again and again,
+
+it's not obvious.
+
+So it could go both ways.
+
+But again, it's just another mechanism now for handling these errors.
+
+We used the except keyword to catch a specific error
+
+but we don't have to handle it more than that.
+
+We can just pass on doing something further.
+
+Let me pause here and see if there's any questions now on. Try except else or pass
+
+any questions here.
+
+Yeah. Let's see, Patrick.
+
+Hey you can hear me right,
+
+okay. You know, I was just kinda curious I guess about
+
+uh, the idea of when you were inventing with the get in function for example.
+
+Um, because I'm noticing, you know,
+
+obviously going through it with the whole logic and breakdown of the entire,
+
+the entire function, you know, while true do this.
+
+But I'm just kind of curious.
+
+I'm collaborating with the indian patients for the code more.
+
+Yes.
+
+So the invitation is deliberate logically some
+
+languages don't require as rigorous indentation.
+
+You can use curly braces or other symbology to make clear what is associated
+
+with what in general anytime you invent something in python on this line.
+
+So rather anytime you write a code, a line of code in python that's here.
+
+And the lines below it are somehow indented.
+
+That means that those lines are somehow associated with that first line.
+
+And presumably those indented lines should only be
+
+executed if the first line told the uh,
+
+told the computer to do so.
+
+So concretely. What does this mean online? Six.
+
+Here we're defining a function called get in that takes no arguments colon.
+
+Everything that's indented by at least four spaces
+
+here after is part of that function.
+
+Why that's just the design of the python language, frankly,
+
+I think the designers got tired of seeing really ugly code
+
+in languages like C and C plus plus and java uh,
+
+that don't necessarily enforce uh, indentation to this extent.
+
+So now it's baked into the language and my chronology might be a little off there.
+
+But there's been many languages that are looser
+
+than Python when it comes to indentation.
+
+The indentation is meaningful online. Seven.
+
+To notice that because the wild true is indented by four spaces,
+
+that just means it's part of the get in function.
+
+But notice below the wild true statement.
+
+There's eight, there's 12, there's eight. There's 12 spaces here.
+
+And I'm just quickly counting the dots.
+
+That means that all of the lines I've just highlighted are inside of that wild loop.
+
+While true means to execute lines eight through 11,
+
+potentially again and again and again.
+
+And now. Lastly online eight
+
+because we have tried and indented below it is line nine.
+
+That just means that what you should try is
+
+what's online nine and similarly online 10 below it,
+
+we have indented line 11,
+
+you should only pass when there is an exception of a value error.
+
+So the indentation just means what is associated with
+
+what and once you get comfortable with that,
+
+you'll see that it helps the indentation alone
+
+helps explain the logic of your program.
+
+And it has a wonderful side effect that
+
+for yourself the next morning for your colleagues,
+
+your family, your friends, your teachers, your code is much more readable.
+
+As a result, it's not one big mess of a blob of text. Other questions now on try except
+
+else or pass.
+
+Yeah.
+
+Yeah. Over to Hendrick.
+
+Hello uh
+
+when you took off the return or in the break you you put the this uh thing for where?
+
+Uh to the past instead of the return. That was before
+
+the past replaced the print line.
+
+So if I rewind here noticed that all I
+
+replaced earlier was this highlighted on line 11.
+
+I was just printing what I decided was kind
+
+of an obnoxious message to keep telling the user.
+
+X. Is not an integer. X. Is not an integer. By using past.
+
+I stay in the loop again and again
+
+but I don't bother doing anything. And the reason for passes this
+
+this would be ambiguous.
+
+Python does not like python does not allow this if
+
+you just have nothing underneath the indented except value error,
+
+colon python doesn't know.
+
+Well wait a minute.
+
+Did the programmer forget to finish their thought or do they want me to do nothing?
+
+So passes just an explicit way of saying I know what I'm doing.
+
+I want you to pass on doing anything further. You cannot just leave a blank line.
+
+Alright lastly one final question on try except else or break.
+
+Yeah let's see, joakim.
+
+Yeah. Thanks. Um two questions. Question one.
+
+once you say pass,
+
+can the caller still um learn anything about this
+
+error um through a system variable or whatever.
+
+and question two problems said zero referenced
+
+some strength methods including is numeric,
+
+is it any different to
+
+um go via? Is to Merrick here.
+
+Good question. So on the first question if I'm handling the error in this way.
+
+The caller is not gonna know anything about it. That's the point of my handling it.
+
+So that main or other callers don't know that anything technically went wrong.
+
+On the second question is numeric is another function that you
+
+can call that can look at a string and determine.
+
+Is this in fact a number? I could use a mechanism like that. I could use a conditional.
+
+If this looks like a number then pass it to the
+
+in function and go ahead and convert it to an integer.
+
+That's totally fine.
+
+I would generally say that the python IQ way of doing
+
+things is often for better or for worse to try things.
+
+Hope they work. But if they don't handle the exception.
+
+So other languages are more in favor of checking if
+
+if if if LF else and all of these conditional
+
+python tends to be a little more of the mindset. Try it.
+
+But just make sure you're handling the error. So this would be the python.
+
+IQ way of doing it your way though, checking with the conditional.
+
+Is it a number first is totally reasonable to if you want to go that way Well,
+
+let me propose some final refinements to this program
+
+that really just kind of tighten things up.
+
+One additional step
+
+to improve the implementation of this. Get in function.
+
+Let me propose that we not hard code, so to speak.
+
+That is type manually ex all over the place.
+
+Let's make this function get into a little more reusable
+
+right now notice that I'm just kind of using the honor
+
+system that well Maine is defining a variable called X
+
+and get into is asking for a variable called X.
+
+But it would be nice if the caller. Maine
+
+doesn't have to know what the Kali is naming its variables and vice versa.
+
+So caller to call the function means to use it.
+
+The caller is the function that's using it.
+
+The Cali is just the function being called.
+
+It would be nice if I'm not just hoping that X is the same in both places.
+
+So let me propose this.
+
+Let me propose that we actually
+
+add
+
+a parameter to get into like this. What's X.
+
+That is to say if Maine wants to use to get in function.
+
+Well then main should probably tell the get in function what
+
+prompt to show the user just like the input function,
+
+recall that comes with python.
+
+It's up to you to pass in a prompt that the
+
+user then sees when the human is asked for input.
+
+So how do I make this work here?
+
+I can go down to my definition of get into and I can say
+
+all right get into is going to take a parameter now called prompt.
+
+I can call it anything I want but prompt in english is pretty self explanatory,
+
+it means what do you want?
+
+The message? The user will see.
+
+And now down here when I actually use input,
+
+I don't have to presumptuously say what's X.
+
+Because what if the program the caller wants to ask for Y or Z. Or some other variable.
+
+I can just pass to input whatever prompt the caller has provided.
+
+So now I'm making more reusable code. It still works just the same.
+
+I haven't changed the functionality per se but
+
+now it's a little more dynamic because now get
+
+into doesn't have to know or care what
+
+variables being asked for what's being asked for.
+
+It just needs to know what prompts it should show to the user.
+
+So if I now run this program down here again, prompt number dot pi enter what's X.
+
+50 still seems to work. Let's run it again. Let's type in cat, It still seems to work.
+
+And if I type in cat, dog, bird or anything else,
+
+it will keep prompting me with that same prompt
+
+making this code therefore all the more usable.
+
+So in the coming days, the coming weeks,
+
+the coming months as you write more code in python,
+
+you'll see that errors are inevitable.
+
+Sometimes there's syntax errors which you got to just fix.
+
+If you even want to run your program at all.
+
+But they could be name errors,
+
+for instance variables that you meant to define but somehow didn't value
+
+errors where maybe the user didn't cooperate and provided you with something
+
+that you weren't expecting or a whole list of other possible errors or exceptions.
+
+But now hopefully,
+
+you know how you can handle these errors and respond to them in any way
+
+you like this then was our look at exceptions and we'll see you next time.
+
+10 minutes.
+
+Sure.
+
+We'll be back in 10 minutes.
+
+We're gonna take a 10 minute break and we'll
+
+come back for the second lecture on libraries.
+
+So see you in 10.
+
+Alright.
+
+If you can hear this,
+
+thought we'd just take a few questions before we begin formally with libraries.
+
+Anyone have any questions about what we just did or
+
+things we did last time or python more generally,
+
+you probably can't answer everything, but we try to take a few here.
+
+Yeah. Let's see
+
+if I'm saying it right.
+
+Yes you are. Um
+
+when you are using the try and except statement,
+
+don't you need to have an idea or an understanding of
+
+the error itself
+
+before you can actually try or have an idea of what to try you do.
+
+Um In this case I added the exception in response to having messed up.
+
+So I therefore knew what I was looking for, but that's not always going to be the case.
+
+And that's certainly not the best strategy because
+
+if you're just kind of crossing your fingers,
+
+that nothing goes wrong and when something does, then you go fix your software,
+
+you're going to annoy a lot of users.
+
+Um frankly python's documentation is not good,
+
+ironically confusingly at documenting what exceptions
+
+can happen from certain functions.
+
+Um, python programmers tend to know, they tend to learn over time.
+
+Third party libraries which were about to discuss. Those tend to be a little better.
+
+I dare say, documenting it.
+
+I don't know why this is the case, but it's a pet peeve of mine.
+
+So in general, look first to the documentation for what you should be accepting.
+
+You shouldn't be taking the approach I took, which was pedagogical deliberate,
+
+which was how do I fix this error?
+
+I just discovered.
+
+Oh,
+
+and just to elaborate to on that there is
+
+a way lazily to handle all possible exceptions.
+
+You just omit value error and you say
+
+except colon generally that's frowned upon because it really
+
+means like you don't know what you're detecting
+
+even though it does potentially solve a problem,
+
+but it's bad practice.
+
+Yeah, that's all I'm saying it right.
+
+Yeah. Thanks for having me, first of all. Sure. Are you able to hear me? Yes, we can.
+
+Alright, I missed some of your earlier lectures.
+
+Although I'm able to catch up because I did
+
+attend a couple of lectures of csfb of yours.
+
+Uh but any advice of how do I catch up or how do I keep up with?
+
+Although I am able to understand almost all the things that you're telling us.
+
+But still I just want to know what can I do because I've missed earlier.
+
+Yeah, totally fine.
+
+I mean these lectures are live and open while we create them technically
+
+you're you missed three weeks of school but all of its online carter,
+
+do you want to paste the text link and also the open courseware link.
+
+Everything is already available. And officially only the first week is up.
+
+We're releasing them one week at a time to give us a chance uh to refine everything.
+
+So not a problem. Look for a message in the chat from carter,
+
+let's see Nikita from saying it right?
+
+Yeah. Actually, um I was not able to submit my problems.
+
+Said zero because I think is it
+
+submitted is not that we're living on windows of what?
+
+So I was just confused on that. Let's see, I'm having trouble hearing your audio.
+
+Did you carter, did you hear that? Okay.
+
+Do you mind just the audio here is a little bit joint typing it into the chat.
+
+And I'll ask carter here,
+
+okay, I'll come back to that in just a moment, carter's gonna watch on the chat
+
+and wrong and maybe one other hand
+
+and then we'll forge ahead
+
+and yeah,
+
+as you'll notice there's these delays with zoom in
+
+the post produced version that will eventually post online.
+
+Like all of these delays get get removed. Rohit question
+
+Hello, can you hear me?
+
+Can we solve multiple errors in one line. Of course
+
+multiple errors. No, if you mean exceptions you can have multiple except lines.
+
+You can say except value error except name error and so forth.
+
+Line by line by line If that's what you mean. But not.
+
+Well you can also catch multiple exceptions on the same line.
+
+Let me just show you real fast over here.
+
+You can instead of doing try
+
+this
+
+except
+
+foo
+
+uh do this. You can do this as well. You can say except foo bar.
+
+You can say foo bar baz if each of those are exceptions.
+
+So you can do multiple things at once or you can do X
+
+except for you
+
+do this
+
+except bar.
+
+Do this. If that's what you mean.
+
+You can handle multiple things together or separately in exceptions.
+
+All right, let me see carter, were you able to hear the question?
+
+Okay do um do look for carter? The question that was just asked.
+
+Nikita asked carter if you would like my colleague who's here on his laptop?
+
+I can't see the chat window in front of me but he can hopefully try to answer.
+
+All right,
+
+give me just a moment to get reset and we'll dive in in the moment for libraries.
+
+This is the second of two lectures. We're not gonna go on for like five hours today.
+
+It's just this one final lecture. So
+
+hang in there if you're you're sleepy but no worries. If you want to catch up later.
+
+Give us just a moment to get ready.
+
+No ready when you are.
+
+But give me just a moment to think
+
+and at the end let's do a little Q and a to afterward. Patrick, Just like that.
+
+Okay,
+
+Okay, demonstrate.
+
+Okay,
+
+Okay. Ready when you are
+
+100.
+
+Okay.
+
+Mhm.
+
+All right. This is CS fifty's introduction to programming with python.
+
+My name is David Malin and this is our week on libraries.
+
+So libraries are generally files of code that other people have written.
+
+That you can use in your own programs or a library's code
+
+that you've written that you can use in your own program,
+
+but maybe not just this program, but another and another as well.
+
+So python supports exactly this idea.
+
+This ability to share code with others,
+
+share code across your own projects and it does.
+
+So by way of what it calls module,
+
+a module in python is just a library that typically has
+
+one or more functions or other features built into it.
+
+Generally the purpose of a library or
+
+module specifically is to encourage reusability of
+
+code if you find yourself using the same types of functions again and again,
+
+the same functionality.
+
+If you find yourself copying and pasting from an old project into your new project,
+
+odds are there's an opportunity there to factor out
+
+that code that you keep copying and pasting,
+
+that you keep reusing and put it into a
+
+library that you can then load into your programs moving
+
+forward so as to not just copy and paste
+
+it and have all these different copies all over.
+
+So what are some of the modules or libraries that python comes with?
+
+Well, python comes with a random library literally,
+
+which is to say that when you install the python interpreter
+
+on your Mac or pc or somewhere in the cloud,
+
+not only do you get python, you get a whole bunch of modules as well.
+
+Now these modules provide you with functions that
+
+you don't have access to just by default,
+
+like you do print and input,
+
+print and input and other such functions just work in python.
+
+But sometimes functions are tucked away in these modules,
+
+so you have to be more deliberate about loading them into the computer's memory.
+
+So somewhere on the computer's hard drive, once you've installed python,
+
+there is also, it turns out a file probably called random dot pi,
+
+that someone else wrote probably long ago, but that you have access to.
+
+And in that random dot pi file,
+
+there's probably one or more functions that you yourself can use
+
+in order to do things randomly.
+
+That is to say how could you flip a coin in a program in python?
+
+How could you pick a random number between one and 10 in python?
+
+Well,
+
+you need a bit of randomness and while you could
+
+figure out mathematically how to write functions like that yourself,
+
+It's a lot easier to stand on the shoulders of
+
+others who have already solved that problem for you.
+
+So you can focus on the problem that you yourself want to solve.
+
+So for documentation on most any python module,
+
+you go to the official python docks and you go to a u
+
+r l like this where the documentation for that specific module lives.
+
+And within the documentation,
+
+you'll see a list of the functions
+
+or other functionality that some module provides.
+
+But how do you go about loading a module into your own
+
+program so that you can use the functions in that module?
+
+Well,
+
+we need a new keyword in python and namely its import
+
+the import keyword in python allows you to import the contents of
+
+the functions from
+
+some module in python. Well, how might I go about using this in practice?
+
+Well, let me propose
+
+that there exists in that random module. This function among others.
+
+So I have copied and pasted from the documentation,
+
+uh this uh summary of a function called choice.
+
+Now, the function exists in the random module, so to speak. Not a random module.
+
+The random module. And so generally the documentation describes it fully.
+
+Like this random dot choice is how you would
+
+technically call this function that we'll see alternatives to that
+
+in parentheses. There's a parameter called S E Q.
+
+For sequence and sequence generally means a list or something that is list like if
+
+you have a list of numbers or strings
+
+or anything else and the documentation elaborate.
+
+Well, how can I go about using this function to solve perhaps a familiar problem.
+
+Well, let me go ahead and open up V. S. Code here.
+
+And let me propose that we implement a program that simulates
+
+Flipping a coin. A coin that in the us heads heads or tails.
+
+The idea of which is to pick a decision with 5050 probability,
+
+50% probability of heads, 50% probability of tails.
+
+Or you can use some other mechanism like that.
+
+Well, let me go ahead and open a program with code
+
+called generate dot pi because I want to
+
+start generating a whole bunch of random information.
+
+The first of which is just going to be a coin toss
+
+Now. How do I go about using that function?
+
+Well, I first have to import the random library.
+
+So literally the first or among the first lines of my file should be import random.
+
+And that just gives me access to all of the functions
+
+in that specific module.
+
+Now, suppose I want to flip a coin.
+
+Well, I can do random dot choice per the documentation a moment ago.
+
+And that again takes a sequence. What's a sequence? It's a list or something.
+
+That's list like and we know about lists. We've used list to iterate over numbers.
+
+We've used list to iterate over students at Hogwarts. Let's go ahead now and list.
+
+Iterate over just a list of two sides of a coin. Heads, quote unquote or tails.
+
+Now I can call these anything I want. These are my strings.
+
+I just want to simulate a tossing a coin.
+
+So I'm just gonna say in all lowercase heads and tails.
+
+But notice the syntax I have heads and tails and double quotes.
+
+That's because their strings I could also use single quotes.
+
+So long as I'm consistent, there's a comma between them,
+
+which means the list has two elements,
+
+there's square brackets to the right and the left,
+
+which indicates that this is indeed a list.
+
+That's the syntax recall for defining a list in python.
+
+And then lastly there's something more familiar.
+
+There's the parentheses outside of those square brackets.
+
+But those are just the parentheses that belong to the
+
+choice function and specify where it's parameter gets passed in.
+
+But again, unlike past functions,
+
+I have to specify what module this function is in at least for now.
+
+And so I do random dot choice to call the specific function.
+
+Alright,
+
+well it's one thing to flip a coin picking between those
+
+with 50% probability and that's what random dot choice does it
+
+takes in a list and it returns to one of those
+
+values randomly with equal probability because I've passed into items,
+
+I've got a 50 50 chance.
+
+If I passed in three items,
+
+it would be a 33% chance for each of those items and so forth,
+
+python does the math for you.
+
+But I want to store the value of this in a variable.
+
+So let's define a variable called coin equals whatever the return value is.
+
+So this is indeed like flipping a coin I'm gonna store in a variable called coin,
+
+whatever that value is.
+
+Heads or tails. And now, just so I can see what's going on.
+
+Let's go ahead and print out the value of that string coin.
+
+All right, let me go ahead now and run this program in my terminal window,
+
+python of generate dot pi enter
+
+and it looks like the first coin toss was the heads.
+
+Let's go ahead and run it again
+
+and it looks like it was heads again.
+
+Maybe you want to chime into the chat here? If I run it a third time.
+
+What's it gonna be this time?
+
+If you want to type your thoughts in the chat
+
+You might think there's a bug here. But this is probability in action.
+
+If I go ahead and hit enter a third time there,
+
+it's actually now tails and again tails and again
+
+tails and again tails and again tails and again.
+
+Heads.
+
+Now if we did this an infinite number of times it would indeed work out to be 5050
+
+if we only do it a few times.
+
+It might not work out as cleanly but that's how probabilities indeed work.
+
+Alright, so I've got that now working,
+
+could I have implemented this in a different way.
+
+Well,
+
+let me show you an alternative to actually using the import
+
+keyword alone and let me introduce the keyword from in python.
+
+So from is a keyword in python that you
+
+can use when importing functions from a module,
+
+but it allows you to be a little more specific than import alone.
+
+So if I go back to my code here,
+
+it's worth noting that what technically I'm doing here by importing
+
+random is I'm technically importing everything that's in that module.
+
+So not just the function called random dot choice.
+
+So it's important to note that when I import random at the top of this file,
+
+I'm importing the entire contents of random and giving myself access to
+
+all of the functions there in not just random dot choice,
+
+but a few other functions as well.
+
+If though that could be slow and sometimes modules are so big,
+
+so powerful that they might actually add a split second
+
+or even longer of startup time to your program,
+
+you might not want to import the whole module and so instead you might do this
+
+from the random module,
+
+import the choice function specifically.
+
+So now python is going to be a little smarter,
+
+it's only going to give you access to the choice function,
+
+but nothing else that's in that same module, but I have to change my syntax.
+
+Now now this also allows me to do this.
+
+This allows me to execute choice without having to specify what package it's in.
+
+So another upside of this approach here is that I am sorry, let me think for a second.
+
+Before we fix this,
+
+let's rewind, apologies. This is what happens when it's live.
+
+Let me rephrase some of my my comments here.
+
+Alright, let's rewind to this.
+
+So instead of calling import
+
+Okay,
+
+so instead of using this line of code at the top of my file, import random,
+
+which will technically give me access to all of the contents there
+
+in a downside of that is that I have to type in random
+
+dot choice random dot this random dot that because all of the functions
+
+I'm calling have to be associated with the scope of that module.
+
+Well suppose that I just want to call the function as its name choice.
+
+I can do that as well. Let me replace this first line here with from random
+
+import choice and what this does effectively is it loads the functions, name choice
+
+into my current name space into the scope of the file.
+
+I'm working in what that means is that I
+
+now no longer have to specify which choice function.
+
+I mean I can just say choice and so it loads it into the local name space,
+
+that is into my local vocabulary if you will.
+
+So I can just now say choice.
+
+This might be advantageous
+
+in what cases do you think when might you want
+
+to import the name of the function explicitly like this?
+
+As opposed to just saying random dot choice?
+
+Random dot choice throughout your code when calling a function.
+
+Any instincts here for this alternative import
+
+using from
+
+Yeah over two
+
+buffering
+
+buffering. Okay,
+
+Mohammed.
+
+Hello? I'm Mohammed. Omar from Egypt.
+
+And maybe if we have a variable that its name is basically like choice.
+
+If I have a variable called the choice,
+
+so I need to differentiate with the choice I choose.
+
+So I'm gonna choose random dot choice and
+
+perfect. Really good instincts.
+
+Yeah, really good instincts by using the first approach by just importing random,
+
+you're making sure that all of its contents are associated with are scoped
+
+to the random module so that you can have your own choice function.
+
+You can have your own choice variable.
+
+You can use the same names as all of the functions or
+
+variables that are stored inside of that file without them colliding,
+
+so to speak.
+
+And this is a good thing in older languages,
+
+it was the case that if you imported someone's library,
+
+you better hope that you're not using the same functions or variables as
+
+they are because you might in fact have some kind of conflict python
+
+and certain other languages allow you to scope the names of those functions
+
+and variables to the file or the module that they come from.
+
+So that's a good thing.
+
+But honestly this is such a short program
+
+or equivalently, maybe I'm using the choice function in so many places.
+
+Calling random dot choice random dot choice. Random dot choice.
+
+It's just making my code longer and longer and longer, marginally so.
+
+But it's just getting ugly and annoying.
+
+I can simply import choice and now tighten up my code a little bit.
+
+So, as with so many decisions in the past,
+
+there's not necessarily one right approach or another. It depends.
+
+But I think for those very reasons sometimes it's
+
+better to do what we did the first time,
+
+which is only import the module so as to retain the scope there in.
+
+Well,
+
+let me propose that we transition to another function that comes with pythons,
+
+random module.
+
+And that's this here from the documentation, random event.
+
+It's a bit hard to say, but it implies get back a random event.
+
+And if you read the documentation, it's a random in
+
+that's between zero A.
+
+It's a random infects between A and B inclusive.
+
+So if you were to pass in one for A and 10 for B,
+
+you would get back a number between one and 10 inclusive,
+
+including the one and including the 10, potentially each with a 10% probability.
+
+So how might I go about using a program like this?
+
+Well, let me come back to my generate dot pi file.
+
+And why don't we go ahead and try generating a random number between one and 10.
+
+You might do this frequently in the real world when
+
+you just want someone to pick a random number,
+
+you tell them as much in the human response,
+
+let's get the computer to do the same here,
+
+let me go ahead and delete my two lines of code at the bottom but keep my import random.
+
+And let's go ahead and define a variable this time called number.
+
+Set it equal to the return value of random dot rand ent and
+
+now pass in a value of one and be a value of 10.
+
+And now let's go ahead and print the number.
+
+I'm going to go ahead in my terminal window and
+
+run python of generate dot pi and hit enter four
+
+python of generate dot pi and hit enter
+
+eight again,
+
+nine again,
+
+seven again,
+
+10 again
+
+to again. And we can do this all day long.
+
+And if we add all those up, they should end up being with 10% probability each.
+
+Now, how might you use this information?
+
+Well,
+
+maybe we're playing a guessing game or maybe we're trying
+
+to randomize the behavior of some character in the game.
+
+You can imagine using very simple building blocks like this.
+
+Just kind of spicing up your program by getting
+
+it to do things a little less predictably because
+
+you're choosing these values seemingly randomly and you're deferring
+
+to python to actually do the generation of these numbers
+
+using its own algorithms and its own math.
+
+Well, what more could we do here,
+
+let me propose that we introduce another function that comes
+
+from this random library yet another that you yourself have.
+
+Don't don't have to implement shuffle.
+
+If you read the documentation for shuffle in the same random module,
+
+you'll see that it takes in a list for instance of values and just shuffles them up.
+
+It randomizes them like a deck of cards here,
+
+you might shuffle them so as to put them into seemingly random order.
+
+Well, how do I use this based on
+
+this functions name? Well, let me propose that we go back to V. S.
+
+Code here and let me go ahead and this time do the following
+
+because I need to shuffle something like a deck of cards.
+
+Let me go ahead and not just import random,
+
+but let me give myself a variable called cards.
+
+That's gonna be of type list. And just so I have something to shuffle.
+
+I don't need all 52 cards in a typical deck,
+
+I'm just gonna shuffle three card's a jack, a queen and a king.
+
+I could call those strings, anything I want, but I just wanted a list of some values.
+
+So as to shuffle them up that is randomized the order they're in.
+
+Well, how does this now work?
+
+Well, if you read the documentation for random dot shuffle,
+
+if you read the documentation for random dot shuffle,
+
+you'll see that it shuffles the argument in place.
+
+That is unlike many of the functions we've seen,
+
+it doesn't return to a value that contains the shuffled cards.
+
+In this case it actually shuffles the list. It's given itself.
+
+So what this means for my code is that I need to do something like this
+
+random dot shuffle and pass in the variable containing those cards.
+
+And then on a final line here, how might I go about printing the cards?
+
+Well I could do this and I could say print cards, but if I do that,
+
+I'm actually gonna see python syntax for lists and it's just gonna format in
+
+its own way using commas and the like I want to print these cards out
+
+one at a time just because I think it'll look a little better so
+
+we can use some of our syntax from loops and say something like this.
+
+Four card in cards. Go ahead and print out the current card.
+
+So what's now happening here?
+
+Line three, I'm defining a list of three cards in this order.
+
+Jack, Queen King, I'm then shuffling those same cards online. Four.
+
+And then on line five,
+
+I'm using a four loop for each of the cards in that list printed out one at a time.
+
+And because I'm using print one line at a time. Well let's see the results down here.
+
+My terminal window,
+
+I'm gonna run python of generate dot py and hit enter queen king Jack,
+
+seemingly shuffled because that's not the order I defined earlier.
+
+Let's do it again.
+
+Queen king, Jack. Okay, that happens to be the same.
+
+But let's see this could just be bad chance.
+
+There we go Jack.
+
+Queen King doesn't look like it's shuffled, but at least we're getting back.
+
+Different ordering is now again. Jack, Queen King. Hmm. Not so good.
+
+Jack, Queen King, Not so good.
+
+This is someone you probably want to play against with cards. Queen Jack King.
+
+There we go. But of course we only have three cards here.
+
+So there's not that many permutations we might see.
+
+And if we do this over time, we will see all of them.
+
+But if we had of course 13 or 52 cards, we'd see a lot more permutations instead.
+
+So we have now these three ways to generate random information.
+
+One simple coin toss.
+
+If you want to start some kind of athletic event, one pick a number between one and 10.
+
+If you want to decide something based on that and now using shuffle,
+
+we can even take in a list of things and shuffle
+
+them about so that we get some kind of random behavior.
+
+Well, let me pause here and see if there's any questions yet
+
+On random on modules or any of these three functions.
+
+Yeah, Over to Ganesh, if I'm saying it right,
+
+yes, thanks for giving me the opportunity to ask you the question.
+
+So my question is different.
+
+But I would like to ask you what is the
+
+difference between the difference between library and verifies as I,
+
+as I'm learning C in my classes.
+
+So
+
+I usually saw that sometimes they're used to say like library or hydrofoil.
+
+So what does the difference I heard library, what's the other word you're saying?
+
+It's the audio is a little
+
+enterprise.
+
+No header files. H e a d r f I l E petrified.
+
+Sorry I can't hear
+
+header file. Okay, header file, I'm sorry the speaker is a little quiet here.
+
+What is the difference then between libraries and header files?
+
+So a library is perhaps the most generic term. It
+
+refers to code that someone else has written,
+
+perhaps even you that you can use and reuse in your own projects.
+
+A header file is a feature of languages like C and C plus plus and some other languages
+
+that simply specifies, among other things,
+
+the functions that have been implemented for you.
+
+But in a language like C,
+
+your code would generally be in a file like something
+
+dot see that's where you actually implement those functions,
+
+but in C you would have another file called something
+
+dot h a So called header file and that contains
+
+only the names of those functions and a little more
+
+detail that essentially teaches the compiler the program you're using,
+
+what functions will exist.
+
+Some languages like python don't make that distinction between your header files
+
+and your actual code files rather it's all in one file,
+
+like something called random dot pi.
+
+That's in some sense,
+
+a little more convenient for programmers and so
+
+not all languages take that hetero file approach,
+
+but a header file is something very specific and technical.
+
+A library is the general term and indeed the focus overall today.
+
+Other questions on libraries or python modules here, danish
+
+finish.
+
+Hello? Hello?
+
+Yeah. Can we increase or decrease the probability of gods
+
+If you want to. For example, there is three. There is a 33% chance of probability.
+
+So is there any chance to increase or decrease the probability?
+
+Are there any functions that do? What would the probability did you guys hear?
+
+Uh If we want to increase the probability for Jack,
+
+can we do that?
+
+Can you calculate the probability of a deck?
+
+No, no. I want to increase the probability of Jack
+
+example. Uh like Jack 40% and other queen and king 30 30.
+
+I see Russian
+
+set the probability. Oh, can you set the problem? I'm sorry.
+
+It's hard to hear down here today.
+
+Can you set these probabilities not using these same functions.
+
+Can you set the probabilities?
+
+But you can absolutely implement some of
+
+your own functions or use more sophisticated
+
+functions that do exist in this library and others to exercise more control.
+
+These are meant to be very user friendly and simple functions.
+
+Certainly the ones we looked at that give you equal probability
+
+for all of those but absolutely you could skew things though.
+
+Hopefully if you're implementing a gambling game or the
+
+like you're not actually making some cards more probable
+
+than others.
+
+Allow me to turn back now to our implementation here of
+
+this randomness and consider how we might leverage other types of functionality
+
+that aren't necessarily in this specific library here.
+
+Well,
+
+it turns out that python also comes with a statistics library and this
+
+contains all sorts of functions for doing things more statistical in nature,
+
+namely calculating means or medians or modes or other aspects
+
+of a data set that you might want to analyze.
+
+So how might we use the statistics module in python?
+
+Well,
+
+we might first just take a look at its documentation like any other module in python.
+
+And we'll see within that library that there's a whole bunch of
+
+functions and one of those functions is one that's quite simple.
+
+It's average.
+
+A function that allows you to calculate the
+
+average of some numbers that you've passed in.
+
+Well, let me propose that we implement here a new version of me.
+
+Sorry, let me fix this.
+
+Mm hmm. Sorry.
+
+Well,
+
+let me propose that we create a new file here with code average
+
+dot pi that simply calculates the average of some number of values.
+
+So at the top of this file I'm going to import as before. Not uh
+
+sorry
+
+to do this again,
+
+apologies.
+
+Let me go ahead and envious code in my terminal window.
+
+Open up a new file called average dot pi.
+
+And at the top of this file, I'm going to import a different library this time,
+
+namely the statistics module in python.
+
+And now I'm gonna go ahead and call a function that I know
+
+comes in that module namely mean for the average of some values.
+
+And I'm gonna call statistics dot mean.
+
+And I'm gonna pass into this function means a list of some values.
+
+And let's suppose that I'm quickly trying to calculate what my
+
+current grade averages in school and I did really well on
+
+my first test and I got 100% and on my second I did well but not as well and I got a 90
+
+ironically I'm not very good with math.
+
+So I'd like to figure out what my average now is between those two tests.
+
+So let me go ahead now and in this list
+
+Type in the number 100
+
+Common 90, thereby passing in a list of two values to ants 190.
+
+And outside of those are the parentheses.
+
+Because of course this is now the argument I'm passing to the function called mean.
+
+And this function mean is in the module called statistics.
+
+Well,
+
+it's not that interesting to just calculate the mean
+
+if I don't actually see what it is.
+
+So let me additionally pass the return value of
+
+that mean function to the print function as usual.
+
+So that now when I run python of average dot pi
+
+I see in my terminal window here.
+
+Oh, interesting.
+
+Yeah.
+
+Let me now in my terminal window and bs code
+
+type in python of average dot pi and hit enter.
+
+And voila as you might expect, my average is 95%.
+
+So the difference here is that I'm just using a different module that still
+
+comes with python but I need to import it instead of for instance,
+
+the random module instead.
+
+And this time I know from the documentation that there exists a function
+
+called mean.
+
+Well it turns out there's even more functionality that comes
+
+with python and that comes with other modules in python.
+
+And there's this feature generally known as command line arguments.
+
+This is a feature not just a python but of languages more generally
+
+that allow you to provide input.
+
+Not when prompted inside of a program,
+
+as happens whenever we call the python function input,
+
+but rather there's this feature,
+
+command line arguments of programs that allows
+
+you to provide arguments that is input
+
+to the program of just when you're executing it at the command line.
+
+So up until now, for instance,
+
+recall that we've generally run python of something dot pi, for instance,
+
+python of hello dot pi
+
+And I've never once really executed any words or phrases after the name of the file,
+
+but I could in fact when you're running programs in a command
+
+like environment like we are you can provide any number of words or
+
+numbers or phrases after the command that you're typing and all of
+
+those will somehow be passed in as input to the program itself.
+
+You don't have to prompt the user for one
+
+thing at a time by manually calling that input function.
+
+So what does this mean in real terms? Well, let me go ahead back into V s code here.
+
+And let me propose that
+
+we consider how we might leverage a certain module.
+
+I'm gonna go ahead and create a file called name dot
+
+pi And I'd like to use a new module this time.
+
+That's going to give me access to
+
+values that have been typed at the command line. But what's this module going to be?
+
+Well,
+
+this one is going to be called sis and sis short for system contains a whole lot
+
+of functionality that's specific to the system itself
+
+and the commands that you and I are typing
+
+the documentation for this module is that this you are all here
+
+and it lists all of the various functions and variables and the like
+
+that come with that module.
+
+But we're going to focus on something a little more specific namely this thing here.
+
+It turns out in the sys module, in python,
+
+there is a variable that just magically exists for you called R G.
+
+It stands for argument vector,
+
+which is a fancy way of describing the list of all
+
+of the words that the human typed in at their prompt
+
+before they hit enter.
+
+All of those are seemingly magically provided to you via python
+
+in a variable called sys dot org.
+
+This variable is a list which means that the first element
+
+is going to be the first word that you typed.
+
+The second element is gonna be the second word that you typed and so forth.
+
+And by way of this list then,
+
+can you figure out what words did the human actually
+
+type at the prompt and maybe use that to influence
+
+the behavior of your own program. So what does this mean now in real terms?
+
+Oh
+
+sorry.
+
+So what is this network? Hmm.
+
+So what does this mean now in real terms?
+
+Well, in this new tab called name dot pi,
+
+let me go ahead and import sys within that sis module
+
+is going to give me access to sis dot org.
+
+But how might I want to use it?
+
+Well,
+
+let's do this instead of writing a Hello
+
+World program that all of these times has just
+
+looked for the return value of input to figure out what the user wants me to print.
+
+Let's go ahead and just expect the user to
+
+tell us when they run the python program itself,
+
+what their name is.
+
+And suppose this time I'd like to generate a whole bunch
+
+of name tags initially just one and then the US here,
+
+it's very common to wear a sticker on your lapel that says hello, my name is David.
+
+So I want to print out some text that resembles that.
+
+The idea being maybe I could enhance this program someday to even send
+
+that text straight to the printer and dynamically generate those name tags.
+
+Well, let me go ahead now and do this. Let me go ahead and print out as always. Hello.
+
+But I'll say a little something more this time to make things more interesting.
+
+Hello? My name is quote unquote.
+
+And then after that I normally have been in the habit of calling input,
+
+storing the return value in a variable and passing in the name of that variable here.
+
+But I'm going to instead jump right to this
+
+sys dot r v bracket one
+
+and that's it.
+
+I'm going to have a program here that says hello.
+
+My name is followed by whatever is insists dot org bracket one.
+
+And notice this dot org again is a list and
+
+recall from our discussion of loops and intern list.
+
+We use the square bracket notation to get at the various elements inside of a list.
+
+Well, let's go ahead and run this program and see what it does, python of name dot pi
+
+at the prompt
+
+is going to give me this huh
+
+python of name dot pi. Index error here.
+
+Well, index error list. Index out of range. Well, what's going on?
+
+Well,
+
+actually, let me think to myself, if we want to do that,
+
+nope, let's rewind and not trip over that yet unless we cloud the example.
+
+All right. Let me go down now into my terminal window and run python of name dot pi.
+
+But this time rather than just hit enter and wait
+
+for the program to prompt me for my name.
+
+Let me proactively just tell this program what my
+
+name is at the so called command line.
+
+Here we go. D A V I D separated with a space from the name of the file.
+
+So that now when I execute python name dot pi, David, I see on the screen.
+
+Voila, Hello, my name is David.
+
+So based on this demonstration alone,
+
+I think we can infer exactly what's going on insist dot org
+
+even though it sounds certainly at first glance rather complicated here,
+
+let's look up at sys dot org.
+
+I'm going to bracket one here. So clearly sys dot org bracket one is storing D A V I D.
+
+But it's one in the past.
+
+When we looked at loops recall that we said that they were zero index.
+
+That is the first element is zero. The next element is one.
+
+The next element is two and so forth.
+
+And yet, here I am treating it as though my name is at the start of the list one.
+
+Well, let me ask this question.
+
+What is probably insists.org V of zero.
+
+What is probably insist dot r G of zero.
+
+The very first element actually in that list, Philip your thoughts.
+
+Oh, yeah, I think it's like in c the name of program.
+
+Indeed. It's indeed like in C and other languages the name of the program.
+
+Well, if we consider what it was, I typed,
+
+I certainly typed python because that's the name of my interpreter and
+
+we don't really need to know that because we're using python itself.
+
+But after that I did type two things.
+
+I typed name dot pi as I've done so many times
+
+anytime I want python to interpret a program I've written.
+
+And it turns out by convention what python does is it stores insist dot org
+
+the name of the file that you're executing or interpreting
+
+followed by any number of other words that you type.
+
+So all this time we could have been accessing the name of the program,
+
+which frankly isn't all that interesting.
+
+But we can also now access words that are typed after that prompt as well.
+
+But of course, if I don't type anything in
+
+what might happen here,
+
+this might be naive of me to assume that there's
+
+always gonna be something at location one insist dot org.
+
+Let me go ahead and try this python name dot pi And no,
+
+I'm not giving you my name because at this point I might
+
+not even know that you want my name to be typed.
+
+So let me hit enter now. And also we see now an error.
+
+A so called exception in python, This one's a new one. This one's an index error.
+
+That elaborate list,
+
+index out of range and turns out this is actually
+
+one of the most common mistakes in programming whether using a
+
+list in python or arrays or vectors and other languages is
+
+to try to access some element that does not exist.
+
+You try to go too far to the left or you try to
+
+go too far to the right in this uh in this object,
+
+that is just a list of some values.
+
+So of course the mistake here is that I'm assuming there's
+
+gonna be something at location one when really it's location zero.
+
+That's the only one that has a value.
+
+But fixing this is not going to amount to doing brackets zero.
+
+Because now if I go ahead and rerun this program with no other words after name dot pi.
+
+It says hello, my name is name dot pi.
+
+Which is fine if we're making a name tag for the program.
+
+But that's not of course what my goal here is instead.
+
+So if the fix is not just to change the one to a zero,
+
+how else might I handle this error?
+
+How else might I handle this error?
+
+This index error that happens if the user just doesn't remember to
+
+or doesn't know to type their actual name at the prompt.
+
+Yeah,
+
+your thoughts.
+
+Um we could always put an exception into this program saying
+
+If there is,
+
+if there's nothing at location one
+
+we just come out and say, okay we haven't got parameter or something.
+
+But if there is to continue along with the program.
+
+Perfect. So if I might simplify, we can try to execute this line of code.
+
+Except if there's an error, we'll deal with it in some other way.
+
+Now,
+
+ideally and once I'm a strong enough programmer I would have
+
+anticipated this and written the following code from the get go.
+
+But when you're learning it's certainly reasonable to see an error.
+
+Oh I didn't realize I should detect that and then go back and improve your code.
+
+But of course if you read the documentation,
+
+you ingrain some of the lessons learned from the past.
+
+You'll get into the habit of trying and
+
+checking for some of these exceptions yourself.
+
+So let me solve this in one possible way as you proposed here,
+
+let's try to handle this exception as follows.
+
+Let me go ahead now and instead of just blindly calling this print line,
+
+let me try to print out Hello, my name is such and such.
+
+Except if there is an issue specifically an index error
+
+then what do I want to go ahead and do?
+
+I'm gonna say something like too few arguments.
+
+I could be more explanatory than that.
+
+But for now I'm just going to explain to the user that they gave me too few arguments.
+
+Too few words at the prompt.
+
+So now it's still not gonna work in quite the way I want.
+
+I'm still not gonna be able to generate their name tag but at least they're not
+
+going to see some cryptic error message and
+
+think that they themselves broke the program.
+
+Let me go ahead now and run python of name dot pi enter
+
+and too few arguments.
+
+Okay, let me go ahead now and do python of name dot pi and type in my name, David.
+
+And now we're back in business and I see that my name is on the screen to
+
+but strictly speaking, I don't have to try to do this.
+
+I could actually be a little more defensive in writing this
+
+code and maybe I could check whether or not the user
+
+has indeed provided a name or multiple names at the prompt
+
+so as to give them more refined error messages as well.
+
+So how might I do this?
+
+Well,
+
+let me go and undo the exception handling I've added and
+
+why don't I instead more modestly try to do this.
+
+Let me go ahead and introduce a conditional here.
+
+If the length of sys dot org is less than two or equivalently equal to just one value,
+
+but I'll just stick with less than two for now.
+
+Then go ahead and print out
+
+too few arguments. So I want ultimately to arguments, I want the name of the program
+
+at location zero and I want the name of the human at location one.
+
+So that's a total of two arguments.
+
+So if I have fewer than two arguments, let's tell the user with this print line
+
+L if the length of sys dot org
+
+is say greater than two. Like they typed in too many words at the prompt.
+
+Well, let's tell them.
+
+Print, quote,
+
+unquote too many arguments else if they did get it
+
+right and they gave me exactly two arguments else.
+
+Let's go ahead and print what I actually care about.
+
+Well,
+
+let me go down to my terminal window and run python of name dot pi here and hit enter
+
+ha ha syntax error. Okay, let's turn this into a teachable moment.
+
+All right,
+
+let me go down to my terminal window here and run python of
+
+name dot pi And voila uh a completely different type of error.
+
+This one a syntax error which we've seen in the past
+
+now a syntax error recall is mia copa like I messed
+
+up here and I wrote invalid syntax and so no amount
+
+of conditional or exception handling is really gonna catch this one.
+
+I need to go back and just get my program to work because it's not running at all.
+
+Well,
+
+let me go up here and see line four is the issue
+
+and indeed it looks like I have an Unterman ated string here.
+
+I need to go ahead and now add this double quote.
+
+So let me go ahead now and with that red herring gone.
+
+Let me rerun python of name dot pi and hit enter and now we see too few arguments.
+
+Okay, maybe it wants my full name. Let me go ahead now and run python of name dot pi.
+
+David malin
+
+typing in both words after the name of the file and hit enter.
+
+And now of course it's too many arguments fine.
+
+Now I'll oblige and do python of name dot pi and just David and there we have it,
+
+my name tag printed on the screen.
+
+So strictly speaking,
+
+we don't have to handle exceptions if we can be a little smarter
+
+about it and just check for the things that we're worried about,
+
+especially if we want to give the user more refined advice.
+
+We don't want to just tell them no something went wrong or we don't want to pass,
+
+we want to tell them No, that's too few or no, that's too many.
+
+We have conditional in our vocabulary already via which we can now express that.
+
+Well,
+
+let me pause here and see if there's any questions now
+
+on how we handled the error before with the index error
+
+or how now we're just pro actively avoiding
+
+all index errors altogether by just checking first.
+
+Is it too few. Is it too many or is it exactly what we want
+
+to go?
+
+Oh yeah, thank you.
+
+Um So I was wondering you you touched upon kind of using your full name.
+
+Um Could we,
+
+could we then um is there a way going forward that perhaps we have
+
+people that want their full names and want their just their first name?
+
+That we separate that into like oh this person has full name, This person has
+
+just the one name? Absolutely.
+
+And allow me to allow me to propose,
+
+we come back to that support for multiple names but
+
+indeed we could do that and I should know too
+
+though we can support full names right now if I
+
+do this instead of typing in David space malin,
+
+which is problematic because again by definition of how RGB works,
+
+each word ends up in a specific location in the list.
+
+But if I add quotes, single quotes or double quotes at the command line.
+
+Now python will view this as to total things, the name of the file and this full name.
+
+And now when I hit enter I don't see the quotes,
+
+the whole thing is passed in as my full name and if I want to
+
+adapt this further for multiple people will be able to do that as well.
+
+Other questions now on this version with if
+
+LF else or unaccepted before uh let's see uh
+
+Artem Soir
+
+if I'm saying that right?
+
+I think we're hearing a lot of background noise.
+
+Ah sorry my name is Sophia
+
+Hi my name is
+
+I was thinking if there wasn't at least or something like that of arguments that
+
+music
+
+while
+
+calling like
+
+the same way there is a model
+
+but a model of
+
+so a model of
+
+things that is in the house sometimes that that kid
+
+two years.
+
+Okay.
+
+I'm I'm I'm squinting because I'm having trouble hearing you here.
+
+Do you mind typing it into the chat so that carter can relay it to me?
+
+I'm afraid your audio is breaking up quite a bit.
+
+Let me turn to one other question will come back verbally in a moment.
+
+If we could How about over to some brat?
+
+I want to
+
+I want to ask you can we use multiple else statement?
+
+Can you use multiple else's statements?
+
+No else is the last catch all statement that you can have.
+
+You can have multiple L if statements in the middle but not multiple else's
+
+Okay.
+
+All right, well,
+
+let's turn our attention back now to this code and see if we can't refine it a
+
+bit more by adding in some additional functionality that
+
+we get with modules like the sys module.
+
+One of the things I don't love about this version of the code,
+
+even though arguably it is now correct.
+
+Is that the essence of my program which is just to print out the name tag,
+
+it's kind of relegated to this else clause and that's fine logically, it's correct.
+
+But generally speaking,
+
+there's something nice about keeping all of your error handling separate from
+
+the code that you really care about having all of these ifs
+
+l it's perhaps at the top of your code that are checking
+
+to make sure that all of the data is as expected.
+
+But then it would be nice if only for design,
+
+say not to sort of hide in this else statement.
+
+The actual code that you care about,
+
+I would prefer for instance to do something logically like this.
+
+I could check for errors up top and then down here, print the name tags.
+
+It would be nice if those are sort of distinct blocks of code,
+
+all of which are here left aligned.
+
+But there's a problem with what I've just done here
+
+logically. What bug did I just introduced by getting rid of the else
+
+And introducing line 10 on its own with no indentation outside of the conditional.
+
+What bug have I just introduced? What mistake to be clear.
+
+Yeah, let's go to
+
+toku Toku if I'm saying it right
+
+um, name error.
+
+A name error. Why do you say name error?
+
+You froze for me? But it's not,
+
+ironically it's a name error but not a name error. Exception.
+
+It's an error with my name but
+
+I think you're frozen for me,
+
+it's going to raise an exception because even though
+
+I'm checking the length of sys dot org up
+
+top and even though I'm checking it again for
+
+being greater than to not just less than two,
+
+but greater,
+
+I'm still then blindly and incorrectly assuming it's now going to exist.
+
+So just to be clear if I run python of name dot pi and I don't type any arguments.
+
+I've got too few.
+
+I think I'm going to see that I have too few but I'm also going
+
+to see that same exception at the very top of my terminal Windows output.
+
+There's my error message. Too few arguments. But again, online 10.
+
+I blindly proceed to still index into my list at location one, which does not exist.
+
+So it turns out there's a better way to handle errors like this,
+
+especially if you're writing a program in python
+
+that's just meant to run briefly and then exit anyway.
+
+But maybe we could start to exit prematurely.
+
+If the program itself just can't proceed if the user has not given us the data we want.
+
+Perhaps we should just exit the program
+
+earlier than we might otherwise. So let me go ahead and do this.
+
+Let me go ahead and remove my comments so as to focus only on the code here.
+
+And let me propose that instead of
+
+just printing, quote unquote too few arguments,
+
+I'm gonna use one other function that comes with the sys module.
+
+I'm gonna go ahead and call sys dot exit.
+
+And as the name suggests, it's going to do exactly that with the systems help.
+
+It's going to exit my program then and there on line four. Why is that?
+
+Okay, well, if you gave me too few arguments,
+
+I have nothing more to say to you the user.
+
+I might as well exit a bit prematurely and I can do this as well on line six.
+
+Let's go ahead and not just print that, but sys dot exit quote,
+
+unquote too many arguments.
+
+Print out that message and just exit right there Now I can trust that.
+
+By the time I get to line eight,
+
+every error condition has been checked for and so it's safe for me to
+
+assume that there is in fact an item at location one insist dot org.
+
+So let me go ahead now and run this python of name
+
+dot pi enter too few arguments but I'm back at my prompt.
+
+Nothing more has happened. Let me run it again, python of name dot pi.
+
+David malin with no quotes, enter too many arguments is now printed here finally,
+
+python of name dot pi.
+
+Just David enter Hello, my name is David.
+
+So we have then insists two forms of functionality.
+
+Now we have access to this variable sys dot org. This argument vector,
+
+that gives me all of the words that were typed at the prompt,
+
+including the program zone, file name.
+
+And it turns out if we read further in the documentation, there's an exit function
+
+that can take different types of inputs.
+
+But if I pass it a string like this,
+
+it will indeed print that string for me and then exit from my program then and there
+
+questions now on exiting from programs like this
+
+to be clear all of this time.
+
+Once python gets to the bottom of your file, it's going to exit anyway,
+
+so I'm using sys dot exit now just to make sure that I exit earlier than otherwise.
+
+Roderick question
+
+Hi, um my question is about the cysts that are
+
+RV. So is that capable of accepting or taking multiple elements at once?
+
+Let's say for example, Python named that by David Mallon. I'm a male.
+
+20 years old and if let's say I only want to access
+
+your name, which is that the first index
+
+And then your your your age is probably say at the sixth index,
+
+can I say cysts that are B one
+
+and another one for six to access what I just want.
+
+Is that
+
+a short answer? Yes.
+
+I think if I understand your question
+
+correctly whereby you're proposing to have many words
+
+at the end of the command and you want to access those individual words.
+
+Absolutely. At some point it gets a little fragile.
+
+I would say if you're typing so many words at the prompt
+
+that the order really matters.
+
+And so it turns out there's a lot of programs and there's functionality in
+
+python that can allow you to provide those values like name or age or
+
+any number of other fields in any order you want but pass in a
+
+bit more information texturally that tells the program how you want to use it.
+
+So in short what you're describing is possible.
+
+And let me do a small incarnation of it as follows.
+
+Let me propose that we go back to my code here and let's
+
+propose that we actually now want to support multiple values at the prompt,
+
+so there's gonna be no such thing as too many
+
+arguments suppose that I want to generate name tags,
+
+not just for David, but for David, for carter for wrong,
+
+shin for others in the group who all want their name tags as well,
+
+So I'm gonna go ahead and do this,
+
+I'm gonna get rid of my LF condition because I don't want to
+
+limit the maximum number of words that are typed at the prompt anymore.
+
+I instead want to iterate over every
+
+name at the prompt. So I'm going to say this for rgb in sys dot org.
+
+Go ahead and print out this time.
+
+Argh,
+
+so what am I doing here?
+
+Well, even though the syntax is a little different, the idea is the same as before,
+
+when we've had loops, I'm using a four loop to iterate over a list.
+
+The list in question here is sys dot org.
+
+Argh is a variable that I'm creating on the fly,
+
+the for loop is going to make sure that the first time through
+
+this loop rd is set to the first word on the command line.
+
+The second time through the loop,
+
+python's gonna make sure that art is now set to
+
+the second thing on the command line and so forth.
+
+That's just how a for loop works, it updates the variable for us,
+
+I don't have to call it argh,
+
+I could call it name so long as I change it to name in both places,
+
+but argh is reasonable if I'm iterating over arguments more generally,
+
+if I now run this program though, unfortunately there's a little bit of a bug,
+
+even if I type in David and carter and wrong shin,
+
+I'm not gonna get just three name tags
+
+in your mind, does anyone see the bug I'm about to trip over?
+
+It's not a huge deal if I've got enough name tags to go around,
+
+but I'm gonna be wasting one because this is gonna print not three,
+
+but four name tags whereby the first contains the name of the program itself?
+
+Maybe not a big deal.
+
+Maybe that's the sticker we don't bother handing out, but it's wasteful and it,
+
+it does look wrong.
+
+So how could we get access to?
+
+Not all four elements of our G but just a
+
+slice of our navy and this is actually a technical term
+
+in python and some other languages to take a slice
+
+of a list means to take a subset of it.
+
+Maybe from the beginning, Maybe the middle, Maybe the end,
+
+but a slice is a subset of a data structure, like a list.
+
+Well, how do I actually do this in code? Well,
+
+and python, it's actually very easy to take a slice of a list,
+
+that is a subset thereof, you can simply do this at the end of the list,
+
+name sys dot org.
+
+In this case you can use square brackets and then in those square brackets you
+
+can specify the start and the end of the list that you want to retain.
+
+I want to start at element one,
+
+not zero. I want to start at element one and I want to just go to the end.
+
+So I'm actually gonna omit a second number altogether.
+
+It's not necessary to have a second number,
+
+but I do need that colon because this is going to give me a slice of the list.
+
+It's gonna give me a slice of the list that starts at location one,
+
+not zero and the colon and then a blank just means it's gonna give me everything else.
+
+So this is an equivalently gonna slice off the first element of the list
+
+and give me a new list that contains just those three human names,
+
+not the name of the file itself.
+
+Let me try running this again.
+
+I'm gonna run python of name dot pi, David carter wrong shin This time,
+
+hopefully I'm gonna get three and only three name tags hitting enter.
+
+And indeed, I've done now just this.
+
+So again, using some relatively simple syntax in python,
+
+we can use square brackets,
+
+not just to go to specific elements like bracket zero or bracket one.
+
+We can also get subsets of the list slices
+
+of the list by doing bracket something colon,
+
+something where each of those something's is the number the beginning or the end
+
+and they're optional depending on whether you want all of them or just some
+
+any questions now on this version which adds the loop
+
+and these slices with that new syntax
+
+questions on this here.
+
+Yeah, let's go over to Melvin.
+
+Mhm.
+
+Can we slice starting from the end of the argument argument vector?
+
+You can you can slice something from the end of the argument vector
+
+and this might uh this might blow one's mind a little bit.
+
+Let me go ahead and do this.
+
+Uh Let's see,
+
+let me go ahead and do negative one at the end
+
+using a negative number here and running the same command.
+
+We've just uninvited wrong, shin from receiving a name tag here.
+
+So if you use a negative number it has the effect of counting
+
+to the uh in the other direction from the end of the list.
+
+A good question. There are other questions now on slices on
+
+looping over sys dot org.
+
+Yeah. Eric question
+
+Hi.
+
+So I remember very early on when we were talking about
+
+only having two decimal places in a in a float value.
+
+Um
+
+Does this, is that in the same vein like because we use the colon .2 f.
+
+So that is that the same thing then why would the F.
+
+B included then in the 0.2 F as opposed to here. When you just have the numbers.
+
+A really good question and it's just the short answer is that context matters.
+
+So there's only so many keys on our keyboard.
+
+And so we sometimes use the same symbols for different things.
+
+So what you're alluding to is the format code in an F.
+
+String for actually formatting a number using a colon.
+
+Using a period, using a number, using the letter F and so forth.
+
+And that is very specific to the F string feature of python.
+
+This case has nothing to do with any of that syntax per se.
+
+This is just using a colon in a different
+
+context to solve this problem to implement a slice.
+
+The authors of python could have chosen another symbol,
+
+but honestly looking down at my keyboard here,
+
+we don't have that many to choose from that are easy to type.
+
+So sometimes they have different meanings. A good question as well,
+
+allow me to propose now that we take things
+
+further and move away from using only those modules,
+
+those libraries that python comes with to talk about more generally,
+
+packages that exist.
+
+One of the reasons that python is so popular and powerful these days
+
+is that there's a lot of third party libraries out there as well.
+
+Otherwise known as packages.
+
+Strictly speaking, python itself has a term of art called a package,
+
+which is a module essentially that's implemented in a folder.
+
+Not just a file, but a folder,
+
+but more generally a package is a third party library
+
+that you that I can install on our own mac or
+
+a pc or our cloud server and gain access to
+
+even more functionality that other people have implemented for us.
+
+Now,
+
+one of the locations you can get all of these packages is called the pi P i websites,
+
+the python package index,
+
+which lives at this U R L here And this is a website that is searchable via the command
+
+line as well as via the web that allows
+
+you to download and install all sorts of packages.
+
+Even CS 50 has some of its own packages um, in services like these.
+
+Now there's a fun one out there that's a throwback to a command
+
+that's been around for years in command line environments called Cow set.
+
+Kao se is a package in python that allows you to have a cow,
+
+say something on your screen.
+
+If curious to read up on it. Its own documentation is on pipe ei dot org,
+
+specifically at this U R L here.
+
+But how do you actually get the package into your system?
+
+Well,
+
+technically you could figure out how to download the file and maybe unzip
+
+it and put it into the right location on your Mac or pc.
+
+But nowadays a lot of languages python among
+
+them has what's called its own package manager.
+
+This one here called pip, which is just one. So pip is a program
+
+that generally comes with python itself.
+
+Nowadays that allows you to install packages onto your own
+
+macs or pcs or cloud environment by just running a
+
+command and then voila you have access to a whole
+
+new library in python that didn't come with python itself,
+
+but now it's available on your system
+
+for you. So let me go back to V. S. Code here for instance.
+
+And let me propose that we first installed this very same package.
+
+I'm gonna go ahead and type in my terminal window, pip
+
+install cows.
+
+So pip again,
+
+is the package manager installed means to install this package of course,
+
+and cows is the name of the package that I want to install.
+
+I'm gonna go ahead and hit enter.
+
+Um
+
+That was not supposed to happen, teachable moment
+
+movie magic.
+
+Mhm.
+
+Okay,
+
+let's go back to V. S.
+
+Code here and in my terminal window, I'm gonna go ahead and type pip, install cow.
+
+Said Now, what's going on here, pip is the command,
+
+the package manager and I want to install.
+
+What package the package called?
+
+Cow said I'm gonna go ahead and hit enter here and after a little
+
+bit of output it has successfully installed cow said now what does that mean?
+
+That means? I can now go about importing this into my own code.
+
+Well, let's go ahead and see what this means.
+
+Let me go ahead and create a new file with code called say dot pi because
+
+I want something to be said on the screen and in my new tab here.
+
+I'm gonna go ahead and import cows
+
+which presumably is now installed.
+
+I'm now going to import sys as well
+
+because I'd like to use some command line arguments
+
+in this program just so that I can run
+
+it quickly and without using the input function,
+
+I can get the user's name immediately from the prompt and let me go ahead and do this.
+
+I'm going to do a bit of error checking proactively this
+
+time and rather than use less than or greater than I
+
+am this time gonna say if the length of sys dot
+
+org does does equal to so if the human is provided,
+
+just the name of the program and their own first name, we're good to go.
+
+I'm going to do the following,
+
+I'm going to call a function called cow in the package
+
+called Khao sei and I'm gonna pass in a string Hello,
+
+comma.
+
+And then as in the past I'm gonna pass
+
+in just one string because according to its documentation,
+
+it's not like print,
+
+I can't pass in comma this comma that I can only pass in one string.
+
+So I'm going to concatenate the contents of sys dot org, bracket one.
+
+So long as then I type in my name, David after the name of this program,
+
+it should end up insist dot org.
+
+One in which case this line five of coach should concatenate Hello with my
+
+name with a space in between and apparently a cow is gonna say it.
+
+So let's see what happens here.
+
+Let me go ahead and clear my screen and increase the size of my terminal window.
+
+Let me go ahead and run python of say dot pi and type my name, David. And enter.
+
+There is the program called cow.
+
+Say It literally has a cow say something on the screen and this is a
+
+throwback to a program from yesteryear that tended to come with a lot of systems.
+
+Um this is otherwise known as a ski art.
+
+It's a textual way using just keys on your keyboard to
+
+print pictures of sorts on the screen.
+
+Now we can really go down the rabbit hole
+
+here and there's questionable academic value of doing so.
+
+So I'll do so just once
+
+turns out the cows, a package comes with other functions as well.
+
+One of those functions,
+
+for instance is T rex and if I now increase the size
+
+of my terminal window will perhaps see where we're going with this.
+
+Let me now run again, python of ST dot pi
+
+this time. Let me not provide my name just to see if it's broken.
+
+It's still okay because we have that if condition,
+
+if the length of sys dot org equals equals two and only if it
+
+equals equals to do we do anything that's why we're not seeing anything here.
+
+Let me go ahead and cooperate now say dot pi space, David.
+
+And it's no longer a cow. But
+
+if I zoom out on my screen a T rex why?
+
+Just because these are the things you can do once you know how to program,
+
+you can even package them up and make them freely
+
+available to others as open source software for us.
+
+It's demonstrative of a feature more generally here,
+
+namely being able to install these third party packages
+
+and how you might do so in python.
+
+Now,
+
+I'll leave this up on the screen for a moment and see
+
+if there's any questions about cows or tyrannosaurus rexes or packages.
+
+More generally,
+
+I'm really qualified to speak to just one of those
+
+question from the group here.
+
+Yeah.
+
+Question
+
+Hi. I've got two questions. It's a bit earlier than what it's supposed to be.
+
+Um So my first question is
+
+the packages that you're calling um to use in the program,
+
+are they the same as um let's say
+
+I'm doing java the same as calling a class of java file in order to use its functions.
+
+And my second question is,
+
+what's the actual purpose of using command line arguments as you've used? Because
+
+it's not really the best way to,
+
+as you say, the user friendly
+
+where as in
+
+let's say the person who's
+
+using the program doesn't know what it, what they want,
+
+what the program is asking them
+
+and they just say, okay, run the program and
+
+nothing happens and they don't understand it
+
+and then they say okay if the if someone tells them,
+
+oh the program is asking you to print its name
+
+and you have to pass into the why couldn't you just prompt
+
+the user to say please enter your name and then print out its
+
+here's the name, say hello, my name. Is this
+
+really good questions. The first question about the comparison with java.
+
+Python packages are similar to java packages where
+
+you have something dot something dot something at
+
+the top of your program that gives you access to a class or something else.
+
+Python itself supports classes more on those down the
+
+road and you can do very similar things in
+
+python is you can do with java but the
+
+analog really is python packages to java packages here.
+
+As for command line arguments, you ask a good question. Why do we use them?
+
+Especially if they're a little yes user friendly.
+
+They're a little less user friendly to people who aren't in this zoom.
+
+To be honest,
+
+you and I as we learn more and more about
+
+programming and more about command line arguments I dare say,
+
+will become more comfortable with and tend to prefer the
+
+ability to customize commands using these command line arguments.
+
+Why
+
+productivity?
+
+It tends to make you faster because you get
+
+into the habit of knowing exactly how you can
+
+configure your software without having to manually answer questions
+
+and case in point all of this time.
+
+Have we been running python of something dot pi?
+
+You could imagine not doing that.
+
+You can imagine typing only python hitting enter and then you're
+
+prompted for the name of the file you want to run.
+
+So you type in something dot pi and then it runs
+
+not a big deal.
+
+But I I would argue that over time you're gonna get a little tired of that
+
+tedium and you would much prefer to just
+
+automate the command again and again and again.
+
+Especially with little conveniences like being able to hit up and down in your
+
+keyboard history so as to rerun the same command automation is big too.
+
+If you emerge from a class like this and start using python two
+
+automate processes at work or for personal projects
+
+or the like the ability to specify all
+
+of your inputs on the one line just means you can get work done more quickly.
+
+So hands down. Absolutely. Using command line arguments is a more arcane
+
+feature of systems that most of us are no
+
+longer as familiar with because of Windows and Mac.
+
+Os and other operating systems that have buttons and buoys and menus.
+
+But the more comfortable yet you get with programming, I dare say,
+
+the more you will tend to prefer these capabilities
+
+because they allow you to do things more quickly
+
+with that said allow me to propose that
+
+we take a turn towards yet another package that's
+
+particularly popular and just as easy to install all toward an end of using a P.
+
+I. S. Now a P. I.
+
+S are not something that's python specific more generally an Api is an
+
+application programming interface and it can refer to python files and functions.
+
+But often a P. I. S. Really refer to third party services that you and I can write code
+
+that talk too
+
+many ap eyes but not all live on the internet these days so that so long as you have
+
+a browser or so long as you have some
+
+experience with python programming or programming in any language,
+
+you can write code
+
+that in effect pretends to be a browser
+
+connects to that third party A P. I.
+
+On a server and download some data that
+
+you can then incorporate into your own program.
+
+Now. How do you do this?
+
+Well,
+
+python has a very popular package that you can install via pip called requests.
+
+The requests library allows you to make web requests,
+
+internet requests using python code essentially as
+
+though you were a browser yourself,
+
+you can automate their for the retrieval of you or else that start with http or https,
+
+the documentation for this library. Is that the U. R. L.
+
+Like this but it too can be installed at the command line.
+
+And even though it's third party,
+
+it's one of the most popular and commonly used packages out there
+
+in python and this too is one of the reasons again that
+
+python is so popular.
+
+There's just so many solutions to problems that you and I have or
+
+are invariably going to have when we write projects of our own.
+
+There's just a really vibrant ecosystem,
+
+really vibrant community of open source software.
+
+That's that easy for us to install.
+
+Well, let me go ahead and use this package as follows
+
+first. I'm gonna go ahead and do pip install requests
+
+to install requests into the system if it's not already there
+
+and it's successfully installed at the end of this output.
+
+Now I have access to the request library and this is going to allow me, oh sorry,
+
+let me do that again.
+
+Let me go over to my terminal window
+
+here first and run pip installed requests which is
+
+gonna have the effect of installing that library
+
+into my system and indeed it's successfully installed.
+
+Uh well, let me give you the footage you need. Sorry, pip. Uninstall.
+
+This is behind the scenes. This is how you can remove uninstall a package. Now again,
+
+let me go back to my terminal window now and run pip
+
+install requests in order to install this package on my own system.
+
+And after some lines of output, I'll see that it's successfully installed.
+
+Now, let's go ahead and create a new file here, for instance Itunes dot pie.
+
+It turns out that Apple,
+
+who makes ITunes software via which you can download or
+
+browse music and songs and other information has there own
+
+api application programming interface and better yet it's not something
+
+you have to pay for or sign up for.
+
+You can just access it via browser alone.
+
+In fact, let me go ahead and open a browser here and I'm going to go to this U. R. L.
+
+Here https colon slash slash uh itunes dot apple dot com slash search question mark.
+
+Entity equal song ampersand term equals wheezer. Now, a bit of a mouthful to be sure.
+
+But this U. R. L.
+
+Here is going to allow me to search apples ap I application programming interface
+
+for all information they have about songs by the band known as Wheezer.
+
+When I hit enter. What you'll see is that nothing really seems to happen.
+
+At first glance
+
+literally that was not supposed to happen.
+
+Alright, standby, apologies.
+
+We are live programming.
+
+Mm hmm.
+
+One moment please.
+
+How interesting.
+
+Try that again,
+
+apologies. I'll explain what I'm doing in a moment,
+
+interesting.
+
+The
+
+function it looks like limit is required.
+
+That wasn't yesterday though.
+
+Sorry to be with you in one moment. Internet.
+
+Oh, but it didn't need to be there too.
+
+It is working when I do it that way. Um,
+
+entity equal song ampersand.
+
+I have my Well that it's
+
+alright. Sorry, give me just a moment. My apologies. I don't think we need to break.
+
+I will just fix this real fast.
+
+Um
+
+I swear this work before,
+
+but let's do this in a way that it's going to work again.
+
+Let me equals one.
+
+Maybe it is necessary to limit equals one.
+
+Alright,
+
+so we're gonna do this again. Alright, apologies.
+
+All right,
+
+reminding.
+
+Okay, I'm gonna go back in a second. Sorry. Okay, here we go.
+
+Okay.
+
+All right.
+
+My apologies to everyone on the internet.
+
+It turns out that apple has its own aPI for their itunes service.
+
+The software that provides you with the ability to download and
+
+search for music and songs and other information as well.
+
+And it turns out that let me go back over to my computer here and
+
+open up a browser like chrome and let me go ahead and visit this U.
+
+R. L. Here
+
+https colon slash slash itunes dot apple dot com slash search
+
+question mark, entity equal song
+
+ampersand limit equals one ampersand term equals Wheezer.
+
+Now I constructed this U. R. L.
+
+Manually by reading the documentation for Apple's
+
+api application programming interface for Itunes.
+
+And what they told me is that if I want
+
+to search for information about songs in their database,
+
+I should specify entity equal song so that its
+
+songs and albums or artists or something like that.
+
+If I just want to get back information on one song,
+
+I'm going to provide limit equals one.
+
+And if the band, I want to search for the artist is Wheezer,
+
+I should specify term equals wheezer.
+
+So with this if I go ahead and hit enter and visit this U. R. L.
+
+I actually end up with a text file and my downloads folder on my Mac.
+
+And if I go ahead and open this text file here,
+
+what we'll see is a somewhat cryptic looking file of text.
+
+Let me do that.
+
+Let me give you this footage.
+
+If I go ahead and open that text file on my Mac,
+
+you'll see a fairly cryptic file here containing a whole lot of text but we'll
+
+see some familiar syntax which is actually reminiscent
+
+of something we've seen in python itself.
+
+We'll see a curly brace over here and we'll see a curly brace all the way down here.
+
+We'll see a square bracket over here and we'll see a
+
+closed square bracket over here which is to say we've see
+
+we're seeing some of the same syntax we see in python
+
+when it comes to dictionaries or dicks or lists in python,
+
+which is those
+
+I don't want to do this.
+
+Sorry, let me rewind slightly for our team here.
+
+Um,
+
+overlay
+
+If I go ahead and open that text file that my browser just downloaded.
+
+We'll see all of this text here, which at first glance might look a
+
+bit cryptic but it actually follows a pattern.
+
+Notice this curly brace at the start and notice this close curly brace at the end.
+
+I noticed this open square bracket here
+
+and notice this closed square bracket here and
+
+in between those pieces of syntax are a whole bunch of strings and values.
+
+In fact a whole bunch of key value pairs.
+
+What we're looking at here is a standard text format known as Jason.
+
+Javascript object notation, which yes,
+
+is technically related to yet another programming language called java script.
+
+But Jason itself is typically used nowadays as a language
+
+agnostic format for exchanging data between computers by language agnostic.
+
+I mean you don't have to use javascript,
+
+you can use python or any other language to read Jason or write it as well.
+
+And it's a completely text based format which means that if I visit that U. R. L.
+
+With my browser, what gets downloaded is just a bunch of text.
+
+But that text is formatted in a standard
+
+way using curly braces and square brackets using quotes
+
+and some Coghlan's that ultimately contains all of
+
+the information in Apple's database on Weezer's song.
+
+At least the first one because I limited it to one
+
+in their database and that's an api an application programming interface,
+
+a mechanism whereby I can access data on someone else's
+
+server and somehow integrate it into my own program.
+
+Now of course, my browser chrome is not something I wrote.
+
+I should actually write some python code that perhaps pretends
+
+to be a browser to grab the same data.
+
+So let's do that. Let me go back to V.
+
+S code here and let me write a program with code ITunes dot
+
+pi and we're going to write some code via which I can then use
+
+the itunes api I And in turn python to
+
+get information about any band that I might want.
+
+I'm going to go here and import first
+
+the requests library which I installed earlier.
+
+In order to make those http requests.
+
+I'm gonna go ahead and import the sys library via which I'll have the ability to
+
+use command line arguments like specification of the band that I want to search for.
+
+If not weezer. And then down here I'm gonna go ahead and insert some
+
+error checking to say if the length of sys dot org
+
+does not equal to.
+
+So if the user does not provide me with the name of the file
+
+they want to run and the name of a band and that's it.
+
+You know what? Let's just go ahead and exit.
+
+For now I can provide a more explanatory message
+
+but for now I'm going to keep things simple and
+
+just exit the program prematurely so that I can trust
+
+hereafter that sys dot org has what I want.
+
+And now I have the opportunity to use the requests library to
+
+write some python code that effectively is pretending to be a web
+
+browser so as to connect to that same https u r l
+
+on apple's own server and I'm gonna go ahead and do this requests
+
+dot get open parenthesis and an argument. Now that is the U r l.
+
+That I want my program to visit https colon slash
+
+slash itunes dot apple dot com slash search question mark,
+
+entity equal song ampersand limit equals one ampersand term equals now I could say
+
+weezer here explicitly but then this program is only ever going to work for weezer
+
+but that's fine I think for now,
+
+what do I want to do with the response that I get back from the server?
+
+Well, let's sign the return value of requests dot get
+
+to a variable called response.
+
+So to be clear request is the package that I installed earlier.
+
+I've imported up top which gives me access to any and all functions there. In
+
+the function I've decided to use based on the documentation is called
+
+get just like a browser would get information from a server.
+
+So do I want my python code to get the same data as well.
+
+And then just for now,
+
+just so we can poke around and see what's coming back just like I did on my mac,
+
+let me go ahead and print out for instance response dot Jason.
+
+If I know according to apple's documentation that they indeed return Jason as
+
+the text format in which all of their ap eyes responses are.
+
+I can do response which is the variable storing that data
+
+dot Jason to get the same text format on my screen.
+
+Now this is not yet that useful because I would ideally like to
+
+access maybe only the songs that weezer or someone else has performed.
+
+But for now I just want to see the raw data because I'm learning,
+
+I'm gonna go ahead now and increase the size of my terminal window and I'm
+
+gonna run python of itunes dot pi and what comes back from the server?
+
+Nothing. Oh, okay.
+
+Let me go ahead now and run python of I Oh, I see what I did.
+
+I'm sorry for the head fake there.
+
+Let's do this.
+
+Um
+
+Sorry, I just want to get this right, so we don't have to uh
+
+half the team fixed here.
+
+Okay. I'm just gonna rewind a little bit here if folks don't mind.
+
+So a little bit of repetition. But also
+
+hopefully it'll come out even better this time. Alright,
+
+so now that I've guaranteed that the user has typed in not just the name of the file,
+
+but also the name of a band at the prompt.
+
+Giving me a length of two for sys dot org.
+
+Let's go ahead and execute requests dot get Which is a function inside
+
+of the requests package that will literally get some response from a server.
+
+And the U R L. That I want to get is exactly the same as before, https colon slash slash
+
+itunes dot apple dot com slash search question mark, entity,
+
+equal song ampersand limit equals one ampersand term equals previously wheezer.
+
+But let's make this program a little interactive.
+
+And actually allow the human to specify at the
+
+command line what artists they'd like to search for.
+
+So I'm gonna go ahead and close my quote early
+
+and just append using the concatenation operator as in the past
+
+sys dot org bracket one.
+
+And now it actually be nice to store the response from the server in a variable.
+
+So I'm gonna go ahead and say response equals and to store all
+
+of the response that comes back from the server in a variable called response
+
+down here.
+
+Now I'd like to just understand what the servers returning to
+
+me to make sure I know how next to proceed.
+
+So this isn't gonna be very pretty yet,
+
+but I'm gonna go ahead and print out response
+
+dot Jason which ensures that the data I'm getting back
+
+is formatted on my screen is exactly that Jason the
+
+same text format as we saw on my screen.
+
+It's not a useful program yet.
+
+I'm really just learning along the way,
+
+but let me go ahead now and increase the size of my terminal window
+
+and run python of itunes dot pi and type in the name of a band like weezer and hit enter.
+
+And what we see on the screen formatted almost
+
+the same as before is exactly that same text.
+
+But what you'll see here is that this
+
+has been standardized now as a python dictionary.
+
+What indeed Apple's returning is technically adjacent response,
+
+javascript object notation,
+
+but python, the requests library is converting it to a python dictionary,
+
+which happens to use wonderfully coincidentally almost the same syntax.
+
+It uses curly braces to represent the dictionary here and a
+
+close curly brace to represent the end of it here.
+
+For any lists there in it uses a square
+
+bracket here and a closed square bracket down here.
+
+It uses quotes,
+
+single quotes in this case or equivalently double
+
+quotes to represent the keys in that dictionary
+
+and after a colon it stores the value of that key and so you'll see that.
+
+Indeed we have a result count key whose value is
+
+one but then a more interesting results key called results,
+
+whose value is this entire list of data.
+
+Now,
+
+honestly this is such a big blob of text that it's gonna
+
+take me forever to wrap my mind around what I'm seeing.
+
+So let me propose temporarily we use another library in python that
+
+will allow me to format my data a little more cleanly.
+
+It turns out that python also comes with a special library
+
+called Jason.
+
+That allows you to manipulate Jason data and even just print it, print it.
+
+That is formatted in a way that's going to be way easier for you and I to understand.
+
+So let me go back to my code here.
+
+Let me shrink my terminal window and let me
+
+propose that just temporarily again we do this.
+
+Let me import this additional library, Jason which comes with python.
+
+So I don't need to install it manually with pip.
+
+And let me go ahead now and not just print out response dot Jason which was that
+
+big blob of hard to understand text.
+
+Let me go ahead and use one other function here called Jason dot dump.
+
+S for dump string
+
+and passed to that function. That response dot Jason return value.
+
+So again I'm just introducing another function who I
+
+claim it has a purpose in life of pretty printing
+
+nicely formatting on the screen the exact same information and I know this
+
+from the documentation having done this before
+
+but I'd like things to be nicely indented
+
+and according to the documentation,
+
+if I pass in a named parameter of indent equals two,
+
+that's gonna invent everything at least two spaces,
+
+I could do four or something else but it's going to be
+
+enough to help me wrap my mind around what the data is.
+
+I'm getting back because again I'm just learning along with you
+
+so let me increase the size of my terminal window.
+
+Again let me run python of itunes dot pi and again let's search for Huizar and
+
+hit enter and now notice it's still a little bit cryptic because there's a lot going
+
+on here but my gosh I can totally read this more easily now notice now that
+
+I still see the first curly brace which means hey this is a dictionary and python,
+
+a collection of keys and values.
+
+The first key is called result count.
+
+It happens to be displayed in double quotes
+
+now but that's just an issue of formatting.
+
+It could be double or single. So long as we're consistent.
+
+The value of that key is one. Why?
+
+Well I told the U. R. L. Two only limit the responses to one weezer song.
+
+So I've gotten a result set of one. If I increase that limit I could probably get more.
+
+Then the interesting part of this response is really the data itself
+
+notice in the results key here there's a really big value.
+
+The value is a python list as implied
+
+by the square bracket. What does this list contain?
+
+Well, I know from skimming it earlier
+
+that this contains one dictionary and that's why we see another curly brace here.
+
+So again if this gets a little more complicated.
+
+Keep in mind that a dictionary is just a collection of key
+
+value pairs and python uses curly braces to indicate as much.
+
+It is perfectly reasonable for a dictionary to be inside of another
+
+dictionary if the value of some key itself is another dictionary.
+
+So this is a common paradigm. And even though it might seem a bit cryptic,
+
+It's just something that allows us to associate more keys with more values.
+
+Now, most of this information I probably don't care about for instance,
+
+according to Apple, the unique identifier for Weezer is apparently 115,234.
+
+That might be useful if I'm making my own database and
+
+I want this to be searchable but for today's purposes,
+
+all I care about is the name of the track
+
+otherwise called. Track name as key.
+
+And the first song and only song because we limited it to one that we got back
+
+from Itunes here is the song that you might know by Weezer called Say It Ain't.
+
+So,
+
+so now I have a bit of a clue if my
+
+goal here is to implement a program called itunes dot pi.
+
+That doesn't just dump the response from the server,
+
+which is admittedly very cryptic.
+
+But to print out all of the songs that itunes has for the band called Wheezer.
+
+Maybe I can iterate over this somehow. So let me backtrack.
+
+Here's the key called track name.
+
+It is inside of a dictionary. That is the value of results here.
+
+So how can I go about getting this? Well, let me go ahead and try this.
+
+Let me go ahead and shrink my terminal window back down
+
+and let me propose.
+
+Now for one final flourish,
+
+we don't just lazily print out the contents of that
+
+response because that's not interesting or pretty for anyone.
+
+Let's do this.
+
+Let me go ahead and create a new variable just for the sake
+
+of discussion called O for object and I'm gonna go ahead and call
+
+O equals response dot Jason.
+
+Just a store
+
+that Jason response specifically in a variable called Oh,
+
+but I could name it anything I want.
+
+And now I'm gonna do this for each result in that objects key called results.
+
+Go ahead and print
+
+out that result.
+
+Track name and notice I have used exactly the same capitalization
+
+track name has a capital in results is all lowercase.
+
+And let me rewind before we run the actual program
+
+in line eight we are making an
+
+http request using python to the server just like you and I as humans type U
+
+R L S into a browser and hit enter this is the python equivalent thereof.
+
+I am then online 10 just grabbing from
+
+that variable that contains the server's response.
+
+The Jason object that I care about. The thing between those curly braces
+
+at the very top and the bottom.
+
+But because we've poked around and because I read the documentation earlier,
+
+I know that that object has a key called results and that results.
+
+He again is a list. Now at the moment that list contains only one song.
+
+Say it ain't. So
+
+because I limited my response to one.
+
+But even so my loop will work.
+
+It's just going to iterate once and each time
+
+through that loop it's going to print the current results
+
+Track name. And so if I want to make this even more interesting, let me do this.
+
+Let me change limit now from one to
+
+say 50. And
+
+If I want to make this even more interesting let me change this limit now from 1-50.
+
+So I'll at least get back
+
+50 track names instead.
+
+Let me go ahead now and increase the size of my
+
+terminal once more and go ahead now and run python of
+
+itunes dot pi searching again for a band like weezer. And here we go.
+
+And voila, there are 50 songs that itunes has for Huizar.
+
+And if we scroll back up to the top here, will see that
+
+the very first one there is indeed Say it ain't so. But now we got
+
+undone the sweater song buddy holly.
+
+Apparently, another rendition of say it ain't so perhaps from another album,
+
+another buddy holly undone.
+
+My name is Jonas
+
+and so forth.
+
+Questions now
+
+on this program which integrates python with a real world's third party
+
+A P I
+
+questions here from
+
+how can we use break instead of systems. Exit, exit. Good question.
+
+But no break again is used to break out of things like loops like we
+
+saw earlier sys dot exit is used to break out of the whole program itself.
+
+Use break for loops for now and uses dot exit to terminate the whole program.
+
+Good question.
+
+Other questions now on this program are others Mohammed.
+
+Uh
+
+from where we bring the name of the key results
+
+from? Where do we get the name of the key
+
+results itself. Can we change the
+
+results the name? You cannot. So we could in our program.
+
+So the keys that come back in, that Jason response to be clear,
+
+come from itunes dot apple dot com.
+
+Some engineer,
+
+some team of engineers decided for us what all of those keys would be called,
+
+including track name, results,
+
+results count and everything else you and I
+
+can absolutely store those same values in variables.
+
+Just like I'm doing here with oh just like I'm doing here with results,
+
+you can rename those keys, anything you want using python variables.
+
+But the Jason response is coming from that third party server.
+
+Other questions on this approach here. Uh
+
+If I'm saying it right,
+
+yes, so I have a question related to
+
+package. Sure. So like yes. So sort of what sort of asking graphics uh is it
+
+capable of uh of putting the cows a package? Um I would refer you to the U. R. L.
+
+And the slides earlier.
+
+Uh If only because it's more thorough,
+
+they have not just cows but tyrannosaurus rexes and several other animals as well.
+
+I should emphasize that this is not a package.
+
+I suspect you will use much in the real world.
+
+It's really just meant to be representative of the types of packages you can
+
+install but allow me to refer to the documentation for what more is there.
+
+But asking art uh is the all we had before, there were emojis,
+
+let alone gifts and jpeg and pings, but it's what is immortalized in cows.
+
+Well allow me to transition us back now to one final capability of Python,
+
+which is that you yourselves have the ability to make
+
+your own libraries up until now.
+
+We've been writing all of our functions in R1 file, Hello, pie and everything since.
+
+And now that we've introduced modules in python, like random and statistics,
+
+we can import those
+
+that come with python, but that's other people's code as well.
+
+And we've now used pip this package manager to
+
+install third party packages as well in the system
+
+and using other people's code still.
+
+But to come full circle,
+
+what if you yourself find yourself implementing the
+
+same kinds of functions again and again?
+
+Or you find yourself opening up old programs
+
+copying and pasting code you wrote into new
+
+programs because you have the same problem.
+
+Yet again, a good practice would be to somehow bundle up that code.
+
+You keep reusing and make your own python module or package.
+
+You can keep it local on your own mac or pc or cloud
+
+server or you can go through the steps of actually bundling it up,
+
+making it free and open source and putting it on something
+
+like pi P I for others to use as well.
+
+Well, how do you actually go about doing this yourself? Well, let me turn us back to V.
+
+S code here
+
+and let me propose that we create a file that contains
+
+functions that I feel like I keep using a lot.
+
+I keep writing code to say hello and heck I'm
+
+inevitably gonna write code to say goodbye as well.
+
+So why don't I just go ahead and implement once and for all
+
+a function called hello and another Goodbye.
+
+And let me avoid the habit of just copying and pasting that into future projects.
+
+Let me put it in a separate file with no
+
+main function that only exists to package up my code,
+
+so to speak.
+
+So I'm gonna go ahead and run code of sayings dot pi
+
+where an english saying is an expression like hello or goodbye.
+
+And let me just define two relatively simple functions.
+
+I'm gonna define Hello,
+
+which is gonna take a parameter called name and it's
+
+going to print out using an F string hello,
+
+comma, name and curly braces so that we actually plug in the value of name.
+
+I feel like I've done this so many times already here
+
+now is a reusable function that says hello to that person
+
+separately down in the file. I'm going to find another function called Goodbye.
+
+That does pretty much the same thing. Takes a name as a parameter,
+
+prints out using an F string uh goodbye,
+
+comma. And then that same person's name done, there's no main function now.
+
+And to be clear if I go in my terminal window and run sayings dot pi,
+
+nothing's going to happen.
+
+But this time that's a feature,
+
+not a bug because this is not meant to be a program itself.
+
+I am trying to implement my very own package that is
+
+my very own python module that other people maybe me,
+
+maybe you, maybe other people on the internet can import into their own code.
+
+I wouldn't therefore want something immediately to
+
+happen on the screen when I import
+
+this code or you do. I just want you to have access to those functions.
+
+So let me propose now
+
+that I opened up a new tab called say dot pi
+
+again from before and this time, let me not have the cow say anything,
+
+but rather let me go ahead and import first sis.
+
+So I can take in some command line arguments and let me go ahead then and import
+
+from sayings import let's say just the goodbye function.
+
+Now in this program, I can actually write code that will get executed specifically.
+
+I'm gonna say if the length of sys dot org equals equals to that is to say if the
+
+human types both the name of the file they
+
+want to run and the name of themselves thereafter.
+
+Like David, what do I want to go ahead and do?
+
+Well, there's no cow, there's no tyrannosaurus rex.
+
+There's just a function now called goodbye.
+
+And if I pass insist dot org v bracket one,
+
+I should now have access to the goodbye function
+
+in the sayings module that lives in a file.
+
+By convention called sayings dot pie in the same folder.
+
+And so when I run this with python of say dot pi.
+
+It should indeed just say
+
+goodbye. But could I enhance this in anyways?
+
+Well, if I wanted access to hello, I could do this. I could import both.
+
+Hello and goodbye separating them with a comma.
+
+At that point though, if there's only two functions in the file,
+
+I might as well just say import sayings and then go ahead and prefix goodbye with
+
+uh sayings dot goodbye.
+
+But they're too it depends on the problem at hand and exactly
+
+how many times I want to use this function again and again.
+
+Or if it might collide with another variable in my file, I think I'm happy with that
+
+earliest approach
+
+whereby I import from saying just the function. Goodbye.
+
+And then online six I called goodbye. And here I'm gonna go ahead and say
+
+python say dot pi. And rather than my name, I'm gonna go ahead and say
+
+how about everyone
+
+and enter
+
+goodbye.
+
+That's it for this lecture on libraries and python.
+
+We'll see you next time for all the more features so you
+
+can continue to build your own programs on top of these.
+
+Okay.
+
+All right.
+
+Happy. And
+
+actually can we do one? Are we still rolling? Can I fix that?
+
+Just gonna fix that one ending. So we get it right.
+
+And then then we'll do some casual Q and a.
+
+But we're officially a wrap in just a moment.
+
+Alright, Give Me 1 2nd.
+
+Alright. If I now make my terminal window bigger.
+
+Run python of say dot pi but this time provide
+
+a command line argument rather than my own name.
+
+Let me go ahead and say, oh, how about world?
+
+So that now when I hit enter, we see our final saying today,
+
+which is indeed, of course. Goodbye world.
+
+That's it for our lecture on libraries.
+
+Well from here, we'll continue to build on this with more and more syntax,
+
+more and more features so that you can too
+
+build projects of all the grander scope still
+
+do you want?
+
+No. All set. Thanks. All right. Any questions that we can answer here?
+
+We are officially a wrap.
+
+If you need to go home, go to sleep, go to work or the like,
+
+but happy to take some questions here.
+
+Yes. Um Actually, if I'm saying that right?
+
+Mm hmm.
+
+Hello Derek.
+
+Yes.
+
+Uh Yeah,
+
+my question is if every time I don't want to write anything like as we as we as dot
+
+then what I want to write as you say that again. If you
+
+uh
+
+every time if if I use so many methods of
+
+and if I don't want to write every time
+
+dot then what I have to do correct? You let me just pull up a blank file here real quick.
+
+So if you're tired,
+
+if you have import sys at the top and you have lots of lines like sys
+
+dot org or sys dot exit and you don't want to keep typing sis that's fine.
+
+You can say instead from sys import org, comma, exit.
+
+And now you can literally just say RgB down here, bracket one.
+
+You can literally just say exit. You don't need to prefix it anymore.
+
+However, you cannot have your own exit function
+
+or variable. You can't have your own R G function or variable.
+
+You have to decide which is more important.
+
+Good question. Other questions from the group.
+
+Yeah. Let's see
+
+if I'm saying that right?
+
+Yeah. Hi, David, I wanted to ask that, can we make mobile labs in python later?
+
+What? Later in python? Sorry?
+
+Mobile app.
+
+Mobile app. Oh, um probably. But not really.
+
+Like python is not a language people reach for when implementing mobile apps.
+
+I suspect there are libraries that make it possible.
+
+I'm completely guessing, but it's just not.
+
+Sorry. Oh,
+
+can we meet again?
+
+Yeah,
+
+I researched on that but I tried something here and
+
+there but they were not died good in design.
+
+Yeah,
+
+I think for mobile apps you generally for android want to use
+
+java or Cartland for IOS you want to use swift or objective.
+
+C or you want to build for both platforms at the same time using html,
+
+javascript and CSS using libraries you might use python on
+
+the back end for the database or for the servers,
+
+but it would be unusual if even possible to use python for the maps themselves?
+
+I had one more question to like, can we make our own a PS for like? Mhm.
+
+Yeah, absolutely
+
+a good question. Hard to answer quickly.
+
+Um, carter, can you google python rest api and try to blink to a library?
+
+Um short answer.
+
+You can uh if you're interested in this,
+
+I would take CS fifty's course on web programming where
+
+one of the week's focuses on making a P.
+
+I. S.
+
+If carter you wouldn't mind pasting into the chat. CS 50 W
+
+too hard to answer a single question. But I can give you a whole week. Of course.
+
+Other questions. Sure.
+
+Of course.
+
+Let's say you go over to uh
+
+Mamani. Sorry, I'm not pronouncing that. Right.
+
+Hi, how are you? Yes. How do you say your name?
+
+It's
+
+it's a long one. But you can call me m
+
+So here's the thing.
+
+When you imported the library you have created. Uh do you have to import
+
+uh
+
+all the fights you have imported in those libraries you have created
+
+or you don't call them anymore in your main
+
+uh so if I'm hearing you correctly, if your own library uses other libraries,
+
+that's fine.
+
+So long as the library imports them, that's fine.
+
+You the developer don't need to import everything. It all happens automatically.
+
+Recursive. Lee, so to speak.
+
+Mm hmm. Thank you for your other questions,
+
+mama. What if I'm saying it? Right.
+
+Yeah.
+
+Okay.
+
+Hello. So the method that you used um with the link.
+
+Um is that the same method that you can use in web scraping?
+
+Oh, short answer. Yes.
+
+So web scraping for those unfamiliar refers to writing code that scrapes data
+
+from websites that is grabs the data and then does something with it.
+
+Um,
+
+you can absolutely use the requests library and the
+
+get function to get the contents of a website.
+
+Like I've done,
+
+it tends to be more painful because websites change and sometimes your code breaks,
+
+but there's other libraries that you can use to make your life a little easier.
+
+And if you google something called beautiful soup, if carter,
+
+you wouldn't mind googling that too.
+
+This is a very popular library to use with the requests library. Beautiful soup.
+
+And I suspect the name means like, oh, it's a beautiful web page,
+
+but it's a soupy mess of html tags in the like makes it much easier to analyze that.
+
+But when you can using a P I. S like itunes so much better because it's clean data.
+
+Good question.
+
+Others. Uh let's see uh
+
+if I'm saying that right.
+
+Mm hmm.
+
+Yes. Hi.
+
+I was it's not really clear for me what is the difference between a module,
+
+library and a package?
+
+Sure. So in python, specifically a module is a library that's implemented in a file.
+
+So if you have um like uh we used um,
+
+random random dot pi is a file somewhere on your Mac or pc
+
+or the server you're using that contains functions that we're using a package.
+
+is code that's in a folder in python and
+
+the difference is that it can be more structured.
+
+You can have folders and sub folders and
+
+you can organize it a little differently and you
+
+can expose only a subset of the functions
+
+with that said if you read python's documentation,
+
+they say module everywhere, even when they mean package.
+
+So honestly they're effectively synonyms and it
+
+doesn't really matter what you say.
+
+And they're all libraries at the end of the day to
+
+um But those are the biggest different.
+
+Those are the simplest differences modules.
+
+A file, packages, a folder but that's not always the case.
+
+Other questions. Amber.
+
+Hi can you hear me? We can. Yes.
+
+So this was something that happened with Java but
+
+I have a question with python libraries. And that is when you're importing a library
+
+it's technically locally onto your I. D. Onto your machine.
+
+So it's not technically live on the web where someone can mess with the code per se.
+
+And then if you really um
+
+let's just say you decide to use that library locally on your machine.
+
+It's not going to do funny things.
+
+Well yes and no.
+
+So first of all when you install a package like I
+
+did with pip you are indeed downloading it from a server,
+
+installing it on your own Mac and pc and then that's it it shouldn't
+
+be making connections to the internet or snooping on you or anything like that.
+
+However, at the end of the day,
+
+you can do anything with code And it's possible that
+
+a library could be doing what you're worried about their
+
+and one of the biggest risks to about using
+
+other people's code is you have to trust them.
+
+And honestly,
+
+who's to say that today my machine is not
+
+now hacked because the cows a package while pretending to
+
+just say move on the screen is actually deleting all
+
+of my files or stealing all of my passwords.
+
+Like there's a huge amount of trust that goes into using other people's code.
+
+Either commercial or open source.
+
+One of the upsides though of open source and the fact
+
+that you can go look at the source code for cows
+
+is the presumption is there's enough of us,
+
+smart people in the world more by by the day that read code odds
+
+are someone's gonna notice if the person
+
+who wrote cows is doing something inappropriate.
+
+However, it might be too late for you.
+
+So at the end of the day, the only advice I really have is to
+
+be beware, be careful,
+
+don't use any and all packages, make sure you're using reputable ones.
+
+But even that just decreases the risk. It doesn't eliminate it.
+
+Thank you.
+
+And I really hope the calcite packages safe.
+
+Otherwise we created a problem here Maria.
+
+Hello there. Thank you, promising
+
+lecture. Can we use taxi
+
+when we check conditional, Did we write a name or not.
+
+Oh, say the first part of the question again?
+
+Can we use
+
+X. C.
+
+XC.
+
+I am not hearing that word. Right.
+
+Oh except I agree.
+
+Unlike like we use we use it in C plus plus.
+
+Uh
+
+I'm sorry. Okay. Um Python does not have RGC.
+
+Python only has Argov but because python has a length function, L E N.
+
+You can get the length of our G. Which is the same as RGC.
+
+So the only way to get access to command line
+
+arguments in python is using Cis like we did today.
+
+It doesn't happen automatically like it doesn't C and C plus plus.
+
+Good question.
+
+I think we have time here for just a couple more questions if that's okay.
+
+Let's go to a bar.
+
+Hi, I was wondering in the itunes file online. Eight. What is the
+
+what is the type of response? Let me go to line eight.
+
+Oh, what is the type of response? That is a good question. Um
+
+It's a request object. Let me check, python
+
+requests. Uh get
+
+so when in doubt you read the documentation because I don't recall what it is called.
+
+So let me see if I can find this real fast for you.
+
+This is the documentation that we linked earlier. I'm going to a P I reference a P I.
+
+For what it's worth. Doesn't have to mean a third party remote server. Local code.
+
+Local functions and files can have their own a P I. S.
+
+It's a very generic term meaning,
+
+what are the functions? What are the inputs?
+
+What are the outputs same thing on the itunes side.
+
+So here I am in this function and let me see if I can find returns, it returns this.
+
+So we'll talk about this later in the class,
+
+python does support object oriented programming 00.
+
+P. And there's a class in the request package called response. So um
+
+a bit literally returns a response object.
+
+Let's see other questions. Time for maybe two more here. Yes, I'm saying it right.
+
+Yes sir.
+
+I have a couple of questions. Uh
+
+can we create I have seen on youtube many programs like
+
+creating the job is with python creating ai with python.
+
+Is it possible to create like your personal assistant on python?
+
+Absolutely. Um python is very versatile I would say per the other question.
+
+The only thing that's really not good at or designed for is mobile apps,
+
+but absolutely for artificial intelligence type applications,
+
+it is incredibly popular.
+
+You yourself could write the Ai functions. However, there's a lot of commercial and
+
+free libraries you can use to do that for facial recognition.
+
+Um For objects in optical character recognition, speech synthesis,
+
+natural language processing and the like there's third party a p i is that you
+
+can send audio recordings to and they'll translate it back for you short answer.
+
+Yes.
+
+And by the end of this class you should have not
+
+firsthand experience with that but enough programming experience to tackle it.
+
+Um carter,
+
+if you could paste the Ai class you are l a colleague of
+
+ours teaches a class on ai in python that you might really like
+
+and if we may maybe time for one more question and then
+
+um Andrew if we could once we drop off of zoom,
+
+keep the cameras rolling just to record a short snippet, that would be great
+
+and let's see over two and please forgive if we don't quite get to everyone here.
+
+Abdullah. Um if I'm saying it right.
+
+Yeah. Hi hello.
+
+Hey
+
+hey I just I addressed some questions that is
+
+not related to but it's not related to the
+
+lecture but it's like how how do one like
+
+who how does one make a programming language?
+
+I just a question how did bison came to the world?
+
+How and what was the first question? How does someone make a programming language?
+
+Yeah,
+
+yeah,
+
+it's a good question.
+
+And if this is an academic interest,
+
+you can take whole courses on this because all languages were invented by humans.
+
+Um
+
+The
+
+I mean to oversimplify a bit,
+
+you the human decide what are all of the functions gonna be called,
+
+what is all the syntax gonna be the curly braces, the parentheses, The equal signs.
+
+You come up with what's called a grammar and a grammar like in english or any language
+
+is like the fundamental syntax that you have
+
+to use to express yourself in that language,
+
+then what you generally do is you write something like an interpreter.
+
+So someone years ago wrote a program called python and its purpose in life
+
+is to read a file top to bottom left to right and convert each of
+
+the functions that sees each of the
+
+variables that sees essentially into the equivalent
+
+zeros and ones that the computer understands and that's a bit of an overstatement.
+
+You don't have to worry about the zeros and ones,
+
+but essentially you use an existing language to write an interpreter for
+
+a new language and you know what if people like your language,
+
+someone else 10,
+
+20 years from now might use your language
+
+to write an interpreter for yet another language.
+
+And so we keep layering and layering on top of things. Um, and python itself.
+
+Honestly, I would refer you to Wikipedia.
+
+If you google Wikipedia python, you'll see the history.
+
+It came out, I think in the late nineties it was the brainchild of one individual
+
+who was involved with the community for many years
+
+now. There's a whole group that governs updates to.
+
+It's, the language itself keeps evolving.
+
+I know we still have hands up, but we need to get out of the space here on campus.
+
+So I hope you won't mind if we officially adjourn here. Thank you all so much.
+
+We will see you next week. If you can join us for more
+
+python, Have a good weekend.
+

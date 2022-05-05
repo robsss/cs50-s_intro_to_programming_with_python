@@ -1,0 +1,204 @@
+CS50's Introduction to Programming with Python
+
+# Functions, Variables
+
+## Q
+
+About one other question here on programming with python
+
+or Hello world or syntax more generally.
+
+Thanks for that question Jeremiah, I think we have you back
+
+once again. And I was trying to ask if
+
+it is not possible to run the computer using the terminal window
+
+I think I heard. Is it not?
+
+If it's possible to run the program without the terminal window.
+
+Are you okay? You froze for me again, but let me in for what the question is.
+
+So in this environment as I've configured my computer,
+
+I can only run these python programs via the terminal window.
+
+Now, that's good for me,
+
+The programmer or the person who's trying to learn how to program.
+
+But it's not very good if you want to ship
+
+this software and have other people use your actual code.
+
+You can absolutely write programs and then allow other people to use,
+
+not a command line interface, but a graphical user interface or gooey G.
+
+U I.
+
+This is just one mechanism and perhaps I think
+
+the best one with which to start writing code
+
+because eventually it's going to give us a lot
+
+more control allow me to forge ahead here.
+
+## Q
+
+Horatio if I'm saying that right,
+
+your question.
+
+Okay.
+
+Mhm
+
+Okay, well, first of all, thank you for this. Great course.
+
+So my question here is something you mentioned
+
+that you can write code inside of word,
+
+even if if you wanted to you just have to format it correctly.
+
+So
+
+could I want to write code inside a word or for example Microsoft Excel.
+
+And what's the barrier to doing that And why why does
+
+visual code studio is is the tool that we choose?
+
+What makes it better than Word or Excel. If all we need to do is write text.
+
+A really good question and allow me to very explicitly say to
+
+the entire internet that you should not write code with Microsoft word.
+
+I mentioned that only because it's a tool via which you can write text and code is
+
+at the end of the day just text but it's not the right tool for the job.
+
+We don't need bold facing underlining paragraphs and the like we generally
+
+want something much simpler than Microsoft word or google docs and Soviets.
+
+Code is an example of just a more general purpose text editor.
+
+Its purpose in life is to allow you the human to edit text.
+
+Nowadays these text editors come with many more features.
+
+In fact you'll notice that even in my code here, even though it's just one line
+
+there's a bit of color to it. The word print for me is appearing in blue.
+
+The parentheses are black and we'll see as we might write more lines of
+
+code more and more of the lines will come to life in various colors.
+
+Now that's just one feature of a text editor will see to that.
+
+It has features like this built in terminal window.
+
+It's going to have a built in tool for debugging or finding problems with
+
+code and it's just a very popular tool nowadays but there are many,
+
+many others out there.
+
+You're welcome to use them for this course and beyond.
+
+We just happen to use this one in large part to because you can also use V.
+
+S code nowadays
+
+for free in the cloud.
+
+##
+
+
+
+## Question
+
+Yes. Faiza if I'm saying it. Right.
+
+Mhm.
+
+Yeah. So the F street. Could you elaborate on the definition of it? Sure.
+
+An F string is just any string of text that's surrounded by quotes
+
+like to double quotes or two single quotes that starts with an F.
+
+At the very beginning
+
+we have seen F strings before because among their features are the ability
+
+to plug in values inside of the string,
+
+inside of those curly braces that we saw earlier earlier.
+
+We did that to say hello, Common name, butt plug in the value of name here.
+
+I'm using F strings for another feature.
+
+They have a lot of number formatting capabilities built in and if you use this
+
+admittedly cryptic syntax of putting not just Xeon curly braces but Z colon comma.
+
+According to python's documentation,
+
+that is the pattern you used to tell it
+
+to automatically add commas to your long numbers.
+
+That's all
+
+Good question.
+
+## Question
+
+How about 1, 1 other on these on format strings floats rounding or the like
+
+Yeah, how about over to Ethan
+
+mhm
+
+Yes, so I have a question.
+
+So when using floats um is there like a cap on how many decimal points you can have?
+
+Really good question. So floats. Yes. And this is a problem.
+
+We'll revisit before long floats cannot represent numbers infinitely precisely
+
+in a nutshell because computers only have so much memory,
+
+they only have a finite amount of memory.
+
+You and I only have a finite amount of hardware inside of the computer.
+
+So at some point they're going to have
+
+to round right now I'm rounding automatically effectively.
+
+Computers will eventually have to do that for us
+
+but we'll see that as a fundamental problem.
+
+Before long
+
+## Question
+
+ 1. Conditionals
+
+# Loops
+
+ 1. Q
+
+ 
+
